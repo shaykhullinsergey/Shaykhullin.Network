@@ -16,8 +16,8 @@
 		IChannelConfig Channel<TChannel>()
 			where TChannel : IChannel;
 
-		IHandlerConfig<TPayload> When<TEvent, TPayload>()
-			where TEvent : IEvent<TPayload>;
+		IHandlerConfig<TEvent> When<TEvent>()
+			where TEvent : IEvent<object>;
 
 		IServer Create(string host, int port);
 	}

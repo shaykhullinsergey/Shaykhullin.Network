@@ -6,6 +6,8 @@
       <e p="Shaykhullin.Network" t="IncludeRecursive">
         <e p="Class1.cs" t="Include" />
         <e p="IChannelConfig.cs" t="Include" />
+        <e p="IEvent.cs" t="Include" />
+        <e p="IHandler.cs" t="Include" />
         <e p="IHandlerConfig.cs" t="Include" />
         <e p="IRegisterBuilder.cs" t="Include" />
         <e p="ISerializerBuilder.cs" t="Include" />

@@ -1,8 +1,9 @@
 ﻿namespace Shaykhullin.Network
 {
-	public interface IHandlerConfig<TPayload>
+	public interface IHandlerConfig<out TEvent>
+		where TEvent : IEvent<object>
 	{
 		void Call<THandler>()
-			where THandler : IHandler<TPayload>;
+			where THandler : IHandler<TEvent>;
 	}
 }
