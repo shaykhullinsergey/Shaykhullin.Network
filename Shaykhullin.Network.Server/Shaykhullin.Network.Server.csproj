@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Shaykhullin.Network\Shaykhullin.Network.csproj">
+      <Project>{F4F78BE1-0779-47A7-BDDA-6C0986A9603C}</Project>
+      <Name>Shaykhullin.Network</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="handler" />
+  </ItemGroup>
+</Project>

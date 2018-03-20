@@ -1,0 +1,49 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.0",
+    "signature": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.0": {
+      "Shaykhullin.Network.Server.Sandbox/1.0.0": {
+        "dependencies": {
+          "Shaykhullin.Network.Server": "1.0.0"
+        },
+        "runtime": {
+          "Shaykhullin.Network.Server.Sandbox.dll": {}
+        }
+      },
+      "Shaykhullin.Network/1.0.0": {
+        "runtime": {
+          "Shaykhullin.Network.dll": {}
+        }
+      },
+      "Shaykhullin.Network.Server/1.0.0": {
+        "dependencies": {
+          "Shaykhullin.Network": "1.0.0"
+        },
+        "runtime": {
+          "Shaykhullin.Network.Server.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Shaykhullin.Network.Server.Sandbox/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Shaykhullin.Network/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Shaykhullin.Network.Server/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
