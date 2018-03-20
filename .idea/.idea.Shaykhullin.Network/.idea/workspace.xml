@@ -10,202 +10,40 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Program.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Shaykhullin.Network.Server.Sandbox/Program.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="13" column="34" lean-forward="false" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
-              <folding>
-                <marker date="1521577735377" expanded="true" signature="6:75" ph="..." />
-                <marker date="1521577735377" expanded="true" signature="121:1536" ph="{...}" />
-                <marker date="1521577735377" expanded="true" signature="138:951" ph="{...}" />
-                <marker date="1521577735377" expanded="true" signature="175:221" ph="{...}" />
-                <marker date="1521577735377" expanded="true" signature="271:948" ph="{...}" />
-                <marker date="1521577735377" expanded="true" signature="1008:1136" ph="{...}" />
-                <marker date="1521577735377" expanded="true" signature="1052:1133" ph="{...}" />
-                <marker date="1521577735377" expanded="true" signature="1192:1381" ph="{...}" />
-                <marker date="1521577735377" expanded="true" signature="1254:1306" ph="{...}" />
-                <marker date="1521577735377" expanded="true" signature="1447:1534" ph="{...}" />
-                <marker date="1521577735377" expanded="true" signature="1493:1531" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IContainerBuilder.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Shaykhullin.Network/DependencyInjection/IContainerBuilder.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
-              <caret line="1" column="1" lean-forward="false" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
-              <folding>
-                <marker date="1521577735385" expanded="true" signature="29:97" ph="{...}" />
-                <marker date="1521577735385" expanded="true" signature="67:95" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IContainer.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Shaykhullin.Network/DependencyInjection/IContainer.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <marker date="1521577556152" expanded="true" signature="29:71" ph="{...}" />
-                <marker date="1521577556152" expanded="true" signature="60:69" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IEncryption.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Shaykhullin.Network/Encryption/IEncryption.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="34" lean-forward="false" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="34" />
-              <folding>
-                <marker date="1521577565620" expanded="true" signature="34:74" ph="{...}" />
-                <marker date="1521577565620" expanded="true" signature="66:72" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ILifetime.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Shaykhullin.Network/DependencyInjection/Lifetime/ILifetime.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="34" lean-forward="false" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="34" />
-              <folding>
-                <marker date="1521577305430" expanded="true" signature="34:72" ph="{...}" />
-                <marker date="1521577305430" expanded="true" signature="64:70" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Singleton.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Shaykhullin.Network/DependencyInjection/Lifetime/Singleton.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="4" column="29" lean-forward="false" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
-              <folding>
-                <marker date="1521577310674" expanded="true" signature="62:108" ph="{...}" />
-                <marker date="1521577310674" expanded="true" signature="100:106" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Transient.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Shaykhullin.Network/DependencyInjection/Lifetime/Transient.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="4" column="28" lean-forward="false" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
-              <folding>
-                <marker date="1521577458403" expanded="true" signature="62:108" ph="{...}" />
-                <marker date="1521577458403" expanded="true" signature="100:106" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Class1.cs" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Shaykhullin.Network.Core/Class1.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <marker date="1521577682865" expanded="true" signature="49:80" ph="{...}" />
-                <marker date="1521577682865" expanded="true" signature="72:78" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IEncryptionBuilder.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Shaykhullin.Network/Encryption/IEncryptionBuilder.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="34" lean-forward="false" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="34" />
-              <folding>
-                <marker date="1521577529564" expanded="true" signature="34:166" ph="{...}" />
-                <marker date="1521577529564" expanded="true" signature="73:164" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Shaykhullin.Network/Handler/IConnectionHandler.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Shaykhullin.Network/Handler/IConnectionHandlerConfig.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Shaykhullin.Network/DependencyInjection/Lifetime/ILifetime.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Shaykhullin.Network.Server.Sandbox/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Shaykhullin.Network.Server/Channel/DefaultChannel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0E1B27A4-6035-47D9-A041-CEF439F84C41/55/203c0b74/String.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Shaykhullin.Network.Server/Event/Connection.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Shaykhullin.Network.Core/Compression/ICompression.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Shaykhullin.Network.Core/Connection/IConnection.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Shaykhullin.Network.Core/DependencyInjection/IContainerBuilder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Shaykhullin.Network/DependencyInjection/Lifetime/Singleton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Shaykhullin.Network/DependencyInjection/Lifetime/Transient.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Shaykhullin.Network/Class1.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Shaykhullin.Network.Server.Sandbox/Program.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Shaykhullin.Network/Encryption/IEncryptionBuilder.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Shaykhullin.Network/Serializer/ISerializer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Shaykhullin.Network/Encryption/IEncryption.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Shaykhullin.Network/DependencyInjection/IContainerBuilder.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Shaykhullin.Network/DependencyInjection/IImplementedByBuilder.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Shaykhullin.Network.Client/IClient.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Shaykhullin.Network.Core/DependencyInjection/IContainer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Shaykhullin.Network.Core/Event/IConnectionEvent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Shaykhullin.Network.Core/Serializer/ISerializer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Shaykhullin.Network.Client/Event/Connect.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Shaykhullin.Network/Serializer/ISerializerBuilder.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Shaykhullin.Network/DependencyInjection/IRegisterBuilder.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Shaykhullin.Network/Handler/IHandlerConfig.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Shaykhullin.Network.Server/IServerConfig.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EA1EE8EA-B39B-4166-A4C7-20BCC58579CF/6d/acd0b17e/ValueTask`1.cs" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Shaykhullin.Network.Server/Channel/IChannelConfig.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Shaykhullin.Network.Client/IClientConfig.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Shaykhullin.Network/DependencyInjection/IContainer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Shaykhullin.Network.Core/Class1.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Shaykhullin.Network/Event/IEvent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Shaykhullin.Network/Handler/IHandler.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0E1B27A4-6035-47D9-A041-CEF439F84C41/55/203c0b74/String.cs" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Shaykhullin.Network/Connection/IConnectionConfig.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Shaykhullin.Network.Server/IServerNode.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Shaykhullin.Network.Server/Event/Connection.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Shaykhullin.Network/Serializer/JsonSerializer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Shaykhullin.Network/Encryption/AesEncryption.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Shaykhullin.Network/Compression/GZipCompression.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0E1B27A4-6035-47D9-A041-CEF439F84C41/22/21b2add1/Task.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Shaykhullin.Network.Server/Server/ServerConfig.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Shaykhullin.Network.Client/ClientConfig.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Shaykhullin.Network.Client.Sandbox/Program.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Shaykhullin.Network.Server/Channel/IChannel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Shaykhullin.Network.Server/IServer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Shaykhullin.Network/Connection/IConnection.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Shaykhullin.Network/Event/IConnectionEvent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Shaykhullin.Network.Server/Event/Start.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Shaykhullin.Network.Server/Event/Disconnect.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Shaykhullin.Network.Server/Event/Stop.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Shaykhullin.Network.Client/Event/Disconnect.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Shaykhullin.Network/DependencyInjection/AutofacDependencyContainer.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Shaykhullin.Network.Server/IServerHandlerConfig.cs" />
-        <option value="$PROJECT_DIR$/Shaykhullin.Network.Server/Events/IServerEvent.cs" />
-        <option value="$PROJECT_DIR$/Shaykhullin.Network.Server/Channels/IChannelConfig.cs" />
-        <option value="$PROJECT_DIR$/Shaykhullin.Network.Server/Channels/IChannel.cs" />
-        <option value="$PROJECT_DIR$/Shaykhullin.Network.Server/Events/Connection.cs" />
-        <option value="$PROJECT_DIR$/Shaykhullin.Network.Server/IServerHandler.cs" />
-        <option value="$PROJECT_DIR$/Shaykhullin.Network.Server/IServerNode.cs" />
-        <option value="$PROJECT_DIR$/Shaykhullin.Network.Server/IServer.cs" />
-        <option value="$PROJECT_DIR$/Shaykhullin.Network/Class1.cs" />
-        <option value="$PROJECT_DIR$/Shaykhullin.Network/IConnection.cs" />
-        <option value="$PROJECT_DIR$/Shaykhullin.Network/Connection/IConnectionEvent.cs" />
-        <option value="$PROJECT_DIR$/Shaykhullin.Network/Connection/IConnectionHandler.cs" />
-        <option value="$PROJECT_DIR$/Shaykhullin.Network/Connection/IConnectionHandlerConfig.cs" />
-        <option value="$PROJECT_DIR$/Shaykhullin.Network/DependencyInjection/ILifetime.cs" />
-        <option value="$PROJECT_DIR$/Shaykhullin.Network/DependencyInjection/Singleton.cs" />
-        <option value="$PROJECT_DIR$/Shaykhullin.Network/DependencyInjection/Lifetimes/Singleton.cs" />
-        <option value="$PROJECT_DIR$/Shaykhullin.Network/DependencyInjection/Lifetimes/Transient.cs" />
-        <option value="$PROJECT_DIR$/Shaykhullin.Network/ICompressionBuilder.cs" />
-        <option value="$PROJECT_DIR$/Shaykhullin.Network/IEncryptionBuilder.cs" />
-        <option value="$PROJECT_DIR$/Shaykhullin.Network/ISerializer.cs" />
-        <option value="$PROJECT_DIR$/Shaykhullin.Network/ICompression.cs" />
-        <option value="$PROJECT_DIR$/Shaykhullin.Network/IEncryption.cs" />
-        <option value="$PROJECT_DIR$/Shaykhullin.Network/ISerializerBuilder.cs" />
-        <option value="$PROJECT_DIR$/Shaykhullin.Network/IDependencyContainer.cs" />
-        <option value="$PROJECT_DIR$/Shaykhullin.Network.Client/Client.cs" />
-        <option value="$PROJECT_DIR$/Shaykhullin.Network/Handler/IHandler.cs" />
         <option value="$PROJECT_DIR$/Shaykhullin.Network/Handler/IConnectionHandler.cs" />
-        <option value="$PROJECT_DIR$/Shaykhullin.Network.Client/IClient.cs" />
         <option value="$PROJECT_DIR$/Shaykhullin.Network/Serializer/ISerializerBuilder.cs" />
         <option value="$PROJECT_DIR$/Shaykhullin.Network/Handler/IConnectionHandlerConfig.cs" />
         <option value="$PROJECT_DIR$/Shaykhullin.Network/Handler/IHandlerConfig.cs" />
@@ -220,15 +58,42 @@
         <option value="$PROJECT_DIR$/Shaykhullin.Network/Compression/ICompressionBuilder.cs" />
         <option value="$PROJECT_DIR$/Shaykhullin.Network.Client/Event/Connect.cs" />
         <option value="$PROJECT_DIR$/Shaykhullin.Network.Client/IClientConfig.cs" />
-        <option value="$PROJECT_DIR$/Shaykhullin.Network.Client.Sandbox/Program.cs" />
         <option value="$PROJECT_DIR$/Shaykhullin.Network.Server/Channel/IChannelConfig.cs" />
         <option value="$PROJECT_DIR$/Shaykhullin.Network.Server/Event/Connection.cs" />
         <option value="$PROJECT_DIR$/Shaykhullin.Network.Server/IServerConfig.cs" />
-        <option value="$PROJECT_DIR$/Shaykhullin.Network.Server.Sandbox/Program.cs" />
         <option value="$PROJECT_DIR$/Shaykhullin.Network/DependencyInjection/IContainerBuilder.cs" />
         <option value="$PROJECT_DIR$/Shaykhullin.Network/DependencyInjection/IContainer.cs" />
         <option value="$PROJECT_DIR$/Shaykhullin.Network/Encryption/IEncryption.cs" />
         <option value="$PROJECT_DIR$/Shaykhullin.Network.Core/Class1.cs" />
+        <option value="$PROJECT_DIR$/Shaykhullin.Network/Encryption/AesEncryption.cs" />
+        <option value="$PROJECT_DIR$/Shaykhullin.Network.Core/Compression/ICompression.cs" />
+        <option value="$PROJECT_DIR$/Shaykhullin.Network.Core/Serializer/ISerializer.cs" />
+        <option value="$PROJECT_DIR$/Shaykhullin.Network/Serializer/JsonSerializer.cs" />
+        <option value="$PROJECT_DIR$/Shaykhullin.Network.Client/IClient.cs" />
+        <option value="$PROJECT_DIR$/Shaykhullin.Network.Core/Event/IConnectionEvent.cs" />
+        <option value="$PROJECT_DIR$/Shaykhullin.Network.Core/DependencyInjection/IContainer.cs" />
+        <option value="$PROJECT_DIR$/Shaykhullin.Network.Core/DependencyInjection/IContainerBuilder.cs" />
+        <option value="$PROJECT_DIR$/Shaykhullin.Network/Compression/GZipCompression.cs" />
+        <option value="$PROJECT_DIR$/Shaykhullin.Network.Core/Connection/IConnection.cs" />
+        <option value="$PROJECT_DIR$/Shaykhullin.Network.Server/Channel/IChannel.cs" />
+        <option value="$PROJECT_DIR$/Shaykhullin.Network.Server/IServerNode.cs" />
+        <option value="$PROJECT_DIR$/Shaykhullin.Network.Client/ClientConfig.cs" />
+        <option value="$PROJECT_DIR$/Shaykhullin.Network.Server/ServerConfig.cs" />
+        <option value="$PROJECT_DIR$/Shaykhullin.Network.Server.Sandbox/Class1.cs" />
+        <option value="$PROJECT_DIR$/Shaykhullin.Network.Client.Sandbox/Class1.cs" />
+        <option value="$PROJECT_DIR$/Shaykhullin.Network.Server/Event/Disconnect.cs" />
+        <option value="$PROJECT_DIR$/Shaykhullin.Network.Server/Event/Start.cs" />
+        <option value="$PROJECT_DIR$/Shaykhullin.Network.Server/Event/Stop.cs" />
+        <option value="$PROJECT_DIR$/Shaykhullin.Network.Client/Event/Disconnect.cs" />
+        <option value="$PROJECT_DIR$/Shaykhullin.Network.Server/Server/IServer.cs" />
+        <option value="$PROJECT_DIR$/Shaykhullin.Network.Server.Core/Class1.cs" />
+        <option value="$PROJECT_DIR$/Shaykhullin.Network.Server/Shaykhullin.Network.Server.csproj" />
+        <option value="$PROJECT_DIR$/Shaykhullin.Network.Server/Channel/Default.cs" />
+        <option value="$PROJECT_DIR$/Shaykhullin.Network.Client.Core/Class1.cs" />
+        <option value="$PROJECT_DIR$/Shaykhullin.Network.Client/Shaykhullin.Network.Client.csproj" />
+        <option value="$PROJECT_DIR$/Shaykhullin.Network/DependencyInjection/AutofacDependencyContainer.cs" />
+        <option value="$PROJECT_DIR$/Shaykhullin.Network.Server.Sandbox/Program.cs" />
+        <option value="$PROJECT_DIR$/Shaykhullin.Network.Client.Sandbox/Program.cs" />
       </list>
     </option>
   </component>
@@ -265,66 +130,63 @@
           <expand>
             <path>
               <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="Shaykhullin.Network (6 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Shaykhullin.Network (8 projects)" type="977d5f41:SolutionExplorerNodeRider" />
             </path>
             <path>
               <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="Shaykhullin.Network (6 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Shaykhullin.Network (8 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Client" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Shaykhullin.Network (8 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Core" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Shaykhullin.Network (8 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Core" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="Shaykhullin.Network" type="977d5f41:SolutionExplorerNodeRider" />
             </path>
             <path>
               <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="Shaykhullin.Network (6 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Shaykhullin.Network" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Compression" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="Shaykhullin.Network (6 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Shaykhullin.Network" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Connection" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="Shaykhullin.Network (6 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Shaykhullin.Network" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="DependencyInjection" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="Shaykhullin.Network (6 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Shaykhullin.Network" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="DependencyInjection" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Lifetime" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="Shaykhullin.Network (6 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Shaykhullin.Network" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Encryption" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="Shaykhullin.Network (6 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Shaykhullin.Network" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Event" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="Shaykhullin.Network (6 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Shaykhullin.Network" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Handler" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="Shaykhullin.Network (6 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Shaykhullin.Network" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Serializer" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="Shaykhullin.Network (6 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Shaykhullin.Network (8 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Core" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="Shaykhullin.Network.Core" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Shaykhullin.Network (8 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Sandbox" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Shaykhullin.Network (8 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Sandbox" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Shaykhullin.Network.Client.Sandbox" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Shaykhullin.Network (8 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Sandbox" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Shaykhullin.Network.Server.Sandbox" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Shaykhullin.Network (8 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Server" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Shaykhullin.Network (8 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Server" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Shaykhullin.Network.Server" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Shaykhullin.Network (8 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Server" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Shaykhullin.Network.Server.Core" type="977d5f41:SolutionExplorerNodeRider" />
             </path>
           </expand>
           <select />
@@ -337,7 +199,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Shaykhullin.Network.sln" />
-    <property name="SearchEverywhereHistoryKey" value="Singleton&#9;null&#9;null&#10;Single&#9;null&#9;null&#10;Iconn&#9;null&#9;null&#10;Iserver&#9;FILE&#9;file:///home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Shaykhullin.Network.Server/IServer.cs&#10;IEvent&#9;FILE&#9;file:///home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Shaykhullin.Network/IEvent.cs&#10;Iser&#9;FILE&#9;file:///home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Shaykhullin.Network/ISerializerBuilder.cs&#10;Ilife&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="Iconn&#9;FILE&#9;file:///home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Shaykhullin.Network.Core/Connection/IConnection.cs&#10;GZip&#9;FILE&#9;file:///home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Shaykhullin.Network/Compression/GZipCompression.cs&#10;Singleton&#9;null&#9;null&#10;Single&#9;null&#9;null&#10;Iserver&#9;FILE&#9;file:///home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Shaykhullin.Network.Server/IServer.cs&#10;IEvent&#9;FILE&#9;file:///home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Shaykhullin.Network/IEvent.cs&#10;Iser&#9;FILE&#9;file:///home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Shaykhullin.Network/ISerializerBuilder.cs&#10;Ilife&#9;null&#9;null" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -381,12 +243,12 @@
       <workItem from="1521492184439" duration="1995000" />
       <workItem from="1521540245415" duration="3978000" />
       <workItem from="1521569224944" duration="2822000" />
-      <workItem from="1521576222226" duration="1520000" />
+      <workItem from="1521576222226" duration="3818000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10315000" />
+    <option name="totallyTimeSpent" value="12613000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -434,283 +296,11 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network/Handler/IConnectionHandlerConfig.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1521577255314" expanded="true" signature="34:213" ph="{...}" />
-            <marker date="1521577255314" expanded="true" signature="133:211" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network.Server/IServer.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1521571486141" expanded="true" signature="29:65" ph="{...}" />
-            <marker date="1521571486141" expanded="true" signature="57:63" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network/Class1.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1521571863393" expanded="false" signature="6:110" ph="..." />
-            <marker date="1521571863393" expanded="true" signature="141:227" ph="{...}" />
-            <marker date="1521571863393" expanded="true" signature="169:175" ph="{...}" />
-            <marker date="1521571863393" expanded="true" signature="219:225" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network/Handler/IHandler.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="16" column="24" lean-forward="false" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
-          <folding>
-            <marker date="1521577180577" expanded="true" signature="29:108" ph="{...}" />
-            <marker date="1521577180577" expanded="true" signature="69:106" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network/Event/IEvent.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" column="30" lean-forward="false" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
-          <folding>
-            <marker date="1521577278914" expanded="true" signature="34:111" ph="{...}" />
-            <marker date="1521577278914" expanded="true" signature="75:109" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network.Server/Channel/IChannelConfig.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <marker date="1521577453943" expanded="true" signature="34:244" ph="{...}" />
-            <marker date="1521577453943" expanded="true" signature="69:242" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network.Server/IServerConfig.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="18" column="27" lean-forward="false" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
-          <folding>
-            <marker date="1521577469535" expanded="true" signature="34:453" ph="{...}" />
-            <marker date="1521577469535" expanded="true" signature="89:451" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network/Handler/IHandlerConfig.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" column="42" lean-forward="false" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
-          <folding>
-            <marker date="1521577265886" expanded="true" signature="34:183" ph="{...}" />
-            <marker date="1521577265886" expanded="true" signature="113:181" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network/DependencyInjection/IRegisterBuilder.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding>
-            <marker date="1521577297866" expanded="true" signature="34:215" ph="{...}" />
-            <marker date="1521577297866" expanded="true" signature="111:213" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network/Serializer/ISerializerBuilder.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="34" column="3" lean-forward="false" selection-start-line="34" selection-start-column="3" selection-end-line="34" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network/Class1.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1521571863393" expanded="false" signature="6:110" ph="..." />
-            <marker date="1521571863393" expanded="true" signature="141:227" ph="{...}" />
-            <marker date="1521571863393" expanded="true" signature="169:175" ph="{...}" />
-            <marker date="1521571863393" expanded="true" signature="219:225" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0E1B27A4-6035-47D9-A041-CEF439F84C41/55/203c0b74/String.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="20" column="22" lean-forward="false" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network.Server/Class1.cs" />
-    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network/Shaykhullin.Network.csproj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network/Connection/IConnection.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network/Event/IConnectionEvent.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network/Compression/ICompression.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network/Serializer/ISerializer.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network.Client/Class1.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="1" lean-forward="false" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network.Server/IServerNode.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding>
-            <marker date="1521571723541" expanded="true" signature="29:83" ph="{...}" />
-            <marker date="1521571723541" expanded="true" signature="61:81" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network/Class1.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <marker date="1521571863393" expanded="false" signature="6:110" ph="..." />
-            <marker date="1521571863393" expanded="true" signature="141:227" ph="{...}" />
-            <marker date="1521571863393" expanded="true" signature="169:175" ph="{...}" />
-            <marker date="1521571863393" expanded="true" signature="219:225" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network.Server/IServer.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1521571486141" expanded="true" signature="29:65" ph="{...}" />
-            <marker date="1521571486141" expanded="true" signature="57:63" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network/Handler/IHandler.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" column="22" lean-forward="false" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-          <folding>
-            <marker date="1521577180577" expanded="true" signature="29:108" ph="{...}" />
-            <marker date="1521577180577" expanded="true" signature="69:106" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EA1EE8EA-B39B-4166-A4C7-20BCC58579CF/6d/acd0b17e/ValueTask`1.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="15" column="16" lean-forward="false" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network/Handler/IConnectionHandler.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-          <folding>
-            <marker date="1521577054041" expanded="true" signature="60:191" ph="{...}" />
-            <marker date="1521577054041" expanded="true" signature="152:189" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network.Client/IClient.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" column="19" lean-forward="false" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-          <folding>
-            <marker date="1521577199286" expanded="true" signature="29:90" ph="{...}" />
-            <marker date="1521577199286" expanded="true" signature="57:88" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network/Serializer/ISerializerBuilder.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="34" lean-forward="false" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network/Handler/IConnectionHandlerConfig.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="34" lean-forward="false" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="34" />
-          <folding>
-            <marker date="1521577255314" expanded="true" signature="34:213" ph="{...}" />
-            <marker date="1521577255314" expanded="true" signature="133:211" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Shaykhullin.Network/DependencyInjection/IImplementedByBuilder.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="34" lean-forward="false" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="34" />
-          <folding>
-            <marker date="1521577293362" expanded="true" signature="34:139" ph="{...}" />
-            <marker date="1521577293362" expanded="true" signature="76:137" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -718,10 +308,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="34" lean-forward="false" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="34" />
-          <folding>
-            <marker date="1521577297866" expanded="true" signature="34:215" ph="{...}" />
-            <marker date="1521577297866" expanded="true" signature="111:213" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -729,10 +316,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="2" column="33" lean-forward="false" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
-          <folding>
-            <marker date="1521577320826" expanded="true" signature="34:174" ph="{...}" />
-            <marker date="1521577320826" expanded="true" signature="72:172" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -740,10 +324,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="2" column="29" lean-forward="false" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
-          <folding>
-            <marker date="1521577265886" expanded="true" signature="34:183" ph="{...}" />
-            <marker date="1521577265886" expanded="true" signature="113:181" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -759,118 +340,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="34" lean-forward="false" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="34" />
-          <folding>
-            <marker date="1521577278914" expanded="true" signature="34:111" ph="{...}" />
-            <marker date="1521577278914" expanded="true" signature="75:109" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network.Client/Event/Connect.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" column="29" lean-forward="false" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
-          <folding>
-            <marker date="1521577409611" expanded="true" signature="62:241" ph="{...}" />
-            <marker date="1521577409611" expanded="true" signature="114:239" ph="{...}" />
-            <marker date="1521577409611" expanded="true" signature="161:191" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network.Client/IClientConfig.cs">
+    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network.Server/Server/IServerConfig.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="34" lean-forward="false" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="34" />
-          <folding>
-            <marker date="1521577424883" expanded="true" signature="34:364" ph="{...}" />
-            <marker date="1521577424883" expanded="true" signature="68:362" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network.Client.Sandbox/Program.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding>
-            <marker date="1521577576420" expanded="true" signature="6:75" ph="..." />
-            <marker date="1521577576420" expanded="true" signature="121:1152" ph="{...}" />
-            <marker date="1521577576420" expanded="true" signature="138:589" ph="{...}" />
-            <marker date="1521577576420" expanded="true" signature="175:221" ph="{...}" />
-            <marker date="1521577576420" expanded="true" signature="263:586" ph="{...}" />
-            <marker date="1521577576420" expanded="true" signature="632:752" ph="{...}" />
-            <marker date="1521577576420" expanded="true" signature="673:749" ph="{...}" />
-            <marker date="1521577576420" expanded="true" signature="808:997" ph="{...}" />
-            <marker date="1521577576420" expanded="true" signature="870:922" ph="{...}" />
-            <marker date="1521577576420" expanded="true" signature="1063:1150" ph="{...}" />
-            <marker date="1521577576420" expanded="true" signature="1109:1147" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network.Server/Channel/IChannelConfig.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="34" lean-forward="false" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="34" />
-          <folding>
-            <marker date="1521577453943" expanded="true" signature="34:244" ph="{...}" />
-            <marker date="1521577453943" expanded="true" signature="69:242" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network.Server/Channel/IChannel.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1521571148869" expanded="true" signature="29:66" ph="{...}" />
-            <marker date="1521571148869" expanded="true" signature="58:64" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network.Server/Event/Connection.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="30" lean-forward="false" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
-          <folding>
-            <marker date="1521577462295" expanded="true" signature="62:247" ph="{...}" />
-            <marker date="1521577462295" expanded="true" signature="117:245" ph="{...}" />
-            <marker date="1521577462295" expanded="true" signature="167:197" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network.Server/IServerConfig.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="34" lean-forward="false" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="34" />
-          <folding>
-            <marker date="1521577469535" expanded="true" signature="34:453" ph="{...}" />
-            <marker date="1521577469535" expanded="true" signature="89:451" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network.Server.Sandbox/Program.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="13" column="34" lean-forward="false" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
-          <folding>
-            <marker date="1521577735377" expanded="true" signature="6:75" ph="..." />
-            <marker date="1521577735377" expanded="true" signature="121:1536" ph="{...}" />
-            <marker date="1521577735377" expanded="true" signature="138:951" ph="{...}" />
-            <marker date="1521577735377" expanded="true" signature="175:221" ph="{...}" />
-            <marker date="1521577735377" expanded="true" signature="271:948" ph="{...}" />
-            <marker date="1521577735377" expanded="true" signature="1008:1136" ph="{...}" />
-            <marker date="1521577735377" expanded="true" signature="1052:1133" ph="{...}" />
-            <marker date="1521577735377" expanded="true" signature="1192:1381" ph="{...}" />
-            <marker date="1521577735377" expanded="true" signature="1254:1306" ph="{...}" />
-            <marker date="1521577735377" expanded="true" signature="1447:1534" ph="{...}" />
-            <marker date="1521577735377" expanded="true" signature="1493:1531" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -878,10 +356,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="27">
           <caret line="1" column="1" lean-forward="false" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
-          <folding>
-            <marker date="1521577735385" expanded="true" signature="29:97" ph="{...}" />
-            <marker date="1521577735385" expanded="true" signature="67:95" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -889,10 +364,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1521577556152" expanded="true" signature="29:71" ph="{...}" />
-            <marker date="1521577556152" expanded="true" signature="60:69" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -900,10 +372,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="34" lean-forward="false" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="34" />
-          <folding>
-            <marker date="1521577529564" expanded="true" signature="34:166" ph="{...}" />
-            <marker date="1521577529564" expanded="true" signature="73:164" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -911,10 +380,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="34" lean-forward="false" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="34" />
-          <folding>
-            <marker date="1521577565620" expanded="true" signature="34:74" ph="{...}" />
-            <marker date="1521577565620" expanded="true" signature="66:72" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -922,10 +388,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="34" lean-forward="false" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="34" />
-          <folding>
-            <marker date="1521577305430" expanded="true" signature="34:72" ph="{...}" />
-            <marker date="1521577305430" expanded="true" signature="64:70" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -955,10 +418,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1521577682865" expanded="true" signature="49:80" ph="{...}" />
-            <marker date="1521577682865" expanded="true" signature="72:78" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -967,6 +427,388 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network/Class1.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network/Encryption/AesEncryption.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="29" lean-forward="false" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+          <folding>
+            <marker date="1521578020151" expanded="true" signature="62:117" ph="{...}" />
+            <marker date="1521578020151" expanded="true" signature="106:115" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network.Core/Compression/ICompression.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="34" lean-forward="false" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="34" />
+          <folding>
+            <marker date="1521578170741" expanded="true" signature="34:75" ph="{...}" />
+            <marker date="1521578170741" expanded="true" signature="67:73" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network.Core/Serializer/ISerializer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="34" lean-forward="false" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="34" />
+          <folding>
+            <marker date="1521578179017" expanded="true" signature="34:74" ph="{...}" />
+            <marker date="1521578179017" expanded="true" signature="66:72" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network/Serializer/JsonSerializer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="37" lean-forward="false" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
+          <folding>
+            <marker date="1521578187997" expanded="true" signature="62:118" ph="{...}" />
+            <marker date="1521578187997" expanded="true" signature="107:116" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network.Core/Event/IConnectionEvent.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="6" column="8" lean-forward="false" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+          <folding>
+            <marker date="1521578236285" expanded="true" signature="62:174" ph="{...}" />
+            <marker date="1521578236285" expanded="true" signature="110:172" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network.Core/DependencyInjection/IContainer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="34" lean-forward="false" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="34" />
+          <folding>
+            <marker date="1521578248957" expanded="true" signature="34:76" ph="{...}" />
+            <marker date="1521578248957" expanded="true" signature="65:74" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network.Core/DependencyInjection/IContainerBuilder.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="34" lean-forward="false" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="34" />
+          <folding>
+            <marker date="1521578257601" expanded="true" signature="34:102" ph="{...}" />
+            <marker date="1521578257601" expanded="true" signature="72:100" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network/Compression/GZipCompression.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="29" lean-forward="false" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+          <folding>
+            <marker date="1521578332201" expanded="true" signature="62:120" ph="{...}" />
+            <marker date="1521578332201" expanded="true" signature="109:118" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network.Core/Connection/IConnection.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="29" lean-forward="false" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
+          <folding>
+            <marker date="1521578375829" expanded="true" signature="29:72" ph="{...}" />
+            <marker date="1521578375829" expanded="true" signature="61:70" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network.Server/Channel/IChannel.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="1" column="1" lean-forward="false" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0E1B27A4-6035-47D9-A041-CEF439F84C41/22/21b2add1/Task.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="17" column="15" lean-forward="false" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network.Server.Sandbox/Class1.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="8" column="2" lean-forward="false" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network.Client.Sandbox/Class1.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="8" column="2" lean-forward="false" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network.Client/Client/IClientConfig.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="34" lean-forward="false" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network.Client/Event/Connect.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="29" lean-forward="false" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+          <folding>
+            <marker date="1521577409611" expanded="true" signature="62:241" ph="{...}" />
+            <marker date="1521577409611" expanded="true" signature="114:239" ph="{...}" />
+            <marker date="1521577409611" expanded="true" signature="161:191" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network.Client/Event/Disconnect.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="12" column="3" lean-forward="false" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+          <folding>
+            <marker date="1521579247951" expanded="true" signature="62:229" ph="{...}" />
+            <marker date="1521579247951" expanded="true" signature="111:227" ph="{...}" />
+            <marker date="1521579247951" expanded="true" signature="155:185" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network.Client/Client/IClient.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="34" lean-forward="false" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network.Server/Server/IServer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="19" lean-forward="false" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network.Server/Server/IServer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="22" lean-forward="false" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network.Server.Core/Class1.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network.Server/Shaykhullin.Network.Server.csproj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="3" column="18" lean-forward="false" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network.Server/Channel/IChannelConfig.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="34" lean-forward="false" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network.Server/Channel/DefaultChannel.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="29" lean-forward="false" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+          <folding>
+            <marker date="1521579998144" expanded="true" signature="62:115" ph="{...}" />
+            <marker date="1521579998144" expanded="true" signature="104:113" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network.Server/Event/Connection.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="28" lean-forward="false" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+          <folding>
+            <marker date="1521577462295" expanded="true" signature="62:247" ph="{...}" />
+            <marker date="1521577462295" expanded="true" signature="117:245" ph="{...}" />
+            <marker date="1521577462295" expanded="true" signature="167:197" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network.Server/Event/Disconnect.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1521579212550" expanded="true" signature="62:229" ph="{...}" />
+            <marker date="1521579212550" expanded="true" signature="111:227" ph="{...}" />
+            <marker date="1521579212550" expanded="true" signature="155:185" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network.Server/Event/Start.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding>
+            <marker date="1521579223166" expanded="true" signature="62:204" ph="{...}" />
+            <marker date="1521579223166" expanded="true" signature="101:202" ph="{...}" />
+            <marker date="1521579223166" expanded="true" signature="135:165" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network.Server/Event/Stop.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1521579217610" expanded="true" signature="62:202" ph="{...}" />
+            <marker date="1521579217610" expanded="true" signature="100:200" ph="{...}" />
+            <marker date="1521579217610" expanded="true" signature="133:163" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network.Server/Server/ServerConfig.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="29" lean-forward="false" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+          <folding>
+            <marker date="1521579764458" expanded="true" signature="62:1199" ph="{...}" />
+            <marker date="1521579764458" expanded="true" signature="107:1197" ph="{...}" />
+            <marker date="1521579764458" expanded="true" signature="198:253" ph="{...}" />
+            <marker date="1521579764458" expanded="true" signature="343:398" ph="{...}" />
+            <marker date="1521579764458" expanded="true" signature="493:548" ph="{...}" />
+            <marker date="1521579764458" expanded="true" signature="638:693" ph="{...}" />
+            <marker date="1521579764458" expanded="true" signature="777:832" ph="{...}" />
+            <marker date="1521579764458" expanded="true" signature="903:958" ph="{...}" />
+            <marker date="1521579764458" expanded="true" signature="1036:1091" ph="{...}" />
+            <marker date="1521579764458" expanded="true" signature="1139:1194" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network.Client.Core/Class1.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network.Client/ClientConfig.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="84" lean-forward="false" selection-start-line="11" selection-start-column="84" selection-end-line="11" selection-end-column="84" />
+          <folding>
+            <marker date="1521578887068" expanded="true" signature="62:634" ph="{...}" />
+            <marker date="1521578887068" expanded="true" signature="107:632" ph="{...}" />
+            <marker date="1521578887068" expanded="true" signature="199:254" ph="{...}" />
+            <marker date="1521578887068" expanded="true" signature="338:393" ph="{...}" />
+            <marker date="1521578887068" expanded="true" signature="471:526" ph="{...}" />
+            <marker date="1521578887068" expanded="true" signature="574:629" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network.Client/Shaykhullin.Network.Client.csproj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="10" lean-forward="false" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network/DependencyInjection/AutofacDependencyContainer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="15" lean-forward="false" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+          <folding>
+            <marker date="1521579969112" expanded="true" signature="62:206" ph="{...}" />
+            <marker date="1521579969112" expanded="true" signature="115:204" ph="{...}" />
+            <marker date="1521579969112" expanded="true" signature="146:201" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network.Server.Sandbox/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="26" lean-forward="false" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
+          <folding>
+            <marker date="1521580016280" expanded="true" signature="6:56" ph="..." />
+            <marker date="1521580016280" expanded="true" signature="82:1532" ph="{...}" />
+            <marker date="1521580016280" expanded="true" signature="99:863" ph="{...}" />
+            <marker date="1521580016280" expanded="true" signature="123:860" ph="{...}" />
+            <marker date="1521580016280" expanded="true" signature="920:1048" ph="{...}" />
+            <marker date="1521580016280" expanded="true" signature="964:1045" ph="{...}" />
+            <marker date="1521580016280" expanded="true" signature="1104:1293" ph="{...}" />
+            <marker date="1521580016280" expanded="true" signature="1166:1218" ph="{...}" />
+            <marker date="1521580016280" expanded="true" signature="1359:1446" ph="{...}" />
+            <marker date="1521580016280" expanded="true" signature="1405:1443" ph="{...}" />
+            <marker date="1521580016280" expanded="true" signature="1474:1480" ph="{...}" />
+            <marker date="1521580016280" expanded="true" signature="1524:1530" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network.Client.Sandbox/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="9" column="38" lean-forward="true" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
+          <folding>
+            <marker date="1521580019580" expanded="true" signature="6:56" ph="..." />
+            <marker date="1521580019580" expanded="true" signature="82:1223" ph="{...}" />
+            <marker date="1521580019580" expanded="true" signature="99:571" ph="{...}" />
+            <marker date="1521580019580" expanded="true" signature="123:568" ph="{...}" />
+            <marker date="1521580019580" expanded="true" signature="614:739" ph="{...}" />
+            <marker date="1521580019580" expanded="true" signature="655:736" ph="{...}" />
+            <marker date="1521580019580" expanded="true" signature="795:984" ph="{...}" />
+            <marker date="1521580019580" expanded="true" signature="857:909" ph="{...}" />
+            <marker date="1521580019580" expanded="true" signature="1050:1137" ph="{...}" />
+            <marker date="1521580019580" expanded="true" signature="1096:1134" ph="{...}" />
+            <marker date="1521580019580" expanded="true" signature="1165:1171" ph="{...}" />
+            <marker date="1521580019580" expanded="true" signature="1215:1221" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>

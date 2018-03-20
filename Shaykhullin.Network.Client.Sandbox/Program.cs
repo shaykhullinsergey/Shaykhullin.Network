@@ -1,22 +1,18 @@
-﻿using System;
+﻿using Shaykhullin.Network;
 using System.Threading.Tasks;
-using Shaykhullin.Network.Core;
 
-namespace Shaykhullin.Network.Client.Sandbox
+namespace Client.Sandbox
 {
 	class Program
 	{
-		static void Main(string[] args)
+		static void Main()
 		{
-			Console.WriteLine("Hello World!");
-		}
-
-		static void Test(IClientConfig config)
-		{
-			config.UseSerializer<ISerializer>()
-				.UseCompression<ICompression>()
-				.UseEncryption<IEncryption>()
-				.UseDependencyContainer<IContainerBuilder>();
+			var config = new ClientConfig();
+			
+			config.UseSerializer<JsonSerializer>()
+				.UseCompression<GZipCompression>()
+				.UseEncryption<AesEncryption>()
+				.UseDependencyContainer<AutofacContainer>();
 			
 			config.Register<BaseService>()
 				.ImplementedBy<DerivedService>()
@@ -24,6 +20,10 @@ namespace Shaykhullin.Network.Client.Sandbox
 			
 			config.When<Connect>()
 				.Call<ConnectHandler>();
+
+			var connection = config
+				.Create("127.0.0.1", 4000)
+				.Connect();
 		}
 	}
 
@@ -31,7 +31,8 @@ namespace Shaykhullin.Network.Client.Sandbox
 	{
 		public void Execute(Connect @event)
 		{
-			@event.Context.When<MessageEvent>()
+			@event.Context
+				.When<MessageEvent>()
 				.Call<MessageHandler>();
 		}
 	}
@@ -54,5 +55,13 @@ namespace Shaykhullin.Network.Client.Sandbox
 		{
 			return Task.CompletedTask;
 		}
+	}
+	
+	public class BaseService
+	{
+	}
+
+	public class DerivedService : BaseService
+	{
 	}
 }

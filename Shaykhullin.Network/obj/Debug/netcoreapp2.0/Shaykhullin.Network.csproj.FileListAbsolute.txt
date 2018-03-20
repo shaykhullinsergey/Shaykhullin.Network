@@ -6,3 +6,5 @@
 /home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Shaykhullin.Network/obj/Debug/netcoreapp2.0/Shaykhullin.Network.AssemblyInfo.cs
 /home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Shaykhullin.Network/obj/Debug/netcoreapp2.0/Shaykhullin.Network.dll
 /home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Shaykhullin.Network/obj/Debug/netcoreapp2.0/Shaykhullin.Network.pdb
+/home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Shaykhullin.Network/bin/Debug/netcoreapp2.0/Shaykhullin.Network.Core.dll
+/home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Shaykhullin.Network/bin/Debug/netcoreapp2.0/Shaykhullin.Network.Core.pdb

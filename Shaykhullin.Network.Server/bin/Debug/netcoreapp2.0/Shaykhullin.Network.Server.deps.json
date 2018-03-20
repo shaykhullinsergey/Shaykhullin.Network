@@ -8,15 +8,31 @@
     ".NETCoreApp,Version=v2.0": {
       "Shaykhullin.Network.Server/1.0.0": {
         "dependencies": {
-          "Shaykhullin.Network": "1.0.0"
+          "Shaykhullin.Network.Server.Core": "1.0.0"
         },
         "runtime": {
           "Shaykhullin.Network.Server.dll": {}
         }
       },
       "Shaykhullin.Network/1.0.0": {
+        "dependencies": {
+          "Shaykhullin.Network.Core": "1.0.0"
+        },
         "runtime": {
           "Shaykhullin.Network.dll": {}
+        }
+      },
+      "Shaykhullin.Network.Core/1.0.0": {
+        "runtime": {
+          "Shaykhullin.Network.Core.dll": {}
+        }
+      },
+      "Shaykhullin.Network.Server.Core/1.0.0": {
+        "dependencies": {
+          "Shaykhullin.Network": "1.0.0"
+        },
+        "runtime": {
+          "Shaykhullin.Network.Server.Core.dll": {}
         }
       }
     }
@@ -28,6 +44,16 @@
       "sha512": ""
     },
     "Shaykhullin.Network/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Shaykhullin.Network.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Shaykhullin.Network.Server.Core/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

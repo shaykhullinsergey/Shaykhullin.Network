@@ -12,3 +12,7 @@
 /home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Shaykhullin.Network.Client.Sandbox/obj/Debug/netcoreapp2.0/Shaykhullin.Network.Client.Sandbox.pdb
 /home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Shaykhullin.Network.Client.Sandbox/bin/Debug/netcoreapp2.0/Shaykhullin.Network.dll
 /home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Shaykhullin.Network.Client.Sandbox/bin/Debug/netcoreapp2.0/Shaykhullin.Network.pdb
+/home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Shaykhullin.Network.Client.Sandbox/bin/Debug/netcoreapp2.0/Shaykhullin.Network.Core.dll
+/home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Shaykhullin.Network.Client.Sandbox/bin/Debug/netcoreapp2.0/Shaykhullin.Network.Core.pdb
+/home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Shaykhullin.Network.Client.Sandbox/bin/Debug/netcoreapp2.0/Shaykhullin.Network.Client.Core.dll
+/home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Shaykhullin.Network.Client.Sandbox/bin/Debug/netcoreapp2.0/Shaykhullin.Network.Client.Core.pdb

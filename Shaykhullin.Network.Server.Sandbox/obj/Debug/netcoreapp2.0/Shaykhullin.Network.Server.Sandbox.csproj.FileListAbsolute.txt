@@ -2,7 +2,6 @@
 /home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Shaykhullin.Network.Server.Sandbox/bin/Debug/netcoreapp2.0/Shaykhullin.Network.Server.Sandbox.runtimeconfig.json
 /home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Shaykhullin.Network.Server.Sandbox/bin/Debug/netcoreapp2.0/Shaykhullin.Network.Server.Sandbox.runtimeconfig.dev.json
 /home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Shaykhullin.Network.Server.Sandbox/bin/Debug/netcoreapp2.0/Shaykhullin.Network.Server.Sandbox.dll
-/home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Shaykhullin.Network.Server.Sandbox/bin/Debug/netcoreapp2.0/Shaykhullin.Network.Server.Sandbox.pdb
 /home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Shaykhullin.Network.Server.Sandbox/bin/Debug/netcoreapp2.0/Shaykhullin.Network.dll
 /home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Shaykhullin.Network.Server.Sandbox/bin/Debug/netcoreapp2.0/Shaykhullin.Network.Server.dll
 /home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Shaykhullin.Network.Server.Sandbox/bin/Debug/netcoreapp2.0/Shaykhullin.Network.Server.pdb
@@ -12,3 +11,8 @@
 /home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Shaykhullin.Network.Server.Sandbox/obj/Debug/netcoreapp2.0/Shaykhullin.Network.Server.Sandbox.AssemblyInfo.cs
 /home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Shaykhullin.Network.Server.Sandbox/obj/Debug/netcoreapp2.0/Shaykhullin.Network.Server.Sandbox.dll
 /home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Shaykhullin.Network.Server.Sandbox/obj/Debug/netcoreapp2.0/Shaykhullin.Network.Server.Sandbox.pdb
+/home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Shaykhullin.Network.Server.Sandbox/bin/Debug/netcoreapp2.0/Shaykhullin.Network.Core.dll
+/home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Shaykhullin.Network.Server.Sandbox/bin/Debug/netcoreapp2.0/Shaykhullin.Network.Core.pdb
+/home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Shaykhullin.Network.Server.Sandbox/bin/Debug/netcoreapp2.0/Shaykhullin.Network.Server.Sandbox.pdb
+/home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Shaykhullin.Network.Server.Sandbox/bin/Debug/netcoreapp2.0/Shaykhullin.Network.Server.Core.dll
+/home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Shaykhullin.Network.Server.Sandbox/bin/Debug/netcoreapp2.0/Shaykhullin.Network.Server.Core.pdb

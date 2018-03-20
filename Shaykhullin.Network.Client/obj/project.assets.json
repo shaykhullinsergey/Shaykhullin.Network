@@ -210,6 +210,19 @@
           "bin/placeholder/Shaykhullin.Network.dll": {}
         }
       },
+      "Shaykhullin.Network.Client.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "dependencies": {
+          "Shaykhullin.Network": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Shaykhullin.Network.Client.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Shaykhullin.Network.Client.Core.dll": {}
+        }
+      },
       "Shaykhullin.Network.Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.0",
@@ -685,6 +698,11 @@
       "path": "../Shaykhullin.Network/Shaykhullin.Network.csproj",
       "msbuildProject": "../Shaykhullin.Network/Shaykhullin.Network.csproj"
     },
+    "Shaykhullin.Network.Client.Core/1.0.0": {
+      "type": "project",
+      "path": "../Shaykhullin.Network.Client.Core/Shaykhullin.Network.Client.Core.csproj",
+      "msbuildProject": "../Shaykhullin.Network.Client.Core/Shaykhullin.Network.Client.Core.csproj"
+    },
     "Shaykhullin.Network.Core/1.0.0": {
       "type": "project",
       "path": "../Shaykhullin.Network.Core/Shaykhullin.Network.Core.csproj",
@@ -694,7 +712,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
       "Microsoft.NETCore.App >= 2.0.0",
-      "Shaykhullin.Network >= 1.0.0"
+      "Shaykhullin.Network.Client.Core >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -725,8 +743,8 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "/home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Shaykhullin.Network/Shaykhullin.Network.csproj": {
-              "projectPath": "/home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Shaykhullin.Network/Shaykhullin.Network.csproj"
+            "/home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Shaykhullin.Network.Client.Core/Shaykhullin.Network.Client.Core.csproj": {
+              "projectPath": "/home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Shaykhullin.Network.Client.Core/Shaykhullin.Network.Client.Core.csproj"
             }
           }
         }

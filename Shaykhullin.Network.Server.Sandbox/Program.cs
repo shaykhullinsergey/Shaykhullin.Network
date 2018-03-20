@@ -1,33 +1,29 @@
-﻿using System;
+﻿using Shaykhullin.Network;
 using System.Threading.Tasks;
-using Shaykhullin.Network.Core;
 
-namespace Shaykhullin.Network.Server.Sandbox
+namespace Server.Sandbox
 {
 	class Program
 	{
-		static void Main(string[] args)
+		static void Main()
 		{
-			Console.WriteLine("Hello World!");
-		}
-
-		private static void Test(IServerConfig config)
-		{
-			config.UseSerializer<ISerializer>()
-				.UseCompression<ICompression>()
-				.UseEncryption<IEncryption>()
-				.UseDependencyContainer<IContainerBuilder>();
+			var config = new ServerConfig();
+			
+			config.UseSerializer<JsonSerializer>()
+				.UseCompression<GZipCompression>()
+				.UseEncryption<AesEncryption>()
+				.UseDependencyContainer<AutofacContainer>();
 
 			config.Register<BaseService>()
 				.ImplementedBy<DerivedService>()
 				.As<Singleton>();
 
-			var channel = config.Channel<IChannel>();
+			var channel = config.Channel<DefaultChannel>();
 			
-			channel.UseSerializer<ISerializer>()
-				.UseCompression<ICompression>()
-				.UseEncryption<IEncryption>()
-				.UseDependencyContainer<IContainerBuilder>();
+			channel.UseSerializer<JsonSerializer>()
+				.UseCompression<GZipCompression>()
+				.UseEncryption<AesEncryption>()
+				.UseDependencyContainer<AutofacContainer>();
 
 			channel.Register<BaseService>()
 				.ImplementedBy<DerivedService>()
@@ -69,5 +65,13 @@ namespace Shaykhullin.Network.Server.Sandbox
 		{
 			return Task.CompletedTask;
 		}
+	}
+	
+	public class BaseService
+	{
+	}
+
+	public class DerivedService : BaseService
+	{
 	}
 }

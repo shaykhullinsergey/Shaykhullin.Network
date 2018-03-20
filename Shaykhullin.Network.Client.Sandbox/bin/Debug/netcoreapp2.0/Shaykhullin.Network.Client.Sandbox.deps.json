@@ -15,16 +15,32 @@
         }
       },
       "Shaykhullin.Network/1.0.0": {
+        "dependencies": {
+          "Shaykhullin.Network.Core": "1.0.0"
+        },
         "runtime": {
           "Shaykhullin.Network.dll": {}
         }
       },
       "Shaykhullin.Network.Client/1.0.0": {
         "dependencies": {
-          "Shaykhullin.Network": "1.0.0"
+          "Shaykhullin.Network.Client.Core": "1.0.0"
         },
         "runtime": {
           "Shaykhullin.Network.Client.dll": {}
+        }
+      },
+      "Shaykhullin.Network.Client.Core/1.0.0": {
+        "dependencies": {
+          "Shaykhullin.Network": "1.0.0"
+        },
+        "runtime": {
+          "Shaykhullin.Network.Client.Core.dll": {}
+        }
+      },
+      "Shaykhullin.Network.Core/1.0.0": {
+        "runtime": {
+          "Shaykhullin.Network.Core.dll": {}
         }
       }
     }
@@ -41,6 +57,16 @@
       "sha512": ""
     },
     "Shaykhullin.Network.Client/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Shaykhullin.Network.Client.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Shaykhullin.Network.Core/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
