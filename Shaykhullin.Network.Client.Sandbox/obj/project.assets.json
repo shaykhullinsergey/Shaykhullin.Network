@@ -197,14 +197,40 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
+      "Shaykhullin.Network/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "dependencies": {
+          "Shaykhullin.Network.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Shaykhullin.Network.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Shaykhullin.Network.dll": {}
+        }
+      },
       "Shaykhullin.Network.Client/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.0",
+        "dependencies": {
+          "Shaykhullin.Network": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/Shaykhullin.Network.Client.dll": {}
         },
         "runtime": {
           "bin/placeholder/Shaykhullin.Network.Client.dll": {}
+        }
+      },
+      "Shaykhullin.Network.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Shaykhullin.Network.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Shaykhullin.Network.Core.dll": {}
         }
       }
     }
@@ -667,10 +693,20 @@
         "netstandard.library.nuspec"
       ]
     },
+    "Shaykhullin.Network/1.0.0": {
+      "type": "project",
+      "path": "../Shaykhullin.Network/Shaykhullin.Network.csproj",
+      "msbuildProject": "../Shaykhullin.Network/Shaykhullin.Network.csproj"
+    },
     "Shaykhullin.Network.Client/1.0.0": {
       "type": "project",
       "path": "../Shaykhullin.Network.Client/Shaykhullin.Network.Client.csproj",
       "msbuildProject": "../Shaykhullin.Network.Client/Shaykhullin.Network.Client.csproj"
+    },
+    "Shaykhullin.Network.Core/1.0.0": {
+      "type": "project",
+      "path": "../Shaykhullin.Network.Core/Shaykhullin.Network.Core.csproj",
+      "msbuildProject": "../Shaykhullin.Network.Core/Shaykhullin.Network.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {

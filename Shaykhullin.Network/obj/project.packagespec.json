@@ -14,7 +14,11 @@
     ],
     "frameworks": {
       "netcoreapp2.0": {
-        "projectReferences": {}
+        "projectReferences": {
+          "/home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Shaykhullin.Network.Core/Shaykhullin.Network.Core.csproj": {
+            "projectPath": "/home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Shaykhullin.Network.Core/Shaykhullin.Network.Core.csproj"
+          }
+        }
       }
     },
     "warningProperties": {

@@ -196,6 +196,16 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
+      },
+      "Shaykhullin.Network.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Shaykhullin.Network.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Shaykhullin.Network.Core.dll": {}
+        }
       }
     }
   },
@@ -656,11 +666,17 @@
         "netstandard.library.2.0.0.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
+    },
+    "Shaykhullin.Network.Core/1.0.0": {
+      "type": "project",
+      "path": "../Shaykhullin.Network.Core/Shaykhullin.Network.Core.csproj",
+      "msbuildProject": "../Shaykhullin.Network.Core/Shaykhullin.Network.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
-      "Microsoft.NETCore.App >= 2.0.0"
+      "Microsoft.NETCore.App >= 2.0.0",
+      "Shaykhullin.Network.Core >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -690,7 +706,11 @@
       },
       "frameworks": {
         "netcoreapp2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "/home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Shaykhullin.Network.Core/Shaykhullin.Network.Core.csproj": {
+              "projectPath": "/home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Shaykhullin.Network.Core/Shaykhullin.Network.Core.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

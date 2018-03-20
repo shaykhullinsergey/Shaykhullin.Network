@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v2.0": {
       "Shaykhullin.Network.Client/1.0.0": {
+        "dependencies": {
+          "Shaykhullin.Network": "1.0.0"
+        },
         "runtime": {
           "Shaykhullin.Network.Client.dll": {}
+        }
+      },
+      "Shaykhullin.Network/1.0.0": {
+        "runtime": {
+          "Shaykhullin.Network.dll": {}
         }
       }
     }
   },
   "libraries": {
     "Shaykhullin.Network.Client/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Shaykhullin.Network/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -1,6 +1,6 @@
 ﻿namespace Shaykhullin.Network
 {
-	public interface IServerHandler<in TEvent>
+	public interface IHandler<in TEvent>
 	{
 		void Execute(TEvent @event);
 	}

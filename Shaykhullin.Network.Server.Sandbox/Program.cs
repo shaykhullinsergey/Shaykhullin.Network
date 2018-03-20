@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
+using Shaykhullin.Network.Core;
 
 namespace Shaykhullin.Network.Server.Sandbox
 {
@@ -15,7 +16,7 @@ namespace Shaykhullin.Network.Server.Sandbox
 			config.UseSerializer<ISerializer>()
 				.UseCompression<ICompression>()
 				.UseEncryption<IEncryption>()
-				.UseDependencyContainer<IContainer>();
+				.UseDependencyContainer<IContainerBuilder>();
 
 			config.Register<BaseService>()
 				.ImplementedBy<DerivedService>()
@@ -26,7 +27,7 @@ namespace Shaykhullin.Network.Server.Sandbox
 			channel.UseSerializer<ISerializer>()
 				.UseCompression<ICompression>()
 				.UseEncryption<IEncryption>()
-				.UseDependencyContainer<IContainer>();
+				.UseDependencyContainer<IContainerBuilder>();
 
 			channel.Register<BaseService>()
 				.ImplementedBy<DerivedService>()
@@ -40,7 +41,7 @@ namespace Shaykhullin.Network.Server.Sandbox
 		}
 	}
 	
-	public class ConnectionHandler : IServerHandler<Connection>
+	public class ConnectionHandler : IHandler<Connection>
 	{
 		public void Execute(Connection @event)
 		{

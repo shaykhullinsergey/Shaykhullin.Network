@@ -2,9 +2,9 @@
 
 namespace Shaykhullin.Network
 {
-	public class Connection : IEvent<IConnectionConfig>
+	public class Connect : IEvent<IConnectionConfig>
 	{
-		public Connection(IConnectionConfig context)
+		public Connect(IConnectionConfig context)
 		{
 			Context = context;
 		}

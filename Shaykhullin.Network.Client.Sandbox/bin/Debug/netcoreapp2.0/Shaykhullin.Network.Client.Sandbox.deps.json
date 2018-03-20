@@ -14,7 +14,15 @@
           "Shaykhullin.Network.Client.Sandbox.dll": {}
         }
       },
+      "Shaykhullin.Network/1.0.0": {
+        "runtime": {
+          "Shaykhullin.Network.dll": {}
+        }
+      },
       "Shaykhullin.Network.Client/1.0.0": {
+        "dependencies": {
+          "Shaykhullin.Network": "1.0.0"
+        },
         "runtime": {
           "Shaykhullin.Network.Client.dll": {}
         }
@@ -23,6 +31,11 @@
   },
   "libraries": {
     "Shaykhullin.Network.Client.Sandbox/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Shaykhullin.Network/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

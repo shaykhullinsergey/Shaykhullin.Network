@@ -200,11 +200,24 @@
       "Shaykhullin.Network/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.0",
+        "dependencies": {
+          "Shaykhullin.Network.Core": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/Shaykhullin.Network.dll": {}
         },
         "runtime": {
           "bin/placeholder/Shaykhullin.Network.dll": {}
+        }
+      },
+      "Shaykhullin.Network.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Shaykhullin.Network.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Shaykhullin.Network.Core.dll": {}
         }
       },
       "Shaykhullin.Network.Server/1.0.0": {
@@ -684,6 +697,11 @@
       "type": "project",
       "path": "../Shaykhullin.Network/Shaykhullin.Network.csproj",
       "msbuildProject": "../Shaykhullin.Network/Shaykhullin.Network.csproj"
+    },
+    "Shaykhullin.Network.Core/1.0.0": {
+      "type": "project",
+      "path": "../Shaykhullin.Network.Core/Shaykhullin.Network.Core.csproj",
+      "msbuildProject": "../Shaykhullin.Network.Core/Shaykhullin.Network.Core.csproj"
     },
     "Shaykhullin.Network.Server/1.0.0": {
       "type": "project",

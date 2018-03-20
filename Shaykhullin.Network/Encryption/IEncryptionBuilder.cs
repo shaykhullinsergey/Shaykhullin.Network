@@ -1,8 +1,8 @@
-﻿namespace Shaykhullin.Network
+﻿namespace Shaykhullin.Network.Core
 {
 	public interface IEncryptionBuilder
 	{
 		void UseDependencyContainer<TContainer>()
-			where TContainer : IContainer;
+			where TContainer : IContainerBuilder;
 	}
 }

@@ -2,4 +2,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Shaykhullin.Network.Core\Shaykhullin.Network.Core.csproj" />
+  </ItemGroup>
 </Project>
