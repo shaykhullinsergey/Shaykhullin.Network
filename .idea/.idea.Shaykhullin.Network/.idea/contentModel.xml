@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$USER_HOME$/.Rider2017.3/system/resharper-host/local/Transient/ReSharperHost/v11/SolutionCaches/_Shaykhullin.Network.1871837353.00" t="ExcludeRecursive" />
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
+      <e p="Shaykhullin.Network" t="IncludeRecursive">
+        <e p="Class1.cs" t="Include" />
+        <e p="IChannelConfig.cs" t="Include" />
+        <e p="IHandlerConfig.cs" t="Include" />
+        <e p="IRegisterBuilder.cs" t="Include" />
+        <e p="ISerializerBuilder.cs" t="Include" />
+        <e p="IServerConfig.cs" t="Include" />
+        <e p="Shaykhullin.Network.csproj" t="IncludeRecursive" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.0" t="Include">
+              <e p="Shaykhullin.Network.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="Shaykhullin.Network.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

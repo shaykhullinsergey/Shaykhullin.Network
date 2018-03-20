@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="fbcd71fc-6a2d-4154-8238-98aa67ecf5ea" name="Default" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Class1.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Shaykhullin.Network/Class1.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="786">
+              <caret line="37" column="15" lean-forward="false" selection-start-line="37" selection-start-column="15" selection-end-line="37" selection-end-column="15" />
+              <folding>
+                <marker date="1521543066203" expanded="true" signature="6:30" ph="..." />
+                <marker date="1521543066203" expanded="true" signature="61:1449" ph="{...}" />
+                <marker date="1521543066203" expanded="true" signature="89:95" ph="{...}" />
+                <marker date="1521543066203" expanded="true" signature="139:145" ph="{...}" />
+                <marker date="1521543066203" expanded="true" signature="161:971" ph="{...}" />
+                <marker date="1521543066203" expanded="true" signature="203:968" ph="{...}" />
+                <marker date="1521543066203" expanded="true" signature="1007:1013" ph="{...}" />
+                <marker date="1521543066203" expanded="true" signature="1041:1047" ph="{...}" />
+                <marker date="1521543066203" expanded="true" signature="1094:1100" ph="{...}" />
+                <marker date="1521543066203" expanded="true" signature="1142:1182" ph="{...}" />
+                <marker date="1521543066203" expanded="true" signature="1227:1276" ph="{...}" />
+                <marker date="1521543066203" expanded="true" signature="1265:1273" ph="{...}" />
+                <marker date="1521543066203" expanded="true" signature="1340:1403" ph="{...}" />
+                <marker date="1521543066203" expanded="true" signature="1392:1400" ph="{...}" />
+                <marker date="1521543066203" expanded="true" signature="1441:1447" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IChannelConfig.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Shaykhullin.Network/IChannelConfig.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding>
+                <marker date="1521543157446" expanded="true" signature="29:274" ph="{...}" />
+                <marker date="1521543157446" expanded="true" signature="64:237" ph="{...}" />
+                <marker date="1521543157446" expanded="true" signature="266:272" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IServerConfig.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Shaykhullin.Network/IServerConfig.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="513">
+              <caret line="19" column="38" lean-forward="true" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
+              <folding>
+                <marker date="1521543244797" expanded="true" signature="29:506" ph="{...}" />
+                <marker date="1521543244797" expanded="true" signature="57:77" ph="{...}" />
+                <marker date="1521543244797" expanded="true" signature="132:504" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IHandlerConfig.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Shaykhullin.Network/IHandlerConfig.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="2" column="33" lean-forward="false" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+              <folding>
+                <marker date="1521542883177" expanded="true" signature="29:146" ph="{...}" />
+                <marker date="1521542883177" expanded="true" signature="74:144" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IRegisterBuilder.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Shaykhullin.Network/IRegisterBuilder.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="594">
+              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <folding>
+                <marker date="1521541589718" expanded="true" signature="29:393" ph="{...}" />
+                <marker date="1521541589718" expanded="true" signature="106:208" ph="{...}" />
+                <marker date="1521541589718" expanded="true" signature="250:311" ph="{...}" />
+                <marker date="1521541589718" expanded="true" signature="341:347" ph="{...}" />
+                <marker date="1521541589718" expanded="true" signature="385:391" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ISerializerBuilder.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Shaykhullin.Network/ISerializerBuilder.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="918">
+              <caret line="34" column="3" lean-forward="false" selection-start-line="34" selection-start-column="3" selection-end-line="34" selection-end-column="3" />
+              <folding>
+                <marker date="1521541876170" expanded="true" signature="29:635" ph="{...}" />
+                <marker date="1521541876170" expanded="true" signature="91:188" ph="{...}" />
+                <marker date="1521541876170" expanded="true" signature="249:341" ph="{...}" />
+                <marker date="1521541876170" expanded="true" signature="380:474" ph="{...}" />
+                <marker date="1521541876170" expanded="true" signature="506:512" ph="{...}" />
+                <marker date="1521541876170" expanded="true" signature="544:550" ph="{...}" />
+                <marker date="1521541876170" expanded="true" signature="581:587" ph="{...}" />
+                <marker date="1521541876170" expanded="true" signature="627:633" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Shaykhullin.Network/IChannelConfig.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Shaykhullin.Network/Class1.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Shaykhullin.Network/ISerializerBuilder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Shaykhullin.Network/IRegisterBuilder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Shaykhullin.Network/IHandlerConfig.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Shaykhullin.Network/IServerConfig.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Shaykhullin.Network/IRegisterBuilder.cs" />
+        <option value="$PROJECT_DIR$/Shaykhullin.Network/ISerializerBuilder.cs" />
+        <option value="$PROJECT_DIR$/Shaykhullin.Network/IHandlerConfig.cs" />
+        <option value="$PROJECT_DIR$/Shaykhullin.Network/Class1.cs" />
+        <option value="$PROJECT_DIR$/Shaykhullin.Network/IChannelConfig.cs" />
+        <option value="$PROJECT_DIR$/Shaykhullin.Network/IServerConfig.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="90" />
+    <option name="y" value="39" />
+    <option name="width" value="1717" />
+    <option name="height" value="969" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="SolutionExplorer" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="SolutionExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Shaykhullin.Network (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Shaykhullin.Network (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Shaykhullin.Network" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <option name="show-file-system" value="false" />
+        <option name="show-all-items" value="false" />
+      </pane>
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Shaykhullin.Network.sln" />
+    <property name="SearchEverywhereHistoryKey" value="Iser&#9;FILE&#9;file:///home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Shaykhullin.Network/ISerializerBuilder.cs&#10;Ilife&#9;null&#9;null" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Default" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <envs />
+      <option name="USE_MONO" value="0" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="PROJECT_PATH" value="" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="None" />
+      <option name="PROJECT_TFM" value="" />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fbcd71fc-6a2d-4154-8238-98aa67ecf5ea" name="Default" comment="" />
+      <created>1521492181872</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1521492181872</updated>
+      <workItem from="1521492184439" duration="1995000" />
+      <workItem from="1521540245415" duration="3013000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="5008000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="90" y="39" width="1717" height="969" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935324" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.32916668" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905138" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Unit Tests" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935324" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="false" weight="0.32935324" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905138" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935324" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="NuGet" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935324" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19394292" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.32916668" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39919758" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.32946298" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32905138" sideWeight="0.49791667" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905138" sideWeight="0.49791667" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.32905138" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29416403" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network/Class1.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1521543066203" expanded="true" signature="6:30" ph="..." />
+            <marker date="1521543066203" expanded="true" signature="61:1449" ph="{...}" />
+            <marker date="1521543066203" expanded="true" signature="89:95" ph="{...}" />
+            <marker date="1521543066203" expanded="true" signature="139:145" ph="{...}" />
+            <marker date="1521543066203" expanded="true" signature="161:971" ph="{...}" />
+            <marker date="1521543066203" expanded="true" signature="203:968" ph="{...}" />
+            <marker date="1521543066203" expanded="true" signature="1007:1013" ph="{...}" />
+            <marker date="1521543066203" expanded="true" signature="1041:1047" ph="{...}" />
+            <marker date="1521543066203" expanded="true" signature="1094:1100" ph="{...}" />
+            <marker date="1521543066203" expanded="true" signature="1142:1182" ph="{...}" />
+            <marker date="1521543066203" expanded="true" signature="1227:1276" ph="{...}" />
+            <marker date="1521543066203" expanded="true" signature="1265:1273" ph="{...}" />
+            <marker date="1521543066203" expanded="true" signature="1340:1403" ph="{...}" />
+            <marker date="1521543066203" expanded="true" signature="1392:1400" ph="{...}" />
+            <marker date="1521543066203" expanded="true" signature="1441:1447" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network/ISerializerBuilder.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="34" column="3" lean-forward="false" selection-start-line="34" selection-start-column="3" selection-end-line="34" selection-end-column="3" />
+          <folding>
+            <marker date="1521541876170" expanded="true" signature="29:635" ph="{...}" />
+            <marker date="1521541876170" expanded="true" signature="91:188" ph="{...}" />
+            <marker date="1521541876170" expanded="true" signature="249:341" ph="{...}" />
+            <marker date="1521541876170" expanded="true" signature="380:474" ph="{...}" />
+            <marker date="1521541876170" expanded="true" signature="506:512" ph="{...}" />
+            <marker date="1521541876170" expanded="true" signature="544:550" ph="{...}" />
+            <marker date="1521541876170" expanded="true" signature="581:587" ph="{...}" />
+            <marker date="1521541876170" expanded="true" signature="627:633" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network/IRegisterBuilder.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <marker date="1521541589718" expanded="true" signature="29:393" ph="{...}" />
+            <marker date="1521541589718" expanded="true" signature="106:208" ph="{...}" />
+            <marker date="1521541589718" expanded="true" signature="250:311" ph="{...}" />
+            <marker date="1521541589718" expanded="true" signature="341:347" ph="{...}" />
+            <marker date="1521541589718" expanded="true" signature="385:391" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network/IHandlerConfig.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="33" lean-forward="false" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+          <folding>
+            <marker date="1521542883177" expanded="true" signature="29:146" ph="{...}" />
+            <marker date="1521542883177" expanded="true" signature="74:144" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network/IChannelConfig.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <marker date="1521543157446" expanded="true" signature="29:274" ph="{...}" />
+            <marker date="1521543157446" expanded="true" signature="64:237" ph="{...}" />
+            <marker date="1521543157446" expanded="true" signature="266:272" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network/IServerConfig.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="19" column="38" lean-forward="true" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
+          <folding>
+            <marker date="1521543244797" expanded="true" signature="29:506" ph="{...}" />
+            <marker date="1521543244797" expanded="true" signature="57:77" ph="{...}" />
+            <marker date="1521543244797" expanded="true" signature="132:504" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shaykhullin.Network/Class1.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="786">
+          <caret line="37" column="15" lean-forward="false" selection-start-line="37" selection-start-column="15" selection-end-line="37" selection-end-column="15" />
+          <folding>
+            <marker date="1521543066203" expanded="true" signature="6:30" ph="..." />
+            <marker date="1521543066203" expanded="true" signature="61:1449" ph="{...}" />
+            <marker date="1521543066203" expanded="true" signature="89:95" ph="{...}" />
+            <marker date="1521543066203" expanded="true" signature="139:145" ph="{...}" />
+            <marker date="1521543066203" expanded="true" signature="161:971" ph="{...}" />
+            <marker date="1521543066203" expanded="true" signature="203:968" ph="{...}" />
+            <marker date="1521543066203" expanded="true" signature="1007:1013" ph="{...}" />
+            <marker date="1521543066203" expanded="true" signature="1041:1047" ph="{...}" />
+            <marker date="1521543066203" expanded="true" signature="1094:1100" ph="{...}" />
+            <marker date="1521543066203" expanded="true" signature="1142:1182" ph="{...}" />
+            <marker date="1521543066203" expanded="true" signature="1227:1276" ph="{...}" />
+            <marker date="1521543066203" expanded="true" signature="1265:1273" ph="{...}" />
+            <marker date="1521543066203" expanded="true" signature="1340:1403" ph="{...}" />
+            <marker date="1521543066203" expanded="true" signature="1392:1400" ph="{...}" />
+            <marker date="1521543066203" expanded="true" signature="1441:1447" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
