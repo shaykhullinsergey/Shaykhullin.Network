@@ -9,6 +9,11 @@ namespace Shaykhullin.Network
 			throw new System.NotImplementedException();
 		}
 
+		public IProtocolBuilder UseProtocol<TProtocol>() where TProtocol : IProtocol
+		{
+			throw new System.NotImplementedException();
+		}
+
 		public IEncryptionBuilder UseEncryption<TEncryption>() where TEncryption : IEncryption
 		{
 			throw new System.NotImplementedException();

@@ -5,8 +5,4 @@
   <ItemGroup>
     <ProjectReference Include="..\Shaykhullin.Network.Core\Shaykhullin.Network.Core.csproj" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Connection" />
-    <Folder Include="Handler\Connection" />
-  </ItemGroup>
 </Project>

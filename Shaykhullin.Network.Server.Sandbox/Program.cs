@@ -12,6 +12,7 @@ namespace Server.Sandbox
 			config.UseSerializer<JsonSerializer>()
 				.UseCompression<GZipCompression>()
 				.UseEncryption<AesEncryption>()
+				.UseProtocol<TcpProtocol>()
 				.UseDependencyContainer<AutofacContainer>();
 
 			config.Register<BaseService>()
@@ -23,6 +24,7 @@ namespace Server.Sandbox
 			channel.UseSerializer<JsonSerializer>()
 				.UseCompression<GZipCompression>()
 				.UseEncryption<AesEncryption>()
+				.UseProtocol<TcpProtocol>()
 				.UseDependencyContainer<AutofacContainer>();
 
 			channel.Register<BaseService>()
@@ -61,17 +63,28 @@ namespace Server.Sandbox
 	
 	public class MessageHandler : IConnectionHandler<MessageEvent>
 	{
-		public Task Execute(MessageEvent @event)
+		private readonly BaseService service;
+
+		public MessageHandler(BaseService service)
 		{
-			return Task.CompletedTask;
+			this.service = service;
+		}
+		
+		public async Task Execute(MessageEvent @event)
+		{
+			await @event.Connection
+				.Send(service.GetSomeString())
+				.To<MessageEvent>();
 		}
 	}
 	
-	public class BaseService
+	public abstract class BaseService
 	{
+		public abstract string GetSomeString();
 	}
 
 	public class DerivedService : BaseService
 	{
+		public override string GetSomeString() => nameof(DerivedService);
 	}
 }

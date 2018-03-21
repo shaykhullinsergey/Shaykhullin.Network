@@ -12,6 +12,7 @@ namespace Client.Sandbox
 			config.UseSerializer<JsonSerializer>()
 				.UseCompression<GZipCompression>()
 				.UseEncryption<AesEncryption>()
+				.UseProtocol<TcpProtocol>()
 				.UseDependencyContainer<AutofacContainer>();
 			
 			config.Register<BaseService>()
@@ -24,6 +25,10 @@ namespace Client.Sandbox
 			var connection = config
 				.Create("127.0.0.1", 4000)
 				.Connect();
+
+			connection.Send("Hello")
+				.To<MessageEvent>()
+				.Wait();
 		}
 	}
 
@@ -51,14 +56,24 @@ namespace Client.Sandbox
 	
 	public class MessageHandler : IConnectionHandler<MessageEvent>
 	{
-		public Task Execute(MessageEvent @event)
+		private readonly BaseService service;
+
+		public MessageHandler(BaseService service)
 		{
-			return Task.CompletedTask;
+			this.service = service;
+		}
+		
+		public async Task Execute(MessageEvent @event)
+		{
+			await @event.Connection 
+				.Send(service.GetSomeString())
+				.To<MessageEvent>();
 		}
 	}
 	
 	public class BaseService
 	{
+		public string GetSomeString() => "";
 	}
 
 	public class DerivedService : BaseService

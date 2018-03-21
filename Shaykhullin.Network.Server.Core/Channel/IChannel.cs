@@ -1,6 +1,9 @@
-﻿namespace Shaykhullin.Network.Core
+﻿using System.Collections.Generic;
+
+namespace Shaykhullin.Network.Core
 {
-	public interface IChannel
+	public interface IChannel : ISender
 	{
+		ICollection<IRoom> Rooms { get; }
 	}
 }

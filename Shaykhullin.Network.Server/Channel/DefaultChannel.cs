@@ -1,9 +1,6 @@
-﻿using Shaykhullin.Network.Core;
-
-namespace Shaykhullin.Network
+﻿namespace Shaykhullin.Network
 {
-	public class DefaultChannel : IChannel
+	public class DefaultChannel : Channel
 	{
-		
 	}
 }

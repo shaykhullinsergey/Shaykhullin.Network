@@ -1,7 +1,9 @@
-﻿namespace Shaykhullin.Network
+﻿using Shaykhullin.Network.Core;
+
+namespace Shaykhullin.Network
 {
-	public interface IConnection
+	public interface IConnection : ISender
 	{
-		
+		IProtocol Procotol { get; }
 	}
 }
