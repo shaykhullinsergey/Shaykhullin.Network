@@ -2,7 +2,7 @@
 
 namespace Shaykhullin.Network
 {
-	public class AutofacContainer : IContainerBuilder
+	public class DefaultContainer : IContainerBuilder
 	{
 		public IContainer Build()
 		{

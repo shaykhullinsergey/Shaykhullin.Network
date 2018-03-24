@@ -13,7 +13,7 @@ namespace Server.Sandbox
 				.UseCompression<GZipCompression>()
 				.UseEncryption<AesEncryption>()
 				.UseProtocol<TcpProtocol>()
-				.UseDependencyContainer<AutofacContainer>();
+				.UseDependencyContainer<DefaultContainer>();
 
 			config.Register<BaseService>()
 				.ImplementedBy<DerivedService>()
@@ -25,66 +25,67 @@ namespace Server.Sandbox
 				.UseCompression<GZipCompression>()
 				.UseEncryption<AesEncryption>()
 				.UseProtocol<TcpProtocol>()
-				.UseDependencyContainer<AutofacContainer>();
+				.UseDependencyContainer<DefaultContainer>();
 
 			channel.Register<BaseService>()
 				.ImplementedBy<DerivedService>()
 				.As<Singleton>();
 
 			config.When<Connection>()
-				.Call<ConnectionHandler>();
+				.Call<ConnectionConfig>();
 
 			config.Create("127.0.0.1", 4000)
 				.Run();
 		}
-	}
-	
-	public class ConnectionHandler : IHandler<Connection>
-	{
-		public void Execute(Connection @event)
-		{
-			@event.Context
-				.When<MessageEvent>()
-				.Call<MessageHandler>();
-		}
-	}
-	
-	public class MessageEvent : IConnectionEvent<string>
-	{
-		public MessageEvent(IConnection connection, string data)
-		{
-			Connection = connection;
-			Data = data;
-		}
-
-		public IConnection Connection { get; }
-		public string Data { get; }
-	}
-	
-	public class MessageHandler : IConnectionHandler<MessageEvent>
-	{
-		private readonly BaseService service;
-
-		public MessageHandler(BaseService service)
-		{
-			this.service = service;
-		}
 		
-		public async Task Execute(MessageEvent @event)
+		public class ConnectionConfig : IConfig<Connection>
 		{
-			await @event.Connection
-				.Send(service.GetSomeString())
-				.To<MessageEvent>();
+			public void Configure(Connection @event)
+			{
+				@event.Context
+					.When<MessageEvent>()
+					.Call<MessageHandler>();
+			}
+		}
+	
+		public class MessageEvent : IEvent<string>
+		{
+			public MessageEvent(IConnection connection, string data)
+			{
+				Connection = connection;
+				Data = data;
+			}
+
+			public IConnection Connection { get; }
+			public string Data { get; }
+		}
+	
+		public class MessageHandler : IHandler<MessageEvent>
+		{
+			private readonly BaseService service;
+
+			public MessageHandler(BaseService service)
+			{
+				this.service = service;
+			}
+		
+			public async Task Handle(MessageEvent @event)
+			{
+				await @event.Connection
+					.Send(service.GetSomeString())
+					.To<MessageEvent>();
+			}
+		}
+	
+		public abstract class BaseService
+		{
+			public abstract string GetSomeString();
+		}
+
+		public class DerivedService : BaseService
+		{
+			public override string GetSomeString() => nameof(DerivedService);
 		}
 	}
 	
-	public abstract class BaseService
-	{
-		public abstract string GetSomeString();
-	}
-
-	public class DerivedService : BaseService
-	{
-		public override string GetSomeString() => nameof(DerivedService);
-	}
 }

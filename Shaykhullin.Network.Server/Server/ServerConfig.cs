@@ -39,7 +39,7 @@ namespace Shaykhullin.Network
 			throw new System.NotImplementedException();
 		}
 
-		public IHandlerConfig<TEvent> When<TEvent>() where TEvent : IEvent<object>
+		public IConfigBuilder<TEvent> When<TEvent>() where TEvent : IConfigEvent<object>
 		{
 			throw new System.NotImplementedException();
 		}

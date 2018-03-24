@@ -1,6 +1,6 @@
 ﻿namespace Shaykhullin.Network.Core
 {
-	public interface IRegisterBuilder<in TRegister>
+	public interface IRegisterBuilder<in TRegister> : IImplementedByBuilder
 		where TRegister : class
 	{
 		IImplementedByBuilder ImplementedBy<TImplemented>()

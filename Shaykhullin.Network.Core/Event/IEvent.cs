@@ -1,7 +1,8 @@
-﻿namespace Shaykhullin.Network.Core
+﻿namespace Shaykhullin.Network
 {
-	public interface IEvent<out TContext>
+	public interface IEvent<out TData>
 	{
-		TContext Context { get; }
+		IConnection Connection { get; }
+		TData Data { get; }
 	}
 }

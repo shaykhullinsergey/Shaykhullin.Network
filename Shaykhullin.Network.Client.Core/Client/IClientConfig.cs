@@ -8,8 +8,8 @@
 		IRegisterBuilder<TRegister> Register<TRegister>()
 			where TRegister : class;
 		
-		IHandlerConfig<TEvent> When<TEvent>()
-			where TEvent : IEvent<object>;
+		IConfigBuilder<TEvent> When<TEvent>()
+			where TEvent : IConfigEvent<object>;
 		
 		IClient Create(string host, int port);
 	}

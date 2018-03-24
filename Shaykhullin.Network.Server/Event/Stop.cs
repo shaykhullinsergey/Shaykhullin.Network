@@ -2,7 +2,7 @@
 
 namespace Shaykhullin.Network
 {
-	public class Stop : IEvent<object>
+	public class Stop : IConfigEvent<object>
 	{
 		public Stop(object context)
 		{

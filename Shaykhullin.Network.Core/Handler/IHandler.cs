@@ -1,7 +1,10 @@
-﻿namespace Shaykhullin.Network
+﻿using System.Threading.Tasks;
+
+namespace Shaykhullin.Network
 {
 	public interface IHandler<in TEvent>
+		where TEvent : IEvent<object>
 	{
-		void Execute(TEvent @event);
+		Task Handle(TEvent @event);
 	}
 }

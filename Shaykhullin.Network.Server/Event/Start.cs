@@ -2,7 +2,7 @@
 
 namespace Shaykhullin.Network
 {
-	public class Start : IEvent<object>
+	public class Start : IConfigEvent<object>
 	{
 		public Start(object context)
 		{

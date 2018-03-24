@@ -5,6 +5,8 @@ namespace Shaykhullin.Network
 {
 	public class TcpProtocol : IProtocol
 	{
+		public int Id { get; }
+
 		public Task Send(IPacket packet)
 		{
 			throw new System.NotImplementedException();

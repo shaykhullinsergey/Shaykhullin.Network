@@ -2,7 +2,7 @@
 {
 	public interface IConnectionConfig
 	{
-		IConnectionHandlerConfig<TEvent> When<TEvent>()
-			where TEvent : IConnectionEvent<object>;
+		IHandlerBuilder<TEvent> When<TEvent>()
+			where TEvent : IEvent<object>;
 	}
 }
