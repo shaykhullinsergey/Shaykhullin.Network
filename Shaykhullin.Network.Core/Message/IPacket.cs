@@ -5,7 +5,7 @@
 		int Id { get; }
 		int Order { get; }
 		int Length { get; }
-		bool IsTail { get; }
+		bool Last { get; }
 
 		byte[] GetBytes();
 	}

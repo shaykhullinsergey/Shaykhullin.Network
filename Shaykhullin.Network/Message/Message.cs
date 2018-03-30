@@ -4,7 +4,7 @@ namespace Shaykhullin.Network.Core
 {
 	internal class Message : IMessage
 	{
-		public int Type { get; }
+		public int Event { get; }
 
 		public int Serializer { get; }
 

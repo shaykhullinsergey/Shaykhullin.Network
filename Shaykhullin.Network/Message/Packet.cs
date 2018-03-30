@@ -10,7 +10,7 @@ namespace Shaykhullin.Network.Core
 
 		public int Length { get; }
 
-		public bool IsTail { get; }
+		public bool Last { get; }
 
 		public byte[] GetBytes()
 		{

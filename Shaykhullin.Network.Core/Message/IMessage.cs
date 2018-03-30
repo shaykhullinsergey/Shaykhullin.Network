@@ -2,7 +2,7 @@
 {
 	public interface IMessage
 	{
-		int Type { get; }
+		int Event { get; }
 		int Serializer { get; }
 		int Compression { get; }
 		int Encryption { get; }
