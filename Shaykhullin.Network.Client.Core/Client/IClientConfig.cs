@@ -1,8 +1,8 @@
 ﻿namespace Shaykhullin.Network.Core
 {
-	public interface IClientConfig
+	public interface IClientConfig : ICompressionBuilder
 	{
-		ISerializerBuilder UseSerializer<TSerializer>()
+		ICompressionBuilder UseSerializer<TSerializer>()
 			where TSerializer : ISerializer;
 
 		IRegisterBuilder<TRegister> Register<TRegister>()

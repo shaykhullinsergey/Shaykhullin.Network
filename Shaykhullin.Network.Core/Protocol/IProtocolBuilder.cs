@@ -1,8 +1,8 @@
 ﻿namespace Shaykhullin.Network.Core
 {
-	public interface IProtocolBuilder
+	public interface IProtocolBuilder : IDependencyContainerBuilder
 	{
-		void UseDependencyContainer<TContainer>()
-			where TContainer : IContainerBuilder;
+		IDependencyContainerBuilder UseProtocol<TProtocol>()
+			where TProtocol : IProtocol;
 	}
 }

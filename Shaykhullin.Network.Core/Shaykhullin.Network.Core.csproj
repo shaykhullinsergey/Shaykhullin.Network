@@ -3,6 +3,8 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <Folder Include="Handler\Connection\" />
+    <Compile Remove="Handler\Connection\**" />
+    <EmbeddedResource Remove="Handler\Connection\**" />
+    <None Remove="Handler\Connection\**" />
   </ItemGroup>
 </Project>

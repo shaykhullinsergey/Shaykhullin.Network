@@ -2,24 +2,21 @@
 
 namespace Shaykhullin.Network
 {
-	public class ServerConfig : IServerConfig
+	public class ClientConfig : IClientConfig
 	{
-		public IRegisterBuilder<TRegister> Register<TRegister>() where TRegister : class
+		public IConfigBuilder<TEvent> When<TEvent>()
+			where TEvent : IHandlerEvent<object>
 		{
 			throw new System.NotImplementedException();
 		}
 
-		public IChannelConfig Channel<TChannel>() where TChannel : IChannel
+		public IRegisterBuilder<TRegister> Register<TRegister>() 
+			where TRegister : class
 		{
 			throw new System.NotImplementedException();
 		}
 
-		public IConfigBuilder<TEvent> When<TEvent>() where TEvent : IHandlerEvent<object>
-		{
-			throw new System.NotImplementedException();
-		}
-
-		public IServer Create(string host, int port)
+		public IClient Create(string host, int port)
 		{
 			throw new System.NotImplementedException();
 		}

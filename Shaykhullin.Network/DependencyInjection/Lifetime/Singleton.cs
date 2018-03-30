@@ -2,7 +2,7 @@
 
 namespace Shaykhullin.Network
 {
-	public class Singleton : ILifetime
+	public class Singleton : ILifecycle
 	{
 	}
 }

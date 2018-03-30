@@ -2,7 +2,7 @@
 {
 	public interface IEncryptionBuilder : IProtocolBuilder
 	{
-		IProtocolBuilder UseProtocol<TProtocol>()
-			where TProtocol : IProtocol;
+		IProtocolBuilder UseEncryption<TEncryption>()
+			where TEncryption : IEncryption;
 	}
 }

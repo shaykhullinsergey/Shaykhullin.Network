@@ -2,7 +2,7 @@
 {
 	public interface IChannelConfig
 	{
-		ISerializerBuilder UseSerializer<TSerializer>()
+		ICompressionBuilder UseSerializer<TSerializer>()
 			where TSerializer : ISerializer;
 
 		IRegisterBuilder<TRegister> Register<TRegister>()

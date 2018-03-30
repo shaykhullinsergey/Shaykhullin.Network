@@ -3,6 +3,6 @@
 	public interface IImplementedByBuilder
 	{
 		void As<TLifetime>()
-			where TLifetime : ILifetime;
+			where TLifetime : ILifecycle;
 	}
 }

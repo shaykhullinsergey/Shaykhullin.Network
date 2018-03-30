@@ -1,6 +1,6 @@
 ﻿namespace Shaykhullin.Network.Core
 {
-	public interface ILifetime
+	public interface ILifecycle
 	{
 	}
 }

@@ -64,8 +64,10 @@ namespace Client.Sandbox
 		
 			public async Task Handle(MessageEvent @event)
 			{
+				var message = service.GetSomeString();
+
 				await @event.Connection 
-					.Send(service.GetSomeString())
+					.Send(message)
 					.To<MessageEvent>();
 			}
 		}
