@@ -2,23 +2,23 @@
 {
 	internal class EncryptionBuilder : IEncryptionBuilder
 	{
-		public IProtocolBuilder UseEncryption<TEncryption>()
+		public ICommunicatorBuilder UseEncryption<TEncryption>()
 			where TEncryption : IEncryption
 		{
-			return new ProtocolBuilder();
+			return new CommunicatorBuilder();
 		}
 
-		public IDependencyContainerBuilder UseProtocol<TProtocol>() 
-			where TProtocol : IProtocol
+		public IDependencyContainerBuilder UseCommunicator<TProtocol>() 
+			where TProtocol : ICommunicator
 		{
-			return new ProtocolBuilder()
-				.UseProtocol<TProtocol>();
+			return new CommunicatorBuilder()
+				.UseCommunicator<TProtocol>();
 		}
 
 		public void UseContainer<TContainer>() 
 			where TContainer : IContainerBuilder
 		{
-			new ProtocolBuilder()
+			new CommunicatorBuilder()
 				.UseContainer<TContainer>();
 		}
 	}

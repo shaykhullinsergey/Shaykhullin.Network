@@ -1,8 +1,8 @@
 ﻿namespace Shaykhullin.Network.Core
 {
-	public interface IEncryptionBuilder : IProtocolBuilder
+	public interface IEncryptionBuilder : ICommunicatorBuilder
 	{
-		IProtocolBuilder UseEncryption<TEncryption>()
+		ICommunicatorBuilder UseEncryption<TEncryption>()
 			where TEncryption : IEncryption;
 	}
 }

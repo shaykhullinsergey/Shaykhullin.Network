@@ -3,7 +3,7 @@ using Shaykhullin.Network.Core;
 
 namespace Shaykhullin.Network
 {
-	public class DefaultProtocol : IProtocol
+	public class DefaultCommunicator : ICommunicator
 	{
 		public int Id { get; }
 

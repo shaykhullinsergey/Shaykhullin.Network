@@ -8,18 +8,18 @@
 			return new EncryptionBuilder();
 		}
 
-		public IProtocolBuilder UseEncryption<TEncryption>()
+		public ICommunicatorBuilder UseEncryption<TEncryption>()
 			where TEncryption : IEncryption
 		{
 			return new EncryptionBuilder()
 				.UseEncryption<TEncryption>();
 		}
 
-		public IDependencyContainerBuilder UseProtocol<TProtocol>()
-			where TProtocol : IProtocol
+		public IDependencyContainerBuilder UseCommunicator<TProtocol>()
+			where TProtocol : ICommunicator
 		{
 			return new EncryptionBuilder()
-				.UseProtocol<TProtocol>();
+				.UseCommunicator<TProtocol>();
 		}
 
 		public void UseContainer<TContainer>() 

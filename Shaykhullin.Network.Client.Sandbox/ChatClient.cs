@@ -21,7 +21,7 @@ namespace Client.Sandbox
 			config.UseSerializer<DefaultSerializer>()
 				.UseCompression<DefaultCompression>()
 				.UseEncryption<DefaultEncryption>()
-				.UseProtocol<DefaultProtocol>()
+				.UseCommunicator<DefaultCommunicator>()
 				.UseContainer<DefaultContainerBuilder>();
 
 			var connection = config.Create("127.0.0.1", 4000)

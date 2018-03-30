@@ -12,7 +12,7 @@ namespace Server.Sandbox
 			config.UseSerializer<DefaultSerializer>()
 				.UseCompression<DefaultCompression>()
 				.UseEncryption<DefaultEncryption>()
-				.UseProtocol<DefaultProtocol>()
+				.UseCommunicator<DefaultCommunicator>()
 				.UseContainer<DefaultContainerBuilder>();
 
 			config.Register<BaseService>()
@@ -24,7 +24,7 @@ namespace Server.Sandbox
 			channel.UseSerializer<DefaultSerializer>()
 				.UseCompression<DefaultCompression>()
 				.UseEncryption<DefaultEncryption>()
-				.UseProtocol<DefaultProtocol>()
+				.UseCommunicator<DefaultCommunicator>()
 				.UseContainer<DefaultContainerBuilder>();
 
 			channel.Register<BaseService>()

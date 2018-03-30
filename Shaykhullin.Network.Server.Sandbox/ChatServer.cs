@@ -24,14 +24,14 @@ namespace Server.Sandbox
 			config.UseSerializer<DefaultSerializer>()
 				.UseCompression<DefaultCompression>()
 				.UseEncryption<DefaultEncryption>()
-				.UseProtocol<DefaultProtocol>()
+				.UseCommunicator<DefaultCommunicator>()
 				.UseContainer<DefaultContainerBuilder>();
 			
 			config.Channel<DefaultChannel>()
 				.UseSerializer<DefaultSerializer>()
 				.UseCompression<DefaultCompression>()
 				.UseEncryption<DefaultEncryption>()
-				.UseProtocol<DefaultProtocol>()
+				.UseCommunicator<DefaultCommunicator>()
 				.UseContainer<DefaultContainerBuilder>();
 			
 			config.Create("127.0.0.1", 4000)

@@ -4,6 +4,6 @@ namespace Shaykhullin.Network
 {
 	public interface IConnection : ISendable
 	{
-		IProtocol Procotol { get; }
+		ICommunicator Procotol { get; }
 	}
 }

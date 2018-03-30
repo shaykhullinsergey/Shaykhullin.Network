@@ -1,9 +1,9 @@
 ﻿namespace Shaykhullin.Network.Core
 {
-	internal class ProtocolBuilder : IProtocolBuilder
+	internal class CommunicatorBuilder : ICommunicatorBuilder
 	{
-		public IDependencyContainerBuilder UseProtocol<TProtocol>()
-			where TProtocol : IProtocol
+		public IDependencyContainerBuilder UseCommunicator<TProtocol>()
+			where TProtocol : ICommunicator
 		{
 			return new ContainerBuilder();
 		}
