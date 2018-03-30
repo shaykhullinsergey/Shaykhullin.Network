@@ -19,7 +19,7 @@ namespace Client.Sandbox
 				.ImplementedBy<DerivedService>()
 				.As<Singleton>();
 			
-			config.When<Connection>()
+			config.When<Connect>()
 				.Call<ConnectConfig>();
 
 			var connection = config
@@ -31,9 +31,9 @@ namespace Client.Sandbox
 				.Wait();
 		}
 		
-		class ConnectConfig : IConfig<Connection>
+		class ConnectConfig : IConfig<Connect>
 		{
-			public void Configure(Connection @event)
+			public void Configure(Connect @event)
 			{
 				@event.Context
 					.When<MessageEvent>()

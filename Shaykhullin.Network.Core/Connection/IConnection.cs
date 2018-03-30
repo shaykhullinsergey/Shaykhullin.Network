@@ -2,7 +2,7 @@
 
 namespace Shaykhullin.Network
 {
-	public interface IConnection : ISender
+	public interface IConnection : ISendable
 	{
 		IProtocol Procotol { get; }
 	}

@@ -12,7 +12,7 @@ namespace Server.Sandbox
 			config.When<Start>()
 				.Call<StartConfig>();
 			
-			config.When<Connection>()
+			config.When<Connect>()
 				.Call<ConnectionConfig>();
 			
 			config.When<Stop>()
@@ -39,9 +39,9 @@ namespace Server.Sandbox
 		}
 	}
 	
-	public class ConnectionConfig : IConfig<Connection>
+	public class ConnectionConfig : IConfig<Connect>
 	{
-		public void Configure(Connection @event)
+		public void Configure(Connect @event)
 		{
 			var config = @event.Context;
 			

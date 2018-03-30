@@ -31,16 +31,16 @@ namespace Server.Sandbox
 				.ImplementedBy<DerivedService>()
 				.As<Singleton>();
 
-			config.When<Connection>()
+			config.When<Connect>()
 				.Call<ConnectionConfig>();
 
 			config.Create("127.0.0.1", 4000)
 				.Run();
 		}
 		
-		public class ConnectionConfig : IConfig<Connection>
+		public class ConnectionConfig : IConfig<Connect>
 		{
-			public void Configure(Connection @event)
+			public void Configure(Connect @event)
 			{
 				@event.Context
 					.When<MessageEvent>()

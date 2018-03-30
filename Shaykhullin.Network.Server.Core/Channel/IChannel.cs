@@ -2,7 +2,7 @@
 
 namespace Shaykhullin.Network.Core
 {
-	public interface IChannel : ISender
+	public interface IChannel : ISendable
 	{
 	}
 }

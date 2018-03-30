@@ -10,7 +10,7 @@ namespace Client.Sandbox
 		{
 			var config = new ClientConfig();
 
-			config.When<Connection>()
+			config.When<Connect>()
 				.Call<ConnectConfig>();
 
 			config.Register<MessageRepository>();
@@ -31,9 +31,9 @@ namespace Client.Sandbox
 		}
 	}
 
-	public class ConnectConfig : IConfig<Connection>
+	public class ConnectConfig : IConfig<Connect>
 	{
-		public void Configure(Connection @event)
+		public void Configure(Connect @event)
 		{
 			var config = @event.Context;
 			
