@@ -4,13 +4,13 @@ namespace Shaykhullin.Network.Core
 {
 	internal class Packet : IPacket
 	{
-		public int Id => throw new NotImplementedException();
+		public int Id { get; }
 
-		public int Order => throw new NotImplementedException();
+		public int Order { get; }
 
-		public int Length => throw new NotImplementedException();
+		public int Length { get; }
 
-		public bool IsTail => throw new NotImplementedException();
+		public bool IsTail { get; }
 
 		public byte[] GetBytes()
 		{

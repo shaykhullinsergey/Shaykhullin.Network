@@ -4,13 +4,13 @@ namespace Shaykhullin.Network.Core
 {
 	internal class Message : IMessage
 	{
-		public int Type => throw new NotImplementedException();
+		public int Type { get; }
 
-		public int Serializer => throw new NotImplementedException();
+		public int Serializer { get; }
 
-		public int Compression => throw new NotImplementedException();
+		public int Compression { get; }
 
-		public int Encryption => throw new NotImplementedException();
+		public int Encryption { get; }
 
 		public IPacket[] GetPackets()
 		{
