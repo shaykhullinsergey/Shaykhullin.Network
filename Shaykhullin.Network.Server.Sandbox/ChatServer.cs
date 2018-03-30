@@ -21,17 +21,17 @@ namespace Server.Sandbox
 			config.Register<MessageLogger>()
 				.As<Singleton>();
 			
-			config.UseSerializer<JsonSerializer>()
-				.UseCompression<GZipCompression>()
-				.UseEncryption<AesEncryption>()
-				.UseProtocol<TcpProtocol>()
+			config.UseSerializer<DefaultSerializer>()
+				.UseCompression<DefaultCompression>()
+				.UseEncryption<DefaultEncryption>()
+				.UseProtocol<DefaultProtocol>()
 				.UseDependencyContainer<DefaultContainer>();
 			
 			config.Channel<DefaultChannel>()
-				.UseSerializer<JsonSerializer>()
-				.UseCompression<GZipCompression>()
-				.UseEncryption<AesEncryption>()
-				.UseProtocol<TcpProtocol>()
+				.UseSerializer<DefaultSerializer>()
+				.UseCompression<DefaultCompression>()
+				.UseEncryption<DefaultEncryption>()
+				.UseProtocol<DefaultProtocol>()
 				.UseDependencyContainer<DefaultContainer>();
 			
 			config.Create("127.0.0.1", 4000)

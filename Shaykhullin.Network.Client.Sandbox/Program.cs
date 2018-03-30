@@ -9,10 +9,10 @@ namespace Client.Sandbox
 		{
 			var config = new ClientConfig();
 			
-			config.UseSerializer<JsonSerializer>()
-				.UseCompression<GZipCompression>()
-				.UseEncryption<AesEncryption>()
-				.UseProtocol<TcpProtocol>()
+			config.UseSerializer<DefaultSerializer>()
+				.UseCompression<DefaultCompression>()
+				.UseEncryption<DefaultEncryption>()
+				.UseProtocol<DefaultProtocol>()
 				.UseDependencyContainer<DefaultContainer>();
 			
 			config.Register<BaseService>()

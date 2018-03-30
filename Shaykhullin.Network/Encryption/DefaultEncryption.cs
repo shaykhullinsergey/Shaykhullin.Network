@@ -2,16 +2,16 @@
 
 namespace Shaykhullin.Network
 {
-	public class AesEncryption : IEncryption
+	public class DefaultEncryption : IEncryption
 	{
 		public byte[] Encrypt(byte[] data)
 		{
-			throw new System.NotImplementedException();
+			return data;
 		}
 
 		public byte[] Decrypt(byte[] data)
 		{
-			throw new System.NotImplementedException();
+			return data;
 		}
 	}
 }

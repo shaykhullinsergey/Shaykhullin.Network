@@ -2,16 +2,16 @@
 
 namespace Shaykhullin.Network
 {
-	public class GZipCompression : ICompression
+	public class DefaultCompression : ICompression
 	{
 		public byte[] Compress(byte[] data)
 		{
-			throw new System.NotImplementedException();
+			return data;
 		}
 
 		public byte[] Decompress(byte[] data)
 		{
-			throw new System.NotImplementedException();
+			return data;
 		}
 	}
 }

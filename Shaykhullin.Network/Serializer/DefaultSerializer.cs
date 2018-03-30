@@ -3,7 +3,10 @@ using Shaykhullin.Network.Core;
 
 namespace Shaykhullin.Network
 {
-	public class JsonSerializer : ISerializer
+	/// <summary>
+	/// Just BinaryFormatter??
+	/// </summary>
+	public class DefaultSerializer : ISerializer
 	{
 		public byte[] Serialize(object data)
 		{

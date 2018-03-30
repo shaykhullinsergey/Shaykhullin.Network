@@ -9,10 +9,10 @@ namespace Server.Sandbox
 		{
 			var config = new ServerConfig();
 			
-			config.UseSerializer<JsonSerializer>()
-				.UseCompression<GZipCompression>()
-				.UseEncryption<AesEncryption>()
-				.UseProtocol<TcpProtocol>()
+			config.UseSerializer<DefaultSerializer>()
+				.UseCompression<DefaultCompression>()
+				.UseEncryption<DefaultEncryption>()
+				.UseProtocol<DefaultProtocol>()
 				.UseDependencyContainer<DefaultContainer>();
 
 			config.Register<BaseService>()
@@ -21,10 +21,10 @@ namespace Server.Sandbox
 
 			var channel = config.Channel<DefaultChannel>();
 			
-			channel.UseSerializer<JsonSerializer>()
-				.UseCompression<GZipCompression>()
-				.UseEncryption<AesEncryption>()
-				.UseProtocol<TcpProtocol>()
+			channel.UseSerializer<DefaultSerializer>()
+				.UseCompression<DefaultCompression>()
+				.UseEncryption<DefaultEncryption>()
+				.UseProtocol<DefaultProtocol>()
 				.UseDependencyContainer<DefaultContainer>();
 
 			channel.Register<BaseService>()

@@ -16,10 +16,10 @@ namespace Client.Sandbox
 			config.Register<MessageRepository>();
 			config.Register<LogRepository>();
 			
-			config.UseSerializer<JsonSerializer>()
-				.UseCompression<GZipCompression>()
-				.UseEncryption<AesEncryption>()
-				.UseProtocol<TcpProtocol>()
+			config.UseSerializer<DefaultSerializer>()
+				.UseCompression<DefaultCompression>()
+				.UseEncryption<DefaultEncryption>()
+				.UseProtocol<DefaultProtocol>()
 				.UseDependencyContainer<DefaultContainer>();
 
 			var c = config.Create("127.0.0.1", 4000)
