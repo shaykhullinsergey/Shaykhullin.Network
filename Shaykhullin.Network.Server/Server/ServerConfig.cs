@@ -4,17 +4,20 @@ namespace Shaykhullin.Network
 {
 	public class ServerConfig : IServerConfig
 	{
-		public IRegisterBuilder<TRegister> Register<TRegister>() where TRegister : class
+		public IRegisterBuilder<TRegister> Register<TRegister>() 
+			where TRegister : class
 		{
-			throw new System.NotImplementedException();
+			return new RegisterBuilder<TRegister>();
 		}
 
-		public IChannelConfig Channel<TChannel>() where TChannel : IChannel
+		public IChannelConfig Channel<TChannel>() 
+			where TChannel : IChannel
 		{
-			throw new System.NotImplementedException();
+			return new ChannelConfig();
 		}
 
-		public IConfigBuilder<TEvent> When<TEvent>() where TEvent : IHandlerEvent<object>
+		public IConfigBuilder<TEvent> When<TEvent>() 
+			where TEvent : IHandlerEvent<object>
 		{
 			throw new System.NotImplementedException();
 		}
@@ -30,25 +33,29 @@ namespace Shaykhullin.Network
 			return new CompressionBuilder();
 		}
 
-		public IEncryptionBuilder UseCompression<TCompression>() where TCompression : ICompression
+		public IEncryptionBuilder UseCompression<TCompression>() 
+			where TCompression : ICompression
 		{
 			return new CompressionBuilder()
 				.UseCompression<TCompression>();
 		}
 
-		public IProtocolBuilder UseEncryption<TEncryption>() where TEncryption : IEncryption
+		public IProtocolBuilder UseEncryption<TEncryption>() 
+			where TEncryption : IEncryption
 		{
 			return new EncryptionBuilder()
 				.UseEncryption<TEncryption>();
 		}
 
-		public IDependencyContainerBuilder UseProtocol<TProtocol>() where TProtocol : IProtocol
+		public IDependencyContainerBuilder UseProtocol<TProtocol>() 
+			where TProtocol : IProtocol
 		{
 			return new ProtocolBuilder()
 				.UseProtocol<TProtocol>();
 		}
 
-		public void UseDependencyContainer<TContainer>() where TContainer : IContainerBuilder
+		public void UseDependencyContainer<TContainer>() 
+			where TContainer : IContainerBuilder
 		{
 			new DependencyContainerBuilder()
 				.UseDependencyContainer<TContainer>();
