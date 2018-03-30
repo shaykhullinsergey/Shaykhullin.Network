@@ -7,18 +7,18 @@ namespace Shaykhullin.Network
 		public IConfigBuilder<TEvent> When<TEvent>()
 			where TEvent : IHandlerEvent<object>
 		{
-			throw new System.NotImplementedException();
+			return new ConfigBuilder<TEvent>();
 		}
 
-		public IRegisterBuilder<TRegister> Register<TRegister>() 
+		public IRegisterBuilder<TRegister> Register<TRegister>()
 			where TRegister : class
 		{
-			throw new System.NotImplementedException();
+			return new RegisterBuilder<TRegister>();
 		}
 
 		public IClient Create(string host, int port)
 		{
-			throw new System.NotImplementedException();
+			return new Client();
 		}
 
 		public ICompressionBuilder UseSerializer<TSerializer>()

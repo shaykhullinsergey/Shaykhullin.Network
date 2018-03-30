@@ -9,7 +9,8 @@
 			return new ImplementedByBuilder();
 		}
 
-		public void As<TLifetime>() where TLifetime : ILifecycle
+		public void As<TLifetime>()
+			where TLifetime : ILifecycle
 		{
 			new ImplementedByBuilder()
 				.As<TLifetime>();

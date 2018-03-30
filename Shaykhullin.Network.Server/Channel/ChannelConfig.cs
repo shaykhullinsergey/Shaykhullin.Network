@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Shaykhullin.Network.Core
+﻿namespace Shaykhullin.Network.Core
 {
 	internal class ChannelConfig : IChannelConfig
 	{

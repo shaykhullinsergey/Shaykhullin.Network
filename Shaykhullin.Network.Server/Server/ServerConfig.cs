@@ -4,6 +4,12 @@ namespace Shaykhullin.Network
 {
 	public class ServerConfig : IServerConfig
 	{
+		public IConfigBuilder<TEvent> When<TEvent>()
+			where TEvent : IHandlerEvent<object>
+		{
+			return new ConfigBuilder<TEvent>();
+		}
+
 		public IRegisterBuilder<TRegister> Register<TRegister>() 
 			where TRegister : class
 		{
@@ -16,15 +22,9 @@ namespace Shaykhullin.Network
 			return new ChannelConfig();
 		}
 
-		public IConfigBuilder<TEvent> When<TEvent>() 
-			where TEvent : IHandlerEvent<object>
-		{
-			throw new System.NotImplementedException();
-		}
-
 		public IServer Create(string host, int port)
 		{
-			throw new System.NotImplementedException();
+			return new Server();
 		}
 
 		public ICompressionBuilder UseSerializer<TSerializer>()
