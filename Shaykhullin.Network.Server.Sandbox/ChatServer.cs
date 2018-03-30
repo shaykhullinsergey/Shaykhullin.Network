@@ -25,14 +25,14 @@ namespace Server.Sandbox
 				.UseCompression<DefaultCompression>()
 				.UseEncryption<DefaultEncryption>()
 				.UseProtocol<DefaultProtocol>()
-				.UseDependencyContainer<DefaultContainer>();
+				.UseContainer<DefaultContainerBuilder>();
 			
 			config.Channel<DefaultChannel>()
 				.UseSerializer<DefaultSerializer>()
 				.UseCompression<DefaultCompression>()
 				.UseEncryption<DefaultEncryption>()
 				.UseProtocol<DefaultProtocol>()
-				.UseDependencyContainer<DefaultContainer>();
+				.UseContainer<DefaultContainerBuilder>();
 			
 			config.Create("127.0.0.1", 4000)
 				.Run();

@@ -35,11 +35,11 @@
 				.UseProtocol<TProtocol>();
 		}
 
-		public void UseDependencyContainer<TContainer>()
+		public void UseContainer<TContainer>()
 			where TContainer : IContainerBuilder
 		{
-			new DependencyContainerBuilder()
-				.UseDependencyContainer<TContainer>();
+			new ContainerBuilder()
+				.UseContainer<TContainer>();
 		}
 	}
 }

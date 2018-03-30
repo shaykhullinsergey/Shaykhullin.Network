@@ -13,7 +13,7 @@ namespace Server.Sandbox
 				.UseCompression<DefaultCompression>()
 				.UseEncryption<DefaultEncryption>()
 				.UseProtocol<DefaultProtocol>()
-				.UseDependencyContainer<DefaultContainer>();
+				.UseContainer<DefaultContainerBuilder>();
 
 			config.Register<BaseService>()
 				.ImplementedBy<DerivedService>()
@@ -25,7 +25,7 @@ namespace Server.Sandbox
 				.UseCompression<DefaultCompression>()
 				.UseEncryption<DefaultEncryption>()
 				.UseProtocol<DefaultProtocol>()
-				.UseDependencyContainer<DefaultContainer>();
+				.UseContainer<DefaultContainerBuilder>();
 
 			channel.Register<BaseService>()
 				.ImplementedBy<DerivedService>()

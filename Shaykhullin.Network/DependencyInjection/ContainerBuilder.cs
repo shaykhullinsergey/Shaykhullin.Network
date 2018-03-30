@@ -2,9 +2,9 @@
 
 namespace Shaykhullin.Network.Core
 {
-	internal class DependencyContainerBuilder : IDependencyContainerBuilder
+	internal class ContainerBuilder : IDependencyContainerBuilder
 	{
-		public void UseDependencyContainer<TContainer>() 
+		public void UseContainer<TContainer>() 
 			where TContainer : IContainerBuilder
 		{
 			throw new NotImplementedException();

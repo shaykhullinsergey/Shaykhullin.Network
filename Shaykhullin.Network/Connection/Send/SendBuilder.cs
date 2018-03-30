@@ -8,7 +8,7 @@ namespace Shaykhullin.Network.Core
 		public Task To<TEvent>() 
 			where TEvent : IEvent<TData>
 		{
-			throw new NotImplementedException();
+			return Task.CompletedTask;
 		}
 	}
 }

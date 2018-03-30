@@ -2,11 +2,11 @@
 
 namespace Shaykhullin.Network
 {
-	public class DefaultContainer : IContainerBuilder
+	public class DefaultContainerBuilder : IContainerBuilder
 	{
 		public IContainer Build()
 		{
-			throw new System.NotImplementedException();
+			return new DefaultContainer();
 		}
 	}
 }

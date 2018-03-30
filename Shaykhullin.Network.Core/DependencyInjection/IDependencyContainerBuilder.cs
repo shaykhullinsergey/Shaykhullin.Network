@@ -2,7 +2,7 @@
 {
 	public interface IDependencyContainerBuilder
 	{
-		void UseDependencyContainer<TContainer>()
+		void UseContainer<TContainer>()
 			where TContainer : IContainerBuilder;
 	}
 }

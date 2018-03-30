@@ -5,14 +5,14 @@
 		public IDependencyContainerBuilder UseProtocol<TProtocol>()
 			where TProtocol : IProtocol
 		{
-			return new DependencyContainerBuilder();
+			return new ContainerBuilder();
 		}
 
-		public void UseDependencyContainer<TContainer>() 
+		public void UseContainer<TContainer>() 
 			where TContainer : IContainerBuilder
 		{
-			new DependencyContainerBuilder()
-				.UseDependencyContainer<TContainer>();
+			new ContainerBuilder()
+				.UseContainer<TContainer>();
 		}
 	}
 }

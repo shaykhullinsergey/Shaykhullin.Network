@@ -1,6 +1,5 @@
-﻿using System.Threading.Tasks;
-using Shaykhullin.Network;
-using Shaykhullin.Network.Core;
+﻿using Shaykhullin.Network;
+using System.Threading.Tasks;
 
 namespace Client.Sandbox
 {
@@ -14,18 +13,21 @@ namespace Client.Sandbox
 				.Call<ConnectConfig>();
 
 			config.Register<MessageRepository>();
-			config.Register<LogRepository>();
+
+			config.Register<LogRepository>()
+				.ImplementedBy<LogRepository>()
+				.As<Singleton>();
 			
 			config.UseSerializer<DefaultSerializer>()
 				.UseCompression<DefaultCompression>()
 				.UseEncryption<DefaultEncryption>()
 				.UseProtocol<DefaultProtocol>()
-				.UseDependencyContainer<DefaultContainer>();
+				.UseContainer<DefaultContainerBuilder>();
 
-			var c = config.Create("127.0.0.1", 4000)
+			var connection = config.Create("127.0.0.1", 4000)
 				.Connect();
 
-			c.Send(new Message())
+			connection.Send(new Message())
 				.To<NewMessage>()
 				.Wait();
 		}

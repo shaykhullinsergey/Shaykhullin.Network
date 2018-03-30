@@ -13,7 +13,7 @@ namespace Client.Sandbox
 				.UseCompression<DefaultCompression>()
 				.UseEncryption<DefaultEncryption>()
 				.UseProtocol<DefaultProtocol>()
-				.UseDependencyContainer<DefaultContainer>();
+				.UseContainer<DefaultContainerBuilder>();
 			
 			config.Register<BaseService>()
 				.ImplementedBy<DerivedService>()
