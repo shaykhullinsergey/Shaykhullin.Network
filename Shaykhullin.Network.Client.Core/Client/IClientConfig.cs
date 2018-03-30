@@ -9,7 +9,7 @@
 			where TRegister : class;
 		
 		IConfigBuilder<TEvent> When<TEvent>()
-			where TEvent : IConfigEvent<object>;
+			where TEvent : IHandlerEvent<object>;
 		
 		IClient Create(string host, int port);
 	}

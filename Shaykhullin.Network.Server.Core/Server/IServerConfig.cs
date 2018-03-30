@@ -12,7 +12,7 @@
 			where TChannel : IChannel;
 
 		IConfigBuilder<TEvent> When<TEvent>()
-			where TEvent : IConfigEvent<object>;
+			where TEvent : IHandlerEvent<object>;
 
 		IServer Create(string host, int port);
 	}

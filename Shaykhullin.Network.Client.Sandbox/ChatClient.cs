@@ -30,6 +30,7 @@ namespace Client.Sandbox
 				.Wait();
 		}
 	}
+
 	public class ConnectConfig : IConfig<Connection>
 	{
 		public void Configure(Connection @event)

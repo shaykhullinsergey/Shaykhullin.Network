@@ -1,7 +1,7 @@
 ﻿namespace Shaykhullin.Network.Core
 {
 	public interface IConfigBuilder<out TEvent>
-		where TEvent : IConfigEvent<object>
+		where TEvent : IHandlerEvent<object>
 	{
 		void Call<TConfig>()
 			where TConfig : IConfig<TEvent>;
