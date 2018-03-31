@@ -1,6 +1,8 @@
 ﻿namespace Shaykhullin.Network.Core
 {
-	public interface IChannelConfig : IInjectable
+	public interface IChannelConfig 
 	{
+		IRegisterBuilder<TRegister> Register<TRegister>()
+			where TRegister : class;
 	}
 }

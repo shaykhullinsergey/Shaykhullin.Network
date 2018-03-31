@@ -2,7 +2,7 @@
 {
 	public interface ICommunicatorBuilder : IContainerBuilderBuilder
 	{
-		IContainerBuilderBuilder UseCommunicator<TProtocol>()
-			where TProtocol : ICommunicator;
+		IContainerBuilderBuilder UseCommunicator<TCommunicator>()
+			where TCommunicator : ICommunicator;
 	}
 }

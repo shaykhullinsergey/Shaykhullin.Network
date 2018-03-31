@@ -1,13 +1,18 @@
-﻿using System;
-
-namespace Shaykhullin.Network.Core
+﻿namespace Shaykhullin.Network.Core
 {
 	internal class ContainerBuilder : IContainerBuilderBuilder
 	{
+		private Configuration configuration;
+
+		public ContainerBuilder(Configuration configuration)
+		{
+			this.configuration = configuration;
+		}
+
 		public void UseContainer<TContainer>() 
 			where TContainer : IContainerBuilder
 		{
-			throw new NotImplementedException();
+			configuration.Container = typeof(TContainer);
 		}
 	}
 }

@@ -2,16 +2,24 @@
 {
 	internal class CommunicatorBuilder : ICommunicatorBuilder
 	{
-		public IContainerBuilderBuilder UseCommunicator<TProtocol>()
-			where TProtocol : ICommunicator
+		private readonly Configuration configuration;
+
+		public CommunicatorBuilder(Configuration configuration)
 		{
-			return new ContainerBuilder();
+			this.configuration = configuration;
+		}
+
+		public IContainerBuilderBuilder UseCommunicator<TCommunicator>()
+			where TCommunicator : ICommunicator
+		{
+			configuration.Communicator = typeof(TCommunicator);
+			return new ContainerBuilder(configuration);
 		}
 
 		public void UseContainer<TContainer>() 
 			where TContainer : IContainerBuilder
 		{
-			new ContainerBuilder()
+			new ContainerBuilder(configuration)
 				.UseContainer<TContainer>();
 		}
 	}

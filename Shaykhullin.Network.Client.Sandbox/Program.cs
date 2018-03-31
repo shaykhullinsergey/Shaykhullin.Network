@@ -12,17 +12,19 @@ namespace Client.Sandbox
 			config.Register<BaseService>()
 				.ImplementedBy<DerivedService>()
 				.As<Singleton>();
-			
-			config.When<Connect>()
-				.Call<ConnectConfig>();
 
-			var connection = config
-				.Create("127.0.0.1", 4000)
-				.Connect();
+			config.Register<BaseService>()
+				.ImplementedBy<DerivedService>()
+				.As<Singleton>();
 
-			connection.Send("Hello")
-				.To<MessageEvent>()
-				.Wait();
+			config.Register<BaseService>()
+				.ImplementedBy<DerivedService>()
+				.As<Singleton>();
+
+			config.Register<BaseService>()
+				.ImplementedBy<DerivedService>()
+				.As<Singleton>();
+
 		}
 		
 		class ConnectConfig : IConfig<Connect>

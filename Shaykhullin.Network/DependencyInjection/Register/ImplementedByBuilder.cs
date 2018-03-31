@@ -4,10 +4,17 @@ namespace Shaykhullin.Network.Core
 {
 	internal class ImplementedByBuilder : IImplementedByBuilder
 	{
-		public void As<TLifetime>() 
-			where TLifetime : ILifecycle
+		private readonly Dependency dependency;
+
+		public ImplementedByBuilder(Dependency dependency)
 		{
-			throw new NotImplementedException();
+			this.dependency = dependency;
+		}
+
+		public void As<TLifecycle>() 
+			where TLifecycle : ILifecycle
+		{
+			dependency.Lifecycle = typeof(TLifecycle);
 		}
 	}
 }

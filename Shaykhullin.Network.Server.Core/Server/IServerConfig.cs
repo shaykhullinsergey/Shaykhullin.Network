@@ -1,8 +1,6 @@
 ﻿namespace Shaykhullin.Network.Core
 {
-	public interface IServerConfig 
-		: IConfigurable, 
-			IInjectable
+	public interface IServerConfig  : INodeConfig
 	{
 		IChannelConfig Channel<TChannel>()
 			where TChannel : IChannel;

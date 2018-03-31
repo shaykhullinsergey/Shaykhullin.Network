@@ -2,7 +2,7 @@
 {
 	public interface IImplementedByBuilder
 	{
-		void As<TLifetime>()
-			where TLifetime : ILifecycle;
+		void As<TLifecycle>()
+			where TLifecycle : ILifecycle;
 	}
 }

@@ -5,7 +5,7 @@
 		public IRegisterBuilder<TRegister> Register<TRegister>() 
 			where TRegister : class
 		{
-			return new RegisterBuilder<TRegister>();
+			throw new System.NotImplementedException();
 		}
 	}
 }

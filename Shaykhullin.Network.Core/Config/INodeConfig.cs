@@ -1,9 +1,9 @@
 ﻿namespace Shaykhullin.Network.Core
 {
-	public interface IConfigurable : ICompressionBuilder
+	public interface INodeConfig : ICompressionBuilder
 	{
-		IConfigBuilder<TEvent> When<TEvent>()
-			where TEvent : IHandlerEvent<object>;
+		IRegisterBuilder<TRegister> Register<TRegister>()
+			where TRegister : class;
 
 		ICompressionBuilder UseSerializer<TSerializer>()
 			where TSerializer : ISerializer;
