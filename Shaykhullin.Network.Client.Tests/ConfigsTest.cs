@@ -1,9 +1,9 @@
-﻿using Shaykhullin.Network.Core;
+﻿using Xunit;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using Xunit;
+using System.Collections.Generic;
+using Shaykhullin.Network.Core;
 
 namespace Shaykhullin.Network.Client.Tests
 {

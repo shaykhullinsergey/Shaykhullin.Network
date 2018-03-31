@@ -1,9 +1,10 @@
-using Shaykhullin.Network.Core;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using System.Collections.Generic;
+
 using Xunit;
+using Shaykhullin.Network.Core;
 
 namespace Shaykhullin.Network.Client.Tests
 {
@@ -30,7 +31,7 @@ namespace Shaykhullin.Network.Client.Tests
 			where TField : class
 		{
 			return config.GetType()
-				.GetField("dependencies", BindingFlags.NonPublic | BindingFlags.Instance)
+				.GetField(name, BindingFlags.NonPublic | BindingFlags.Instance)
 				.GetValue(config) as TField;
 		}
 
