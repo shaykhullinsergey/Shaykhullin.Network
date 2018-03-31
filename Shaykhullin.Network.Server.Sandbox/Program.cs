@@ -20,12 +20,6 @@ namespace Server.Sandbox
 				.As<Singleton>();
 
 			var channel = config.Channel<DefaultChannel>();
-			
-			channel.UseSerializer<DefaultSerializer>()
-				.UseCompression<DefaultCompression>()
-				.UseEncryption<DefaultEncryption>()
-				.UseCommunicator<DefaultCommunicator>()
-				.UseContainer<DefaultContainerBuilder>();
 
 			channel.Register<BaseService>()
 				.ImplementedBy<DerivedService>()

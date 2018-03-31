@@ -1,16 +1,9 @@
 ﻿namespace Shaykhullin.Network.Core
 {
-	public interface IClientConfig : ICompressionBuilder
+	public interface IClientConfig 
+		: IConfigurable, 
+			IInjectable
 	{
-		ICompressionBuilder UseSerializer<TSerializer>()
-			where TSerializer : ISerializer;
-
-		IRegisterBuilder<TRegister> Register<TRegister>()
-			where TRegister : class;
-		
-		IConfigBuilder<TEvent> When<TEvent>()
-			where TEvent : IHandlerEvent<object>;
-		
 		IClient Create(string host, int port);
 	}
 }

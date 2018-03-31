@@ -1,11 +1,6 @@
 ﻿namespace Shaykhullin.Network.Core
 {
-	public interface IChannelConfig : ICompressionBuilder
+	public interface IChannelConfig : IInjectable
 	{
-		ICompressionBuilder UseSerializer<TSerializer>()
-			where TSerializer : ISerializer;
-
-		IRegisterBuilder<TRegister> Register<TRegister>()
-			where TRegister : class;
 	}
 }

@@ -2,7 +2,7 @@
 
 namespace Shaykhullin.Network.Core
 {
-	internal class ContainerBuilder : IDependencyContainerBuilder
+	internal class ContainerBuilder : IContainerBuilderBuilder
 	{
 		public void UseContainer<TContainer>() 
 			where TContainer : IContainerBuilder

@@ -1,8 +1,8 @@
 ﻿namespace Shaykhullin.Network.Core
 {
-	public interface ICommunicatorBuilder : IDependencyContainerBuilder
+	public interface ICommunicatorBuilder : IContainerBuilderBuilder
 	{
-		IDependencyContainerBuilder UseCommunicator<TProtocol>()
+		IContainerBuilderBuilder UseCommunicator<TProtocol>()
 			where TProtocol : ICommunicator;
 	}
 }

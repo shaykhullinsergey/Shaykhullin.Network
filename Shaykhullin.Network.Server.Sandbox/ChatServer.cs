@@ -26,13 +26,10 @@ namespace Server.Sandbox
 				.UseEncryption<DefaultEncryption>()
 				.UseCommunicator<DefaultCommunicator>()
 				.UseContainer<DefaultContainerBuilder>();
-			
+
 			config.Channel<DefaultChannel>()
-				.UseSerializer<DefaultSerializer>()
-				.UseCompression<DefaultCompression>()
-				.UseEncryption<DefaultEncryption>()
-				.UseCommunicator<DefaultCommunicator>()
-				.UseContainer<DefaultContainerBuilder>();
+				.Register<MessageLogger>()
+				.As<Transient>();
 			
 			config.Create("127.0.0.1", 4000)
 				.Run();

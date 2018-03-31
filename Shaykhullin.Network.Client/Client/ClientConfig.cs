@@ -16,11 +16,6 @@ namespace Shaykhullin.Network
 			return new RegisterBuilder<TRegister>();
 		}
 
-		public IClient Create(string host, int port)
-		{
-			return new Client();
-		}
-
 		public ICompressionBuilder UseSerializer<TSerializer>()
 			where TSerializer : ISerializer
 		{
@@ -41,7 +36,7 @@ namespace Shaykhullin.Network
 				.UseEncryption<TEncryption>();
 		}
 
-		public IDependencyContainerBuilder UseCommunicator<TProtocol>() 
+		public IContainerBuilderBuilder UseCommunicator<TProtocol>() 
 			where TProtocol : ICommunicator
 		{
 			return new CommunicatorBuilder()
@@ -53,6 +48,11 @@ namespace Shaykhullin.Network
 		{
 			new ContainerBuilder()
 				.UseContainer<TContainer>();
+		}
+
+		public IClient Create(string host, int port)
+		{
+			return new Client();
 		}
 	}
 }

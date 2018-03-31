@@ -8,7 +8,7 @@
 			return new CommunicatorBuilder();
 		}
 
-		public IDependencyContainerBuilder UseCommunicator<TProtocol>() 
+		public IContainerBuilderBuilder UseCommunicator<TProtocol>() 
 			where TProtocol : ICommunicator
 		{
 			return new CommunicatorBuilder()

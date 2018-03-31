@@ -2,7 +2,7 @@
 {
 	internal class CommunicatorBuilder : ICommunicatorBuilder
 	{
-		public IDependencyContainerBuilder UseCommunicator<TProtocol>()
+		public IContainerBuilderBuilder UseCommunicator<TProtocol>()
 			where TProtocol : ICommunicator
 		{
 			return new ContainerBuilder();

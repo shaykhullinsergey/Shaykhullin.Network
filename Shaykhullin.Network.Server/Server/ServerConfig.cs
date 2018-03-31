@@ -47,7 +47,7 @@ namespace Shaykhullin.Network
 				.UseEncryption<TEncryption>();
 		}
 
-		public IDependencyContainerBuilder UseCommunicator<TProtocol>() 
+		public IContainerBuilderBuilder UseCommunicator<TProtocol>() 
 			where TProtocol : ICommunicator
 		{
 			return new CommunicatorBuilder()
