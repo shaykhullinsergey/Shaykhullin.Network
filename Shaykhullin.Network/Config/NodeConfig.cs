@@ -5,9 +5,9 @@ namespace Shaykhullin.Network.Core
 {
 	public abstract class NodeConfig : IConfigurable, IInjectable, IHandlerable
 	{
+		protected readonly Configuration configuration = new Configuration();
 		protected readonly IDictionary<Type, ConfigDto> configs = new Dictionary<Type, ConfigDto>();
 		protected readonly IDictionary<Type, DependencyDto> dependencies = new Dictionary<Type, DependencyDto>();
-		protected readonly Configuration configuration = new Configuration();
 
 		public IConfigBuilder<TEvent> When<TEvent>()
 			where TEvent : IHandlerEvent<object>

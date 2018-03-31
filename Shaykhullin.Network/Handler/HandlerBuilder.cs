@@ -1,14 +1,19 @@
-﻿using System;
-
-namespace Shaykhullin.Network.Core
+﻿namespace Shaykhullin.Network.Core
 {
 	internal class HandlerBuilder<TEvent> : IHandlerBuilder<TEvent>
 		where TEvent : IEvent<object>
 	{
+		private readonly HandlerDto dto;
+
+		public HandlerBuilder(HandlerDto dto)
+		{
+			this.dto = dto;
+		}
+
 		public void Call<THandler>() 
 			where THandler : IHandler<TEvent>
 		{
-			throw new NotImplementedException();
+			dto.Handlers.Add(typeof(THandler));
 		}
 	}
 }

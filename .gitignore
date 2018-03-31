@@ -33,3 +33,5 @@ Shaykhullin\.Network\.Server\.Core/obj/
 
 Shaykhullin\.Network\.Core/bin/Debug/netcoreapp2\.0/
 .vs/
+Shaykhullin.Network.Client.Tests/obj/
+Shaykhullin.Network.Client.Tests/bin/
