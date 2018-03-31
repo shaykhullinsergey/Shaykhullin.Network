@@ -4,40 +4,60 @@ namespace Shaykhullin.Network.Core
 {
 	public abstract class NodeConfig : IConfigurable, IInjectable, IHandlerable
 	{
-		private readonly Injectable injectable  = new Injectable();
-		private readonly Configurable configurable  = new Configurable();
-		private readonly Handlerable handlerable  = new Handlerable();
-
-		protected IList<Dependency> Dependencies => injectable.Dependencies;
-		protected Configuration Configuration => configurable.Configuration;
-		protected IList<EventHandler> Handlers => handlerable.Handlers;
+		protected readonly IList<Dependency> dependencies = new List<Dependency>();
+		protected readonly Configuration configuration = new Configuration();
+		protected readonly IList<EventHandler> handlers = new List<EventHandler>();
 
 		public IConfigBuilder<TEvent> When<TEvent>()
-			where TEvent : IHandlerEvent<object> =>
-				handlerable.When<TEvent>();
+			where TEvent : IHandlerEvent<object>
+		{
+			var eventHandler = new EventHandler(typeof(TEvent));
+			handlers.Add(eventHandler);
+
+			return new ConfigBuilder<TEvent>(eventHandler);
+		}
 
 		public IRegisterBuilder<TRegister> Register<TRegister>()
-			where TRegister : class =>
-				injectable.Register<TRegister>();
+			where TRegister : class
+		{
+			var dependency = new Dependency(typeof(TRegister));
+			dependencies.Add(dependency);
+			return new RegisterBuilder<TRegister>(dependency);
+		}
 
 		public ICompressionBuilder UseSerializer<TSerializer>()
-			where TSerializer : ISerializer =>
-				configurable.UseSerializer<TSerializer>();
+			where TSerializer : ISerializer
+		{
+			configuration.Serializer = typeof(TSerializer);
+			return new CompressionBuilder(configuration);
+		}
 
 		public IEncryptionBuilder UseCompression<TCompression>()
-			where TCompression : ICompression =>
-				configurable.UseCompression<TCompression>();
+			where TCompression : ICompression
+		{
+			return new CompressionBuilder(configuration)
+				.UseCompression<TCompression>();
+		}
 
 		public ICommunicatorBuilder UseEncryption<TEncryption>()
-			where TEncryption : IEncryption =>
-				configurable.UseEncryption<TEncryption>();
+			where TEncryption : IEncryption
+		{
+			return new CompressionBuilder(configuration)
+				.UseEncryption<TEncryption>();
+		}
 
-		public IContainerBuilderBuilder UseCommunicator<TCommunicator>()
-			where TCommunicator : ICommunicator =>
-				configurable.UseCommunicator<TCommunicator>();
+		public IContainerBuilderBuilder UseCommunicator<TProtocol>()
+			where TProtocol : ICommunicator
+		{
+			return new CompressionBuilder(configuration)
+				.UseCommunicator<TProtocol>();
+		}
 
 		public void UseContainer<TContainer>()
-			where TContainer : IContainerBuilder =>
-				configurable.UseContainer<TContainer>();
+			where TContainer : IContainerBuilder
+		{
+			new CompressionBuilder(configuration)
+				.UseContainer<TContainer>();
+		}
 	}
 }
