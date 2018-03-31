@@ -2,7 +2,7 @@
 
 namespace Shaykhullin.Network
 {
-	public class ClientConfig : NodeConfig, IClientConfig
+	public sealed class ClientConfig : NodeConfig, IClientConfig
 	{
 		public IClient Create(string host, int port)
 		{

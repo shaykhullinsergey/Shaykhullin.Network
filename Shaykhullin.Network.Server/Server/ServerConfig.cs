@@ -2,7 +2,7 @@
 
 namespace Shaykhullin.Network
 {
-	public class ServerConfig : NodeConfig, IServerConfig
+	public sealed class ServerConfig : NodeConfig, IServerConfig
 	{
 		public IChannelConfig Channel<TChannel>() 
 			where TChannel : IChannel

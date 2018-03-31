@@ -2,10 +2,10 @@
 {
 	internal class ChannelConfig : IChannelConfig
 	{
-		public IRegisterBuilder<TRegister> Register<TRegister>() 
-			where TRegister : class
-		{
-			throw new System.NotImplementedException();
-		}
+		public Injectable Injectable { get; } = new Injectable();
+
+		public IRegisterBuilder<TRegister> Register<TRegister>()
+			where TRegister : class =>
+				Injectable.Register<TRegister>();
 	}
 }

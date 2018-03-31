@@ -1,85 +1,43 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Shaykhullin.Network.Core
 {
-	public class Configuration
+	public abstract class NodeConfig : IConfigurable, IInjectable, IHandlerable
 	{
-		public Type Serializer { get; set; }
-		public Type Compression { get; set; }
-		public Type Encryption { get; set; }
-		public Type Communicator { get; set; }
-		public Type Container { get; set; }
-	}
+		private readonly Injectable injectable  = new Injectable();
+		private readonly Configurable configurable  = new Configurable();
+		private readonly Handlerable handlerable  = new Handlerable();
 
-	public class EventHandler
-	{
-		public Type Event { get; }
-		public Type Handler { get; set; }
-
-		public EventHandler(Type @event)
-		{
-			Event = @event;
-		}
-	}
-
-	public abstract class NodeConfig : INodeConfig
-	{
-		protected readonly IList<Dependency> dependencies = new List<Dependency>();
-		protected readonly Configuration configuration = new Configuration();
-		protected readonly IList<EventHandler> eventHandlers = new List<EventHandler>();
+		protected IList<Dependency> Dependencies => injectable.Dependencies;
+		protected Configuration Configuration => configurable.Configuration;
+		protected IList<EventHandler> Handlers => handlerable.Handlers;
 
 		public IConfigBuilder<TEvent> When<TEvent>()
-			where TEvent : IHandlerEvent<object>
-		{
-			var eventHandler = new EventHandler(typeof(TEvent));
-			eventHandlers.Add(eventHandler);
-
-			return new ConfigBuilder<TEvent>(eventHandler);
-		}
+			where TEvent : IHandlerEvent<object> =>
+				handlerable.When<TEvent>();
 
 		public IRegisterBuilder<TRegister> Register<TRegister>()
-			where TRegister : class
-		{
-			var dependency = new Dependency(typeof(TRegister));
-			dependencies.Add(dependency);
-
-			return new RegisterBuilder<TRegister>(dependency);
-		}
+			where TRegister : class =>
+				injectable.Register<TRegister>();
 
 		public ICompressionBuilder UseSerializer<TSerializer>()
-			where TSerializer : ISerializer
-		{
-			configuration.Serializer = typeof(TSerializer);
-			return new CompressionBuilder(configuration);
-		}
+			where TSerializer : ISerializer =>
+				configurable.UseSerializer<TSerializer>();
 
 		public IEncryptionBuilder UseCompression<TCompression>()
-			where TCompression : ICompression
-		{
-			return new CompressionBuilder(configuration)
-				.UseCompression<TCompression>();
-		}
+			where TCompression : ICompression =>
+				configurable.UseCompression<TCompression>();
 
 		public ICommunicatorBuilder UseEncryption<TEncryption>()
-			where TEncryption : IEncryption
-		{
-			return new CompressionBuilder(configuration)
-				.UseEncryption<TEncryption>();
-		}
+			where TEncryption : IEncryption =>
+				configurable.UseEncryption<TEncryption>();
 
-		public IContainerBuilderBuilder UseCommunicator<TProtocol>()
-			where TProtocol : ICommunicator
-		{
-			return new CompressionBuilder(configuration)
-				.UseCommunicator<TProtocol>();
-		}
+		public IContainerBuilderBuilder UseCommunicator<TCommunicator>()
+			where TCommunicator : ICommunicator =>
+				configurable.UseCommunicator<TCommunicator>();
 
 		public void UseContainer<TContainer>()
-			where TContainer : IContainerBuilder
-		{
-			new CompressionBuilder(configuration)
-				.UseContainer<TContainer>();
-		}
+			where TContainer : IContainerBuilder =>
+				configurable.UseContainer<TContainer>();
 	}
 }

@@ -1,10 +1,7 @@
 ﻿namespace Shaykhullin.Network.Core
 {
-	public interface INodeConfig : ICompressionBuilder
+	public interface IConfigurable : ICompressionBuilder
 	{
-		IRegisterBuilder<TRegister> Register<TRegister>()
-			where TRegister : class;
-
 		ICompressionBuilder UseSerializer<TSerializer>()
 			where TSerializer : ISerializer;
 	}
