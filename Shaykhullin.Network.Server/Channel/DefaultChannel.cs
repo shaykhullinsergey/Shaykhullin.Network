@@ -1,4 +1,4 @@
-﻿namespace Shaykhullin.Network
+﻿namespace Shaykhullin.Network.Core
 {
 	public class DefaultChannel : Channel
 	{

@@ -1,4 +1,4 @@
-﻿namespace Shaykhullin.Network
+﻿namespace Shaykhullin.Network.Core
 {
 	public interface ISendable
 	{

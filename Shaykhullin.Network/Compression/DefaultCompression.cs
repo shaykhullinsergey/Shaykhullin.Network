@@ -1,6 +1,4 @@
-﻿using Shaykhullin.Network.Core;
-
-namespace Shaykhullin.Network
+﻿namespace Shaykhullin.Network.Core
 {
 	public class DefaultCompression : ICompression
 	{

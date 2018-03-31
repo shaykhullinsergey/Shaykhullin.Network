@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace Shaykhullin.Network
+namespace Shaykhullin.Network.Core
 {
 	public interface ISendBuilder<in TData>
 	{

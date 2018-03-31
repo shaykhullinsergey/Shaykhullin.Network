@@ -1,6 +1,6 @@
 ﻿using System.Net.Sockets;
 
-namespace Shaykhullin.Network
+namespace Shaykhullin.Network.Core
 {
 	public class DisconnectInfo
 	{
