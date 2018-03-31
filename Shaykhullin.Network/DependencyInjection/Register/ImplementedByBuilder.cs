@@ -4,9 +4,9 @@ namespace Shaykhullin.Network.Core
 {
 	internal class ImplementedByBuilder : IImplementedByBuilder
 	{
-		private readonly Dependency dependency;
+		private readonly DependencyDto dependency;
 
-		public ImplementedByBuilder(Dependency dependency)
+		public ImplementedByBuilder(DependencyDto dependency)
 		{
 			this.dependency = dependency;
 		}

@@ -2,13 +2,13 @@
 
 namespace Shaykhullin.Network.Core
 {
-	public class Dependency
+	public class DependencyDto
 	{
 		public Type Register { get; }
 		public Type Implemented { get; set; }
 		public Type Lifecycle { get; set; }
 
-		internal Dependency(Type register)
+		internal DependencyDto(Type register)
 		{
 			Register = register;
 		}

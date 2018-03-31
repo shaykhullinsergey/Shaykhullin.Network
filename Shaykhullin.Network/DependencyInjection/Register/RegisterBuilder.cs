@@ -3,9 +3,9 @@
 	internal class RegisterBuilder<TRegister> : IRegisterBuilder<TRegister>
 		where TRegister : class
 	{
-		private readonly Dependency dependency;
+		private readonly DependencyDto dependency;
 
-		public RegisterBuilder(Dependency dependency)
+		public RegisterBuilder(DependencyDto dependency)
 		{
 			this.dependency = dependency;
 		}

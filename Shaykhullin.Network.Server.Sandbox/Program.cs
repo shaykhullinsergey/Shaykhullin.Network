@@ -1,4 +1,5 @@
 ﻿using Shaykhullin.Network;
+using Shaykhullin.Network.Core;
 using System.Threading.Tasks;
 
 namespace Server.Sandbox
@@ -13,19 +14,32 @@ namespace Server.Sandbox
 				.ImplementedBy<DerivedService>()
 				.As<Singleton>();
 
-			var channel = config.Channel<DefaultChannel>();
+			config.Register<BaseService>()
+				.ImplementedBy<BaseService>()
+				.As<Transient>();
 
-			channel.Register<BaseService>()
+			var c = config.Channel<DefaultChannel>();
+			c.Register<BaseService>()
 				.ImplementedBy<DerivedService>()
 				.As<Singleton>();
+
+			c.Register<BaseService>()
+				.ImplementedBy<BaseService>()
+				.As<Transient>();
 
 			config.When<Connect>()
 				.Call<ConnectionConfig>();
 
-			config.Create("127.0.0.1", 4000)
+			config.UseSerializer<DefaultSerializer>()
+				.UseCompression<DefaultCompression>()
+				.UseEncryption<DefaultEncryption>()
+				.UseCommunicator<DefaultCommunicator>()
+				.UseContainer<DefaultContainerBuilder>();
+
+			config.Create("", 0)
 				.Run();
 		}
-		
+
 		public class ConnectionConfig : IConfig<Connect>
 		{
 			public void Configure(Connect @event)

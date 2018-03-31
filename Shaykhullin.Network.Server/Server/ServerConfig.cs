@@ -1,7 +1,6 @@
-﻿using Shaykhullin.Network.Core;
-using System;
-using System.Collections;
+﻿using System;
 using System.Collections.Generic;
+using Shaykhullin.Network.Core;
 
 namespace Shaykhullin.Network
 {
@@ -12,18 +11,18 @@ namespace Shaykhullin.Network
 		public IChannelConfig Channel<TChannel>() 
 			where TChannel : IChannel
 		{
-			if(channels.TryGetValue(typeof(TChannel), out var dto))
+			if(!channels.TryGetValue(typeof(TChannel), out var dto))
 			{
-				return new ChannelConfig(dto.Dependencies);
+				dto = new ChannelDto(typeof(TChannel));
+				channels.Add(typeof(TChannel), dto);
 			}
-
-			dto = new ChannelDto(typeof(TChannel));
-			channels.Add(typeof(TChannel), dto);
+			
 			return new ChannelConfig(dto.Dependencies);
 		}
 
 		public IServer Create(string host, int port)
 		{
+			
 			return new Server();
 		}
 	}
@@ -31,12 +30,12 @@ namespace Shaykhullin.Network
 	public class ChannelDto
 	{
 		public Type Channel { get; }
-		public IList<Dependency> Dependencies { get; }
+		public IDictionary<Type, DependencyDto> Dependencies { get; }
 
 		public ChannelDto(Type channel)
 		{
 			Channel = channel;
-			Dependencies = new List<Dependency>();
+			Dependencies = new Dictionary<Type, DependencyDto>();
 		}
 	}
 }

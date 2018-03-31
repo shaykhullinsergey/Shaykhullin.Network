@@ -1,28 +1,37 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Shaykhullin.Network.Core
 {
 	public abstract class NodeConfig : IConfigurable, IInjectable, IHandlerable
 	{
-		protected readonly IList<Dependency> dependencies = new List<Dependency>();
+		protected readonly IDictionary<Type, ConfigDto> configs = new Dictionary<Type, ConfigDto>();
+		protected readonly IDictionary<Type, DependencyDto> dependencies = new Dictionary<Type, DependencyDto>();
 		protected readonly Configuration configuration = new Configuration();
-		protected readonly IList<EventHandler> handlers = new List<EventHandler>();
 
 		public IConfigBuilder<TEvent> When<TEvent>()
 			where TEvent : IHandlerEvent<object>
 		{
-			var eventHandler = new EventHandler(typeof(TEvent));
-			handlers.Add(eventHandler);
-
-			return new ConfigBuilder<TEvent>(eventHandler);
+			if(!configs.TryGetValue(typeof(TEvent), out var dto))
+			{
+				dto = new ConfigDto(typeof(TEvent));
+				configs.Add(typeof(TEvent), dto);
+			}
+			
+			return new ConfigBuilder<TEvent>(dto);
 		}
 
 		public IRegisterBuilder<TRegister> Register<TRegister>()
 			where TRegister : class
 		{
-			var dependency = new Dependency(typeof(TRegister));
-			dependencies.Add(dependency);
-			return new RegisterBuilder<TRegister>(dependency);
+			if(dependencies.TryGetValue(typeof(TRegister), out var dto))
+			{
+				throw new InvalidOperationException($"Type {typeof(TRegister)} already registered");
+			}
+
+			dto = new DependencyDto(typeof(TRegister));
+			dependencies.Add(typeof(TRegister), dto);
+			return new RegisterBuilder<TRegister>(dto);
 		}
 
 		public ICompressionBuilder UseSerializer<TSerializer>()

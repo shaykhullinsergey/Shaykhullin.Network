@@ -5,9 +5,9 @@ namespace Shaykhullin.Network.Core
 	internal class ConfigBuilder<TEvent> : IConfigBuilder<TEvent>
 		where TEvent : IHandlerEvent<object>
 	{
-		private readonly EventHandler eventHandler;
+		private readonly ConfigDto eventHandler;
 
-		public ConfigBuilder(EventHandler eventHandler)
+		public ConfigBuilder(ConfigDto eventHandler)
 		{
 			this.eventHandler = eventHandler;
 		}
@@ -15,7 +15,7 @@ namespace Shaykhullin.Network.Core
 		public void Call<TConfig>() 
 			where TConfig : IConfig<TEvent>
 		{
-			eventHandler.Handler = typeof(TConfig);
+			eventHandler.Configs.Add(typeof(TConfig));
 		}
 	}
 }

@@ -1,12 +1,13 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Shaykhullin.Network.Core
 {
 	internal class ChannelConfig : IChannelConfig
 	{
-		private readonly IList<Dependency> dependencies;
+		protected readonly IDictionary<Type, DependencyDto> dependencies;
 
-		public ChannelConfig(IList<Dependency> dependencies)
+		public ChannelConfig(IDictionary<Type, DependencyDto> dependencies)
 		{
 			this.dependencies = dependencies;
 		}
@@ -14,10 +15,14 @@ namespace Shaykhullin.Network.Core
 		public IRegisterBuilder<TRegister> Register<TRegister>()
 			where TRegister : class
 		{
-			var dependency = new Dependency(typeof(TRegister));
-			dependencies.Add(dependency);
+			if (dependencies.TryGetValue(typeof(TRegister), out var dto))
+			{
+				throw new InvalidOperationException($"Type {typeof(TRegister)} already registered");
+			}
 
-			return new RegisterBuilder<TRegister>(dependency);
+			dto = new DependencyDto(typeof(TRegister));
+			dependencies.Add(typeof(TRegister), dto);
+			return new RegisterBuilder<TRegister>(dto);
 		}
 	}
 }
