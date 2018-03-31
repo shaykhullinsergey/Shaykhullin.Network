@@ -18,12 +18,6 @@ namespace Client.Sandbox
 				.ImplementedBy<LogRepository>()
 				.As<Singleton>();
 			
-			config.UseSerializer<DefaultSerializer>()
-				.UseCompression<DefaultCompression>()
-				.UseEncryption<DefaultEncryption>()
-				.UseCommunicator<DefaultCommunicator>()
-				.UseContainer<DefaultContainerBuilder>();
-
 			var connection = config.Create("127.0.0.1", 4000)
 				.Connect();
 

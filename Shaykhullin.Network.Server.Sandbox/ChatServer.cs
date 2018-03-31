@@ -21,12 +21,6 @@ namespace Server.Sandbox
 			config.Register<MessageLogger>()
 				.As<Singleton>();
 			
-			config.UseSerializer<DefaultSerializer>()
-				.UseCompression<DefaultCompression>()
-				.UseEncryption<DefaultEncryption>()
-				.UseCommunicator<DefaultCommunicator>()
-				.UseContainer<DefaultContainerBuilder>();
-
 			config.Channel<DefaultChannel>()
 				.Register<MessageLogger>()
 				.As<Transient>();

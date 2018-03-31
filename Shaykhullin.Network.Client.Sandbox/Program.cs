@@ -9,12 +9,6 @@ namespace Client.Sandbox
 		{
 			var config = new ClientConfig();
 			
-			config.UseSerializer<DefaultSerializer>()
-				.UseCompression<DefaultCompression>()
-				.UseEncryption<DefaultEncryption>()
-				.UseCommunicator<DefaultCommunicator>()
-				.UseContainer<DefaultContainerBuilder>();
-			
 			config.Register<BaseService>()
 				.ImplementedBy<DerivedService>()
 				.As<Singleton>();

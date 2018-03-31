@@ -9,12 +9,6 @@ namespace Server.Sandbox
 		{
 			var config = new ServerConfig();
 			
-			config.UseSerializer<DefaultSerializer>()
-				.UseCompression<DefaultCompression>()
-				.UseEncryption<DefaultEncryption>()
-				.UseCommunicator<DefaultCommunicator>()
-				.UseContainer<DefaultContainerBuilder>();
-
 			config.Register<BaseService>()
 				.ImplementedBy<DerivedService>()
 				.As<Singleton>();
