@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Shaykhullin.Network.Core
+namespace Network.Core
 {
 	public interface ISerializer
 	{

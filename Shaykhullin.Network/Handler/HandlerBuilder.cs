@@ -1,4 +1,4 @@
-﻿namespace Shaykhullin.Network.Core
+﻿namespace Network.Core
 {
 	internal class HandlerBuilder<TEvent> : IHandlerBuilder<TEvent>
 		where TEvent : IEvent<object>

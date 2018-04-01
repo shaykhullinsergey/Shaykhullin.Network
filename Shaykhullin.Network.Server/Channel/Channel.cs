@@ -1,6 +1,6 @@
-﻿using Shaykhullin.Network.Core;
+﻿using Network.Core;
 
-namespace Shaykhullin.Network.Core
+namespace Network.Core
 {
 	public class Channel : IChannel
 	{

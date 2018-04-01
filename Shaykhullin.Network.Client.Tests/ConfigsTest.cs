@@ -3,8 +3,8 @@ using System;
 using System.Linq;
 using System.Collections.Generic;
 
-using Shaykhullin.Network;
-using Shaykhullin.Network.Core;
+using Network;
+using Network.Core;
 
 namespace Network.Tests
 {

@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using Shaykhullin.Network.Core;
+using Network.Core;
 
-namespace Shaykhullin.Network
+namespace Network
 {
 	public sealed class ServerConfig : NodeConfig, IServerConfig
 	{

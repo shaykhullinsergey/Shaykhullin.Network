@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace Shaykhullin.Network
+namespace Network
 {
 	public interface IHandler<in TEvent>
 		where TEvent : IEvent<object>

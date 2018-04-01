@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace Shaykhullin.Network.Core
+namespace Network.Core
 {
 	public class DefaultCommunicator : ICommunicator
 	{

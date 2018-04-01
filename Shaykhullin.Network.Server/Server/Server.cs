@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Shaykhullin.Network.Core
+namespace Network.Core
 {
 	internal class Server : IServer
 	{

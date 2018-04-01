@@ -1,5 +1,5 @@
 ﻿using System.Threading.Tasks;
-using Shaykhullin.Network;
+using Network;
 
 namespace Client.Sandbox
 {

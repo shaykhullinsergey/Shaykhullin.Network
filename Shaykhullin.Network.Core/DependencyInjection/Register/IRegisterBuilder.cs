@@ -1,4 +1,4 @@
-﻿namespace Shaykhullin.Network.Core
+﻿namespace Network.Core
 {
 	public interface IRegisterBuilder<in TRegister> : IImplementedByBuilder
 		where TRegister : class

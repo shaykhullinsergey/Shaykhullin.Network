@@ -1,5 +1,5 @@
 ﻿using System.Reflection;
-using Shaykhullin.Network;
+using Network;
 
 namespace Network.Tests
 {

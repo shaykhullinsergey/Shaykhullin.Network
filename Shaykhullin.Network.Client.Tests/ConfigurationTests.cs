@@ -1,7 +1,7 @@
 ﻿using Xunit;
 
-using Shaykhullin.Network;
-using Shaykhullin.Network.Core;
+using Network;
+using Network.Core;
 
 namespace Network.Tests
 {

@@ -1,6 +1,6 @@
-﻿using Shaykhullin.Network.Core;
+﻿using Network.Core;
 
-namespace Shaykhullin.Network
+namespace Network
 {
 	public class Start : IHandlerEvent<object>
 	{

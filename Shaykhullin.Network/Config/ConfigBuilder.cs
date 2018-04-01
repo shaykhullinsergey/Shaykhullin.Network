@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Shaykhullin.Network.Core
+namespace Network.Core
 {
 	internal class ConfigBuilder<TEvent> : IConfigBuilder<TEvent>
 		where TEvent : IHandlerEvent<object>

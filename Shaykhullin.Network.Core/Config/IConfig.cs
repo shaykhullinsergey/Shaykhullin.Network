@@ -1,4 +1,4 @@
-﻿namespace Shaykhullin.Network
+﻿namespace Network
 {
 	public interface IConfig<in TEvent>
 	{

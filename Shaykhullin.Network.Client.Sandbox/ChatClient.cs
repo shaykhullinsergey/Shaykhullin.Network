@@ -1,4 +1,4 @@
-﻿using Shaykhullin.Network;
+﻿using Network;
 using System.Threading.Tasks;
 
 namespace Client.Sandbox

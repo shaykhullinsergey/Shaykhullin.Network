@@ -1,5 +1,5 @@
-﻿using Shaykhullin.Network;
-using Shaykhullin.Network.Core;
+﻿using Network;
+using Network.Core;
 using System.Threading.Tasks;
 
 namespace Server.Sandbox
