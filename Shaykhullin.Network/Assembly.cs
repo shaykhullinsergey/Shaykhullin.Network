@@ -1,4 +1,4 @@
 ﻿using System.Runtime.CompilerServices;
 
-[assembly: InternalsVisibleTo("Network.Client")]
-[assembly: InternalsVisibleTo("Network.Server")]
+[assembly: InternalsVisibleTo("Shaykhullin.Network.Client")]
+[assembly: InternalsVisibleTo("Shaykhullin.Network.Server")]
