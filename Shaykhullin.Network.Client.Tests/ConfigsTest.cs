@@ -1,13 +1,14 @@
 ﻿using Xunit;
 using System;
 using System.Linq;
-using System.Reflection;
 using System.Collections.Generic;
+
+using Shaykhullin.Network;
 using Shaykhullin.Network.Core;
 
-namespace Shaykhullin.Network.Client.Tests
+namespace Network.Tests
 {
-	public class ConfigsTest
+	public class ConfigsTest : ClientTests
 	{
 		[Fact]
 		public void ConfigExists()
@@ -91,14 +92,6 @@ namespace Shaykhullin.Network.Client.Tests
 			{
 				throw new NotImplementedException();
 			}
-		}
-
-		private TField GetField<TField>(string name, ClientConfig config)
-			where TField : class
-		{
-			return config.GetType()
-				.GetField(name, BindingFlags.NonPublic | BindingFlags.Instance)
-				.GetValue(config) as TField;
 		}
 	}
 }

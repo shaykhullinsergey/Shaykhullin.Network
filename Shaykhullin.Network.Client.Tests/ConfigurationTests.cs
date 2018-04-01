@@ -1,13 +1,11 @@
-﻿using Shaykhullin.Network.Core;
-using System;
-using System.Collections.Generic;
-using System.Reflection;
-using System.Text;
-using Xunit;
+﻿using Xunit;
 
-namespace Shaykhullin.Network.Client.Tests
+using Shaykhullin.Network;
+using Shaykhullin.Network.Core;
+
+namespace Network.Tests
 {
-	public class ConfigurationTests
+	public class ConfigurationTests : ClientTests
 	{
 		[Fact]
 		public void Configuration()
@@ -27,14 +25,6 @@ namespace Shaykhullin.Network.Client.Tests
 			Assert.Equal(typeof(DefaultEncryption), c.Encryption);
 			Assert.Equal(typeof(DefaultCommunicator), c.Communicator);
 			Assert.Equal(typeof(DefaultContainerBuilder), c.Container);
-		}
-
-		private TField GetField<TField>(string name, ClientConfig config)
-			where TField : class
-		{
-			return config.GetType()
-				.GetField(name, BindingFlags.NonPublic | BindingFlags.Instance)
-				.GetValue(config) as TField;
 		}
 	}
 }

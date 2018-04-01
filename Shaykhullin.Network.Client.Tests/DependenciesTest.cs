@@ -1,45 +1,37 @@
 using System;
 using System.Linq;
-using System.Reflection;
 using System.Collections.Generic;
 
 using Xunit;
+using Shaykhullin.Network;
 using Shaykhullin.Network.Core;
 
-namespace Shaykhullin.Network.Client.Tests
+namespace Network.Tests
 {
-	public class DependenciesTest
+	public class DependenciesTest : ClientTests
 	{
 		[Fact]
 		public void DependenciesRegistered()
 		{
 			var config = new ClientConfig();
 
-			config.Register<A>()
-				.ImplementedBy<B>()
+			config.Register<Base>()
+				.ImplementedBy<Derived>()
 				.As<Singleton>();
 
 			var field = GetField<IDictionary<Type, DependencyDto>>("dependencies", config);
 
 			Assert.Equal(1, field.Count);
-			Assert.Equal(typeof(A), field.Values.Single().Register);
-			Assert.Equal(typeof(B), field.Values.Single().Implemented);
+			Assert.Equal(typeof(Base), field.Values.Single().Register);
+			Assert.Equal(typeof(Derived), field.Values.Single().Implemented);
 			Assert.Equal(typeof(Singleton), field.Values.Single().Lifecycle);
 		}
 
-		private TField GetField<TField>(string name, ClientConfig config)
-			where TField : class
-		{
-			return config.GetType()
-				.GetField(name, BindingFlags.NonPublic | BindingFlags.Instance)
-				.GetValue(config) as TField;
-		}
-
-		class A
+		class Base
 		{
 		}
 
-		class B : A
+		class Derived : Base
 		{
 		}
 	}
