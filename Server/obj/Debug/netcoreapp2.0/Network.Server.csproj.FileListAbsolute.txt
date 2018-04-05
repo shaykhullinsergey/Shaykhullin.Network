@@ -1,0 +1,14 @@
+C:\Users\shaykhullin\Desktop\Network\Server\bin\Debug\netcoreapp2.0\Network.Server.deps.json
+C:\Users\shaykhullin\Desktop\Network\Server\bin\Debug\netcoreapp2.0\Network.Server.dll
+C:\Users\shaykhullin\Desktop\Network\Server\bin\Debug\netcoreapp2.0\Network.Server.pdb
+C:\Users\shaykhullin\Desktop\Network\Server\bin\Debug\netcoreapp2.0\Network.dll
+C:\Users\shaykhullin\Desktop\Network\Server\bin\Debug\netcoreapp2.0\Network.pdb
+C:\Users\shaykhullin\Desktop\Network\Server\obj\Debug\netcoreapp2.0\Network.Server.csprojResolveAssemblyReference.cache
+C:\Users\shaykhullin\Desktop\Network\Server\obj\Debug\netcoreapp2.0\Network.Server.csproj.CoreCompileInputs.cache
+C:\Users\shaykhullin\Desktop\Network\Server\obj\Debug\netcoreapp2.0\Network.Server.AssemblyInfoInputs.cache
+C:\Users\shaykhullin\Desktop\Network\Server\obj\Debug\netcoreapp2.0\Network.Server.AssemblyInfo.cs
+C:\Users\shaykhullin\Desktop\Network\Server\obj\Debug\netcoreapp2.0\Network.Server.csproj.CopyComplete
+C:\Users\shaykhullin\Desktop\Network\Server\obj\Debug\netcoreapp2.0\Network.Server.dll
+C:\Users\shaykhullin\Desktop\Network\Server\obj\Debug\netcoreapp2.0\Network.Server.pdb
+C:\Users\shaykhullin\Desktop\Network\Server\bin\Debug\netcoreapp2.0\Network.Core.dll
+C:\Users\shaykhullin\Desktop\Network\Server\bin\Debug\netcoreapp2.0\Network.Core.pdb
