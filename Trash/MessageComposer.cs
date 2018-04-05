@@ -2,7 +2,7 @@ namespace Network.Core
 {
   public class MessageComposer
   {
-    public Message GetMessage(Payload payload)
+    public IMessage GetMessage(IPayload payload)
     {
       var data = new Serializer().Serialize(payload.Object);
       data = new Compression().Compress(data);
@@ -17,7 +17,7 @@ namespace Network.Core
       };
     }
 
-    public Payload GetPayload(Message message)
+    public IPayload GetPayload(IMessage message)
     {
       var data = new Encryption().Decrypt(message.Data);
       data = new Compression().Decompress(data);

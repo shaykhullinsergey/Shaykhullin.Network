@@ -8,7 +8,7 @@ namespace Network.Core
 {
   public class Connection : IConnection
   {
-    private Communicator communicator;
+    private readonly Communicator communicator;
 
     public Connection(Socket socket)
     {
@@ -16,7 +16,7 @@ namespace Network.Core
 			Task.Run(() => ReceiveLoop().Wait());
     }
 
-    public async Task Send(Payload payload)
+    public async Task Send(IPayload payload)
     {
       var message = new MessageComposer().GetMessage(payload);
 			var packets = await new PacketsComposer().GetPackets(message);
@@ -30,7 +30,7 @@ namespace Network.Core
 
     private async Task ReceiveLoop()
     {
-      var messages = new Dictionary<int, List<Packet>>();
+      var messages = new Dictionary<int, IList<IPacket>>();
 
       while (true)
       {
@@ -41,20 +41,22 @@ namespace Network.Core
         }
         else
         {
-          packets = new List<Packet> {packet};
+          packets = new List<IPacket> {packet};
           messages.Add(packet.Id, packets);
         }
 
 				var end = packets.FirstOrDefault(x => x.End);
 
-        if(end != null && end.Order == packets.Count)
-        {
-          var message = new PacketsComposer().GetMessage(packets);
-          var payload = new MessageComposer().GetPayload(message);
+	      if (end == null || end.Order != packets.Count)
+	      {
+		      continue;
+	      }
 
-					await new EventRaiser().Raise(payload);
-					messages.Remove(end.Id);
-				}
+	      var message = new PacketsComposer().GetMessage(packets);
+	      var payload = new MessageComposer().GetPayload(message);
+
+	      await new EventRaiser().Raise(payload);
+	      messages.Remove(end.Id);
       }
     }
   }
@@ -62,7 +64,7 @@ namespace Network.Core
 
 	public class EventRaiser
 	{
-		public async Task Raise(Payload payload)
+		public async Task Raise(IPayload payload)
 		{
 			var handlers = new Container().GetHandlers(payload.Event);
 			await Console.Out.WriteLineAsync(payload.Object.ToString());

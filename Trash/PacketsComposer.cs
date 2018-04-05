@@ -12,7 +12,7 @@ namespace Network.Core
 		private const int HeaderSize = 20;
 		private const int PayloadSize = PacketSize - HeaderSize;
 
-		public Packet GetPacket(byte[] data)
+		public IPacket GetPacket(byte[] data)
 		{
 			var chunk = new byte[PayloadSize];
 			Array.Copy(data, HeaderSize, chunk, 0, PayloadSize);
@@ -27,7 +27,7 @@ namespace Network.Core
 			};
 		}
 
-		public async Task<byte[]> GetBytes(Packet packet)
+		public async Task<byte[]> GetBytes(IPacket packet)
 		{
 			var data = new byte[PacketSize];
 			Array.Copy(BitConverter.GetBytes(packet.Id), 0, data, 0, 4);
@@ -44,7 +44,7 @@ namespace Network.Core
 			return new byte[PacketSize];
 		}
 
-		public async Task<Packet[]> GetPackets(Message message)
+		public async Task<IPacket[]> GetPackets(IMessage message)
 		{
 			var id = UniqueId++;
 
@@ -54,7 +54,7 @@ namespace Network.Core
 
 			var count = GetPacketCount(data.Length);
 
-			var packets = new Packet[count];
+			var packets = new IPacket[count];
 
 			for (var order = 0; order < count; order++)
 			{
@@ -77,7 +77,7 @@ namespace Network.Core
 			return packets;
 		}
 
-		public Message GetMessage(List<Packet> packets)
+		public IMessage GetMessage(IEnumerable<IPacket> packets)
 		{
 			var data = packets
 				.SelectMany(x => x.Chunk.Take(x.Length))

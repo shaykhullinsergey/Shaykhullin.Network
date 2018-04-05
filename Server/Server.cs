@@ -1,14 +1,16 @@
-﻿using Network.Core;
-using System.Net;
+﻿using System.Net;
 using System.Net.Sockets;
 using System.Threading.Tasks;
 
 namespace Network.Core
 {
-	public class Server
+	internal class Server : IServer
 	{
-		public void Run(string host, int port)
+		public void Run()
 		{
+			const string host = "127.0.0.1";
+			const int port = 4000;
+			
 			var socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.IP);
 			socket.Bind(new IPEndPoint(IPAddress.Parse(host), port));
 			socket.Listen(10);

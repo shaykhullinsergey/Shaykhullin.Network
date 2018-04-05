@@ -1,20 +1,24 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "C:\\Users\\shaykhullin\\Desktop\\Network\\Trash\\Network.csproj",
+    "projectUniqueName": "/home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Trash/Network.csproj",
     "projectName": "Network",
-    "projectPath": "C:\\Users\\shaykhullin\\Desktop\\Network\\Trash\\Network.csproj",
-    "outputPath": "C:\\Users\\shaykhullin\\Desktop\\Network\\Trash\\obj\\",
+    "projectPath": "/home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Trash/Network.csproj",
+    "outputPath": "/home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Trash/obj/",
     "projectStyle": "PackageReference",
     "fallbackFolders": [
-      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      "/usr/share/dotnet/sdk/NuGetFallbackFolder"
     ],
     "originalTargetFrameworks": [
-      "netstandard2.0"
+      "netcoreapp2.0"
     ],
     "frameworks": {
-      "netstandard2.0": {
-        "projectReferences": {}
+      "netcoreapp2.0": {
+        "projectReferences": {
+          "/home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Network.Core/Network.Core.csproj": {
+            "projectPath": "/home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Network.Core/Network.Core.csproj"
+          }
+        }
       }
     },
     "warningProperties": {
@@ -24,12 +28,12 @@
     }
   },
   "frameworks": {
-    "netstandard2.0": {
+    "netcoreapp2.0": {
       "dependencies": {
-        "NETStandard.Library": {
+        "Microsoft.NETCore.App": {
           "suppressParent": "All",
           "target": "Package",
-          "version": "[2.0.1, )",
+          "version": "[2.0.0, )",
           "autoReferenced": true
         }
       },

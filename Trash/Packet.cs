@@ -1,8 +1,6 @@
-using System;
-
 namespace Network.Core
 {
-  public class Packet
+  public class Packet : IPacket
   {
 		public int Id { get; set; }
     public int Order { get; set; }
