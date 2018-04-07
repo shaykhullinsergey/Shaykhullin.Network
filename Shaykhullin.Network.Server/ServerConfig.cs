@@ -1,4 +1,6 @@
-﻿namespace Network.Core
+﻿using Network.Core;
+
+namespace Network
 {
 	public class ServerConfig : Config<IServer>
 	{
