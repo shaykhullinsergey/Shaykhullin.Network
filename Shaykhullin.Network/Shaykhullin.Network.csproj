@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <LangVersion>7.2</LangVersion>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Network.DependencyInjection, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\Shaykhullin.DependencyInjection\Network.DependencyInjection\bin\Debug\netcoreapp2.0\Network.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Network.DependencyInjection.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\Shaykhullin.DependencyInjection\Network.DependencyInjection\bin\Debug\netcoreapp2.0\Network.DependencyInjection.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Shaykhullin.Network.Core\Shaykhullin.Network.Core.csproj" />
+  </ItemGroup>
+</Project>
