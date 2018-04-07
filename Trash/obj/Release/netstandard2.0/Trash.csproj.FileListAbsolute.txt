@@ -1,9 +1,0 @@
-C:\Users\shaykhullin\Desktop\Trash\obj\Release\netstandard2.0\Trash.csproj.CoreCompileInputs.cache
-C:\Users\shaykhullin\Desktop\Trash\obj\Release\netstandard2.0\Trash.AssemblyInfoInputs.cache
-C:\Users\shaykhullin\Desktop\Trash\obj\Release\netstandard2.0\Trash.AssemblyInfo.cs
-C:\Users\shaykhullin\Desktop\Trash\bin\Release\netstandard2.0\Trash.deps.json
-C:\Users\shaykhullin\Desktop\Trash\bin\Release\netstandard2.0\Trash.dll
-C:\Users\shaykhullin\Desktop\Trash\bin\Release\netstandard2.0\Trash.pdb
-C:\Users\shaykhullin\Desktop\Trash\obj\Release\netstandard2.0\Trash.dll
-C:\Users\shaykhullin\Desktop\Trash\obj\Release\netstandard2.0\Trash.pdb
-C:\Users\shaykhullin\Desktop\Trash\obj\Release\netstandard2.0\Trash.csprojResolveAssemblyReference.cache
