@@ -2,11 +2,13 @@
 
 namespace Network
 {
-	public class ServerConfig : IServerConfig
+	public class ServerConfig : Config<IServer>
 	{
-		public IServer Create(string host, int port)
+		public override IServer Create(string host, int port)
 		{
-			return new Server();
+			var setup = Build(host, port);
+
+			return new Server(setup);
 		}
 	}
 }

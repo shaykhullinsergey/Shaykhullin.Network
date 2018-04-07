@@ -1,9 +1,10 @@
 ﻿using System;
+using System.Threading.Tasks;
 
 namespace Network.Core
 {
 	public interface IClient
 	{
-		IConnection Connect();
+		Task<IConnection> Connect();
 	}
 }

@@ -6,19 +6,24 @@ namespace Network.Core
 {
 	internal class Server : IServer
 	{
-		public void Run()
+		private ISetup setup;
+
+		public Server(ISetup setup)
 		{
-			const string host = "127.0.0.1";
-			const int port = 4000;
-			
-			var socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.IP);
-			socket.Bind(new IPEndPoint(IPAddress.Parse(host), port));
-			socket.Listen(10);
+			this.setup = setup;
+		}
+
+		public async Task Run()
+		{
+			var serverSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.IP);
+			serverSocket.Bind(new IPEndPoint(IPAddress.Parse(setup.Configuration.Host), setup.Configuration.Port));
+			serverSocket.Listen(10);
 
 			while (true)
 			{
-				var client = socket.Accept();
-				Task.Run(() => new Connection(client));
+				var socket = serverSocket.Accept();
+
+				await setup.CreateConnection(socket);
 			}
 		}
 	}

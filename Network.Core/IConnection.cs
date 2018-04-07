@@ -1,9 +1,10 @@
-﻿using System.Threading.Tasks;
+﻿using Network.Core;
+using System;
 
-namespace Network.Core
+namespace Network
 {
 	public interface IConnection
 	{
-		Task Send(IPayload payload);
+		ISendBuilder Send<TData>(TData data);
 	}
 }

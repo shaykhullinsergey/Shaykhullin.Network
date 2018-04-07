@@ -1,19 +1,24 @@
-﻿using System.Net;
-using System.Net.Sockets;
+﻿using System.Net.Sockets;
+using System.Threading.Tasks;
 
 namespace Network.Core
 {
 	internal class Client : IClient
   {
-    public IConnection Connect()
+		private readonly ISetup setup;
+
+		public Client(ISetup setup)
+		{
+			this.setup = setup;
+		}
+
+		public async Task<IConnection> Connect()
     {
-			const string host = "127.0.0.1";
-			const int port = 4000;
-
 			var socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.IP);
-			socket.Connect(new IPEndPoint(IPAddress.Parse(host), port));
-
-			return new Connection(socket);
+			return await setup.CreateConnection(
+				socket, 
+				async communicator =>
+					await communicator.Connect(setup.Configuration.Host, setup.Configuration.Port));
     }
   }
 }

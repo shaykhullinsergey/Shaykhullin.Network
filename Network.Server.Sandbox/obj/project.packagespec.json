@@ -1,13 +1,13 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "/home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Network.Server.Sandbox/Network.Server.Sandbox.csproj",
+    "projectUniqueName": "C:\\Users\\shaykhullin\\Desktop\\Shaykhullin.Network-network\\Network.Server.Sandbox\\Network.Server.Sandbox.csproj",
     "projectName": "Network.Server.Sandbox",
-    "projectPath": "/home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Network.Server.Sandbox/Network.Server.Sandbox.csproj",
-    "outputPath": "/home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Network.Server.Sandbox/obj/",
+    "projectPath": "C:\\Users\\shaykhullin\\Desktop\\Shaykhullin.Network-network\\Network.Server.Sandbox\\Network.Server.Sandbox.csproj",
+    "outputPath": "C:\\Users\\shaykhullin\\Desktop\\Shaykhullin.Network-network\\Network.Server.Sandbox\\obj\\",
     "projectStyle": "PackageReference",
     "fallbackFolders": [
-      "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
     ],
     "originalTargetFrameworks": [
       "netcoreapp2.0"
@@ -15,8 +15,8 @@
     "frameworks": {
       "netcoreapp2.0": {
         "projectReferences": {
-          "/home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Server/Network.Server.csproj": {
-            "projectPath": "/home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Server/Network.Server.csproj"
+          "C:\\Users\\shaykhullin\\Desktop\\Shaykhullin.Network-network\\Server\\Network.Server.csproj": {
+            "projectPath": "C:\\Users\\shaykhullin\\Desktop\\Shaykhullin.Network-network\\Server\\Network.Server.csproj"
           }
         }
       }

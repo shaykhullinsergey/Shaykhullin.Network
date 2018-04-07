@@ -1,7 +1,9 @@
-﻿namespace Network.Core
+﻿using System.Threading.Tasks;
+
+namespace Network.Core
 {
 	public interface IServer
 	{
-		void Run();
+		Task Run();
 	}
 }

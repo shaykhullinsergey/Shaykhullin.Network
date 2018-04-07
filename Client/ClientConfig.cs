@@ -2,11 +2,13 @@
 
 namespace Network
 {
-	public class ClientConfig : IClientConfig
+	public class ClientConfig : Config<IClient>
 	{
-		public IClient Create(string host, int port)
+		public override IClient Create(string host, int port)
 		{
-			return new Client();
+			var setup = Build(host, port);
+
+			return new Client(setup);
 		}
 	}
 }

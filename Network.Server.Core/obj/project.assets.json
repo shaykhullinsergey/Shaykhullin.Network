@@ -197,11 +197,21 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
+      "Newtonsoft.Json/11.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
       "Network/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.0",
         "dependencies": {
-          "Network.Core": "1.0.0"
+          "Network.Core": "1.0.0",
+          "Newtonsoft.Json": "11.0.2"
         },
         "compile": {
           "bin/placeholder/Network.dll": {}
@@ -680,6 +690,34 @@
         "netstandard.library.nuspec"
       ]
     },
+    "Newtonsoft.Json/11.0.2": {
+      "sha512": "IvJe1pj7JHEsP8B8J8DwlMEx8UInrs/x+9oVY+oCD13jpLu4JbJU2WCIsMRn5C4yW9+DgkaO8uiVE5VHKjpmdQ==",
+      "type": "package",
+      "path": "newtonsoft.json/11.0.2",
+      "files": [
+        "LICENSE.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "newtonsoft.json.11.0.2.nupkg.sha512",
+        "newtonsoft.json.nuspec"
+      ]
+    },
     "Network/1.0.0": {
       "type": "project",
       "path": "../Trash/Network.csproj",
@@ -698,35 +736,37 @@
     ]
   },
   "packageFolders": {
-    "/home/shaykhullin/.nuget/packages/": {},
-    "/usr/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "C:\\Users\\shaykhullin\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Network.Server.Core/Network.Server.Core.csproj",
+      "projectUniqueName": "C:\\Users\\shaykhullin\\Desktop\\Shaykhullin.Network-network\\Network.Server.Core\\Network.Server.Core.csproj",
       "projectName": "Network.Server.Core",
-      "projectPath": "/home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Network.Server.Core/Network.Server.Core.csproj",
-      "packagesPath": "/home/shaykhullin/.nuget/packages/",
-      "outputPath": "/home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Network.Server.Core/obj/",
+      "projectPath": "C:\\Users\\shaykhullin\\Desktop\\Shaykhullin.Network-network\\Network.Server.Core\\Network.Server.Core.csproj",
+      "packagesPath": "C:\\Users\\shaykhullin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\shaykhullin\\Desktop\\Shaykhullin.Network-network\\Network.Server.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/home/shaykhullin/.config/NuGet/NuGet.Config"
+        "C:\\Users\\shaykhullin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "/home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Trash/Network.csproj": {
-              "projectPath": "/home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Trash/Network.csproj"
+            "C:\\Users\\shaykhullin\\Desktop\\Shaykhullin.Network-network\\Trash\\Network.csproj": {
+              "projectPath": "C:\\Users\\shaykhullin\\Desktop\\Shaykhullin.Network-network\\Trash\\Network.csproj"
             }
           }
         }

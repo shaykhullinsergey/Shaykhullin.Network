@@ -1,13 +1,13 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "/home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Client/Network.Client.csproj",
+    "projectUniqueName": "C:\\Users\\shaykhullin\\Desktop\\Shaykhullin.Network-network\\Client\\Network.Client.csproj",
     "projectName": "Network.Client",
-    "projectPath": "/home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Client/Network.Client.csproj",
-    "outputPath": "/home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Client/obj/",
+    "projectPath": "C:\\Users\\shaykhullin\\Desktop\\Shaykhullin.Network-network\\Client\\Network.Client.csproj",
+    "outputPath": "C:\\Users\\shaykhullin\\Desktop\\Shaykhullin.Network-network\\Client\\obj\\",
     "projectStyle": "PackageReference",
     "fallbackFolders": [
-      "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
     ],
     "originalTargetFrameworks": [
       "netcoreapp2.0"
@@ -15,8 +15,8 @@
     "frameworks": {
       "netcoreapp2.0": {
         "projectReferences": {
-          "/home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Network.Client.Core/Network.Client.Core.csproj": {
-            "projectPath": "/home/shaykhullin/Git/Shaykhullin.Network/Shaykhullin.Network/Network.Client.Core/Network.Client.Core.csproj"
+          "C:\\Users\\shaykhullin\\Desktop\\Shaykhullin.Network-network\\Network.Client.Core\\Network.Client.Core.csproj": {
+            "projectPath": "C:\\Users\\shaykhullin\\Desktop\\Shaykhullin.Network-network\\Network.Client.Core\\Network.Client.Core.csproj"
           }
         }
       }

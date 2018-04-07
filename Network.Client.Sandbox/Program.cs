@@ -1,23 +1,69 @@
 ﻿using System;
-using Network.Core;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Network.Client.Sandbox
 {
 	class Program
 	{
-		static void Main(string[] args)
+		static void Main()
+		{
+			Test().Wait();
+		}
+
+		static async Task Test()
 		{
 			var config = new ClientConfig();
 
-			var connection = config.Create("127.0.0.1", 4000)
-				.Connect();
+			config.When<Event>()
+				.Use<Handler>();
 
-			connection.Send(new Payload
+			config.Register<Logger>();
+
+			var client = config.Create("127.0.0.1", 4000);
+			var connection = await client.Connect();
+			await connection.Send(new Works
 			{
-				Event = typeof(int),
-				Object = "ASDASD"
+				Name = "It works!",
+				Age = 122
 			})
-			.Wait();
+			.In<Event>();
+
+			Thread.Sleep(-1);
+		}
+
+		public class Works
+		{
+			public string Name { get; set; }
+			public int Age { get; set; }
+		}
+
+		public class Event : IEvent<Works>
+		{
+			public Event(IConnection connection, Works message, Logger logger)
+			{
+				Logger = logger;
+				Connection = connection;
+				Message = message;
+			}
+
+			public Logger Logger { get; }
+			public IConnection Connection { get; }
+			public Works Message { get; }
+		}
+
+		public class Handler : IHandler<Event>
+		{
+			public Task Execute(Event @event)
+			{
+				@event.Logger.Log(@event.Message);
+				return Task.CompletedTask;
+			}
+		}
+
+		public class Logger
+		{
+			public void Log(Works msg) => Console.WriteLine("Client: " + msg.Name + " " + msg.Age);
 		}
 	}
 }
