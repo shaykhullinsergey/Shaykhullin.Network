@@ -1,0 +1,58 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.0",
+    "signature": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.0": {
+      "Shaykhullin.Network/1.0.0": {
+        "dependencies": {
+          "Shaykhullin.Network.Core": "1.0.0",
+          "Network.DependencyInjection.Core": "1.0.0.0",
+          "Network.DependencyInjection": "1.0.0.0"
+        },
+        "runtime": {
+          "Shaykhullin.Network.dll": {}
+        }
+      },
+      "Shaykhullin.Network.Core/1.0.0": {
+        "runtime": {
+          "Shaykhullin.Network.Core.dll": {}
+        }
+      },
+      "Network.DependencyInjection.Core/1.0.0.0": {
+        "runtime": {
+          "Network.DependencyInjection.Core.dll": {}
+        }
+      },
+      "Network.DependencyInjection/1.0.0.0": {
+        "runtime": {
+          "Network.DependencyInjection.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Shaykhullin.Network/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Shaykhullin.Network.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Network.DependencyInjection.Core/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Network.DependencyInjection/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
