@@ -1,8 +1,0 @@
-C:\Users\shaykhullin\Desktop\Network\Trash\bin\Release\netstandard2.0\Network.deps.json
-C:\Users\shaykhullin\Desktop\Network\Trash\bin\Release\netstandard2.0\Network.dll
-C:\Users\shaykhullin\Desktop\Network\Trash\bin\Release\netstandard2.0\Network.pdb
-C:\Users\shaykhullin\Desktop\Network\Trash\obj\Release\netstandard2.0\Network.csproj.CoreCompileInputs.cache
-C:\Users\shaykhullin\Desktop\Network\Trash\obj\Release\netstandard2.0\Network.AssemblyInfoInputs.cache
-C:\Users\shaykhullin\Desktop\Network\Trash\obj\Release\netstandard2.0\Network.AssemblyInfo.cs
-C:\Users\shaykhullin\Desktop\Network\Trash\obj\Release\netstandard2.0\Network.dll
-C:\Users\shaykhullin\Desktop\Network\Trash\obj\Release\netstandard2.0\Network.pdb
