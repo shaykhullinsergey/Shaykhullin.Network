@@ -1,0 +1,53 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.0",
+    "signature": "dd588b8a81dfb0dc764779e2385081af2006b4c5"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.0": {
+      "Shaykhullin.Network.Core/1.0.0": {
+        "dependencies": {
+          "Shaykhullin.DependencyInjection": "1.0.1"
+        },
+        "runtime": {
+          "Shaykhullin.Network.Core.dll": {}
+        }
+      },
+      "Shaykhullin.DependencyInjection/1.0.1": {
+        "dependencies": {
+          "Shaykhullin.DependencyInjection.Core": "1.0.1"
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/DependencyInjection.dll": {}
+        }
+      },
+      "Shaykhullin.DependencyInjection.Core/1.0.1": {
+        "runtime": {
+          "lib/netcoreapp2.0/DependencyInjection.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Shaykhullin.Network.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Shaykhullin.DependencyInjection/1.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rIMkf9qZklhTrb+JmSrJIpQ08WWFljWTI98z0W0aqf2u8sfxMpO7JcmKF65WhwZpTfH8P4Kr5XRFGD/6VnE2lQ==",
+      "path": "shaykhullin.dependencyinjection/1.0.1",
+      "hashPath": "shaykhullin.dependencyinjection.1.0.1.nupkg.sha512"
+    },
+    "Shaykhullin.DependencyInjection.Core/1.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-RNHq94ZMSoIX+YaEQvVI6jFk42fVRrahqMsx/yX7yHjPFjEWSuUD85HjiAV8yYClNVIlrHuWbucOGHLo8gI04w==",
+      "path": "shaykhullin.dependencyinjection.core/1.0.1",
+      "hashPath": "shaykhullin.dependencyinjection.core.1.0.1.nupkg.sha512"
+    }
+  }
+}
