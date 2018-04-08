@@ -1,4 +1,3 @@
-using System;
 using System.Net.Sockets;
 using System.Threading.Tasks;
 using DependencyInjection;
@@ -7,53 +6,81 @@ namespace Network.Core
 {
 	internal class Communicator : ICommunicator
 	{
-		private readonly Socket socket;
+		private readonly TcpClient tcpClient;
 		private readonly IPacketsComposer packetsComposer;
 		private readonly IConfiguration configuration;
-		
-		public bool IsConnected => !(socket.Poll(1000, SelectMode.SelectRead) && socket.Available == 0);
-		
+
 		public Communicator(IContainer container)
 		{
-			socket = container.Resolve<Socket>();
+			tcpClient = container.Resolve<TcpClient>();
 			packetsComposer = container.Resolve<IPacketsComposer>();
 			configuration = container.Resolve<IConfiguration>();
 		}
 
-		public Task Connect()
+		public async Task Connect()
 		{
-			return Task.Run(async () =>
-			{
-				socket.Connect(configuration.Host, configuration.Port);
-				await Task.Yield();
-			});
+			await tcpClient.ConnectAsync(configuration.Host, configuration.Port);
 		}
 
-		public Task Send(IPacket packet)
+		public async Task Send(IPacket packet)
 		{
-			return Task.Run(async () =>
-			{
-				var data = await packetsComposer.GetBytes(packet);
+			var data = await packetsComposer.GetBytes(packet);
 
-				socket.Send(data, 0, data.Length, SocketFlags.None);
-			});
+			while (!isConnected && !IsConnected)
+			{
+				await Connect();
+			}
+
+			await tcpClient.GetStream().WriteAsync(data, 0, data.Length);
+			await Task.Delay(5);
 		}
 
-		public Task<IPacket> Receive()
+		public async Task<IPacket> Receive()
 		{
-			return Task.Run(async () =>
-			{
-				var buffer = await packetsComposer.GetBuffer();
+			var buffer = await packetsComposer.GetBuffer();
 
-				while(!socket.Connected)
+			while (!isConnected && !IsConnected)
+			{
+				await Connect();
+			}
+
+			await tcpClient.GetStream().ReadAsync(buffer, 0, buffer.Length);
+			return await packetsComposer.GetPacket(buffer);
+		}
+
+		private bool isConnected = false;
+		public bool IsConnected
+		{
+			get
+			{
+				try
 				{
-					await Task.Yield();
+					if (tcpClient != null && tcpClient.Client != null && tcpClient.Client.Connected)
+					{
+						if (tcpClient.Client.Poll(0, SelectMode.SelectRead))
+						{
+							byte[] buff = new byte[1];
+							if (tcpClient.Client.Receive(buff, SocketFlags.Peek) == 0)
+							{
+								return false;
+							}
+							else
+							{
+								return isConnected = true;
+							}
+						}
+						return isConnected = true;
+					}
+					else
+					{
+						return false;
+					}
 				}
-				
-				socket.Receive(buffer, 0, buffer.Length, SocketFlags.None);
-				
-				return await packetsComposer.GetPacket(buffer);
-			});
+				catch
+				{
+					return false;
+				}
+			}
 		}
 	}
 }

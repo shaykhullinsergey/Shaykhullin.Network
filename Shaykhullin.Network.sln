@@ -1,18 +1,21 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shaykhullin.Network.Core", "Shaykhullin.Network.Core\Shaykhullin.Network.Core.csproj", "{97BA6FFC-1D2F-4879-B897-A6F6DF25C4F9}"
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2015
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shaykhullin.Network.Core", "Shaykhullin.Network.Core\Shaykhullin.Network.Core.csproj", "{97BA6FFC-1D2F-4879-B897-A6F6DF25C4F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shaykhullin.Network", "Shaykhullin.Network\Shaykhullin.Network.csproj", "{A4206C10-496B-4460-B376-6A80D833671C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shaykhullin.Network", "Shaykhullin.Network\Shaykhullin.Network.csproj", "{A4206C10-496B-4460-B376-6A80D833671C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shaykhullin.Network.Client", "Shaykhullin.Network.Client\Shaykhullin.Network.Client.csproj", "{E58303F5-3678-4384-B323-39315790CC26}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shaykhullin.Network.Client", "Shaykhullin.Network.Client\Shaykhullin.Network.Client.csproj", "{E58303F5-3678-4384-B323-39315790CC26}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shaykhullin.Network.Server", "Shaykhullin.Network.Server\Shaykhullin.Network.Server.csproj", "{35C2D885-0E8C-41C2-8A59-99C3B6972A9F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shaykhullin.Network.Server", "Shaykhullin.Network.Server\Shaykhullin.Network.Server.csproj", "{35C2D885-0E8C-41C2-8A59-99C3B6972A9F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shaykhullin.Network.Extensions.JsonSerializer", "Shaykhullin.Network.Extensions.JsonSerializer\Shaykhullin.Network.Extensions.JsonSerializer.csproj", "{9F0E4C99-F973-4E5B-8DEF-B02BC468F6FD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shaykhullin.Network.Extensions.JsonSerializer", "Shaykhullin.Network.Extensions.JsonSerializer\Shaykhullin.Network.Extensions.JsonSerializer.csproj", "{9F0E4C99-F973-4E5B-8DEF-B02BC468F6FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{BCFC770F-84D1-4E31-AAC4-025EA443052E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{BCFC770F-84D1-4E31-AAC4-025EA443052E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp2", "ConsoleApp2\ConsoleApp2.csproj", "{95FBB3B1-8AB0-4A0E-9313-DAFC5D83CC78}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp2", "ConsoleApp2\ConsoleApp2.csproj", "{95FBB3B1-8AB0-4A0E-9313-DAFC5D83CC78}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,26 +23,26 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{97BA6FFC-1D2F-4879-B897-A6F6DF25C4F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{97BA6FFC-1D2F-4879-B897-A6F6DF25C4F9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{97BA6FFC-1D2F-4879-B897-A6F6DF25C4F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{97BA6FFC-1D2F-4879-B897-A6F6DF25C4F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A4206C10-496B-4460-B376-6A80D833671C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A4206C10-496B-4460-B376-6A80D833671C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97BA6FFC-1D2F-4879-B897-A6F6DF25C4F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97BA6FFC-1D2F-4879-B897-A6F6DF25C4F9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A4206C10-496B-4460-B376-6A80D833671C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A4206C10-496B-4460-B376-6A80D833671C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E58303F5-3678-4384-B323-39315790CC26}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E58303F5-3678-4384-B323-39315790CC26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4206C10-496B-4460-B376-6A80D833671C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4206C10-496B-4460-B376-6A80D833671C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E58303F5-3678-4384-B323-39315790CC26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E58303F5-3678-4384-B323-39315790CC26}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{35C2D885-0E8C-41C2-8A59-99C3B6972A9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{35C2D885-0E8C-41C2-8A59-99C3B6972A9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E58303F5-3678-4384-B323-39315790CC26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E58303F5-3678-4384-B323-39315790CC26}.Release|Any CPU.Build.0 = Release|Any CPU
 		{35C2D885-0E8C-41C2-8A59-99C3B6972A9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{35C2D885-0E8C-41C2-8A59-99C3B6972A9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9F0E4C99-F973-4E5B-8DEF-B02BC468F6FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9F0E4C99-F973-4E5B-8DEF-B02BC468F6FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35C2D885-0E8C-41C2-8A59-99C3B6972A9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35C2D885-0E8C-41C2-8A59-99C3B6972A9F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9F0E4C99-F973-4E5B-8DEF-B02BC468F6FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9F0E4C99-F973-4E5B-8DEF-B02BC468F6FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F0E4C99-F973-4E5B-8DEF-B02BC468F6FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F0E4C99-F973-4E5B-8DEF-B02BC468F6FD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BCFC770F-84D1-4E31-AAC4-025EA443052E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BCFC770F-84D1-4E31-AAC4-025EA443052E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BCFC770F-84D1-4E31-AAC4-025EA443052E}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -49,6 +52,10 @@ Global
 		{95FBB3B1-8AB0-4A0E-9313-DAFC5D83CC78}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{95FBB3B1-8AB0-4A0E-9313-DAFC5D83CC78}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1F8380D4-7D00-458C-AA7C-C359B91D2BF7}
 	EndGlobalSection
 EndGlobal

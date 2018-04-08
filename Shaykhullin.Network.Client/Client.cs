@@ -1,5 +1,6 @@
 ﻿using System.Net.Sockets;
 using System.Threading.Tasks;
+
 using Network.Core;
 using DependencyInjection;
 
@@ -16,8 +17,8 @@ namespace Network
 
 		public async Task<IConnection> Connect()
 		{
-			config.Register<Socket>()
-				.ImplementedBy(c => new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.IP))
+			config.Register<TcpClient>()
+				.ImplementedBy(c => new TcpClient())
 				.As<Singleton>();
 
 			var container = config.Container;

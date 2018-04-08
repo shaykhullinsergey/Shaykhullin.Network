@@ -15,18 +15,18 @@ namespace Network.Core
 			this.config = config;
 		}
 
-		public Task Run()
+		public async Task Run()
 		{
 			var container = config.Container;
-			
+
 			var configuration = container.Resolve<IConfiguration>();
-			var socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.IP);
-			socket.Bind(new IPEndPoint(IPAddress.Parse(configuration.Host), configuration.Port));
-			socket.Listen(10);
-			
+
+			var tcpListener = new TcpListener(new IPEndPoint(IPAddress.Parse(configuration.Host), configuration.Port));
+			tcpListener.Start();
+
 			while (true)
 			{
-				var client = socket.Accept();
+				var tcpClient = await tcpListener.AcceptTcpClientAsync();
 
 				using (var scope = config.Scope())
 				{
@@ -34,8 +34,8 @@ namespace Network.Core
 						.ImplementedBy(c => scope)
 						.As<Singleton>();
 				
-					scope.Register<Socket>()
-						.ImplementedBy(c => client)
+					scope.Register<TcpClient>()
+						.ImplementedBy(c => tcpClient)
 						.As<Singleton>();
 
 					var connection = scope.Container.Resolve<IConnection>();
