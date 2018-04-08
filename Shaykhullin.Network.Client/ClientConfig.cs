@@ -2,7 +2,7 @@
 
 namespace Network
 {
-	public class ClientNodeConfig : NodeConfig<IClient>
+	public class ClientConfig : NodeConfig<IClient>
 	{
 		public override IClient Create(string host, int port)
 		{

@@ -3,6 +3,6 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Shaykhullin.DependencyInjection" Version="1.0.1" />
+    <PackageReference Include="Shaykhullin.DependencyInjection" Version="1.0.2" />
   </ItemGroup>
 </Project>

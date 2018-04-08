@@ -2,7 +2,7 @@
 
 namespace Network
 {
-	public class ServerNodeConfig : NodeConfig<IServer>
+	public class ServerConfig : NodeConfig<IServer>
 	{
 		public override IServer Create(string host, int port)
 		{
