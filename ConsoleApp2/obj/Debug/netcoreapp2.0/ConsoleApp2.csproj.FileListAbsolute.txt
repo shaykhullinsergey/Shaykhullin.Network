@@ -1,0 +1,17 @@
+/home/shaykhullin/Git/Shaykhullin.Network/ConsoleApp2/bin/Debug/netcoreapp2.0/ConsoleApp2.deps.json
+/home/shaykhullin/Git/Shaykhullin.Network/ConsoleApp2/bin/Debug/netcoreapp2.0/ConsoleApp2.runtimeconfig.json
+/home/shaykhullin/Git/Shaykhullin.Network/ConsoleApp2/bin/Debug/netcoreapp2.0/ConsoleApp2.runtimeconfig.dev.json
+/home/shaykhullin/Git/Shaykhullin.Network/ConsoleApp2/bin/Debug/netcoreapp2.0/ConsoleApp2.dll
+/home/shaykhullin/Git/Shaykhullin.Network/ConsoleApp2/bin/Debug/netcoreapp2.0/ConsoleApp2.pdb
+/home/shaykhullin/Git/Shaykhullin.Network/ConsoleApp2/bin/Debug/netcoreapp2.0/Shaykhullin.Network.Client.dll
+/home/shaykhullin/Git/Shaykhullin.Network/ConsoleApp2/bin/Debug/netcoreapp2.0/Shaykhullin.Network.Core.dll
+/home/shaykhullin/Git/Shaykhullin.Network/ConsoleApp2/bin/Debug/netcoreapp2.0/Shaykhullin.Network.dll
+/home/shaykhullin/Git/Shaykhullin.Network/ConsoleApp2/bin/Debug/netcoreapp2.0/Shaykhullin.Network.Client.pdb
+/home/shaykhullin/Git/Shaykhullin.Network/ConsoleApp2/bin/Debug/netcoreapp2.0/Shaykhullin.Network.Core.pdb
+/home/shaykhullin/Git/Shaykhullin.Network/ConsoleApp2/bin/Debug/netcoreapp2.0/Shaykhullin.Network.pdb
+/home/shaykhullin/Git/Shaykhullin.Network/ConsoleApp2/obj/Debug/netcoreapp2.0/ConsoleApp2.csproj.CoreCompileInputs.cache
+/home/shaykhullin/Git/Shaykhullin.Network/ConsoleApp2/obj/Debug/netcoreapp2.0/ConsoleApp2.AssemblyInfoInputs.cache
+/home/shaykhullin/Git/Shaykhullin.Network/ConsoleApp2/obj/Debug/netcoreapp2.0/ConsoleApp2.AssemblyInfo.cs
+/home/shaykhullin/Git/Shaykhullin.Network/ConsoleApp2/obj/Debug/netcoreapp2.0/ConsoleApp2.csproj.CopyComplete
+/home/shaykhullin/Git/Shaykhullin.Network/ConsoleApp2/obj/Debug/netcoreapp2.0/ConsoleApp2.dll
+/home/shaykhullin/Git/Shaykhullin.Network/ConsoleApp2/obj/Debug/netcoreapp2.0/ConsoleApp2.pdb

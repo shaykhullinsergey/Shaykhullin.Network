@@ -2,9 +2,9 @@
 {
 	public interface IPacket
 	{
-		int Id { get; }
-		int Order { get; }
-		int Length { get; }
+		byte Id { get; }
+		ushort Order { get; }
+		byte Length { get; }
 		bool End { get; }
 		byte[] Chunk { get; }
 	}

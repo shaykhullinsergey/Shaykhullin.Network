@@ -9,7 +9,7 @@ namespace Network.Core
 	{
 		private static int UniqueId;
 		private const int PacketSize = 256;
-		private const int HeaderSize = 20;
+		private const int HeaderSize = 5;
 		private const int PayloadSize = PacketSize - HeaderSize;
 
 		public Task<IPacket> GetPacket(byte[] data)
@@ -19,10 +19,10 @@ namespace Network.Core
 
 			return Task.FromResult((IPacket)new Packet
 			{
-				Id = BitConverter.ToInt32(data, 0),
-				Order = BitConverter.ToInt16(data, 4),
-				Length = BitConverter.ToInt32(data, 8),
-				End = BitConverter.ToBoolean(data, 12),
+				Id = data[0],
+				Order = BitConverter.ToUInt16(data, 1),
+				Length = data[3],
+				End = data[4] == 1,
 				Chunk = chunk
 			});
 		}
@@ -30,10 +30,10 @@ namespace Network.Core
 		public Task<byte[]> GetBytes(IPacket packet)
 		{
 			var data = new byte[PacketSize];
-			Array.Copy(BitConverter.GetBytes(packet.Id), 0, data, 0, 4);
-			Array.Copy(BitConverter.GetBytes(packet.Order), 0, data, 4, 4);
-			Array.Copy(BitConverter.GetBytes(packet.Length), 0, data, 8, 4);
-			Array.Copy(BitConverter.GetBytes(packet.End), 0, data, 12, 1);
+			data[0] = packet.Id;
+			Array.Copy(BitConverter.GetBytes(packet.Order), 0, data, 1, 2);
+			data[3] = packet.Length;
+			data[4] = (byte)(packet.End ? 1 : 0);
 			Array.Copy(packet.Chunk, 0, data, HeaderSize, PayloadSize);
 			return Task.FromResult(data);
 		}
@@ -45,7 +45,7 @@ namespace Network.Core
 
 		public Task<IPacket[]> GetPackets(IMessage message)
 		{
-			var id = UniqueId++;
+			var id = (byte)(UniqueId++ % byte.MaxValue);
 
 			var data = new byte[message.Data.Length + 4];
 			Array.Copy(BitConverter.GetBytes(message.EventId), data, 4);
@@ -53,12 +53,17 @@ namespace Network.Core
 
 			var count = GetPacketCount(data.Length);
 
+			if (count > ushort.MaxValue)
+			{
+				throw new InvalidOperationException("Message size is too long");
+			}
+
 			var packets = new IPacket[count];
 
 			for (var order = 0; order < count; order++)
 			{
 				var end = (order + 1) * PayloadSize >= data.Length;
-				var length = !end ? PayloadSize : data.Length - order * PayloadSize;
+				var length = (byte)(!end ? PayloadSize : data.Length - order * PayloadSize);
 				var chunk = new byte[PayloadSize];
 
 				Array.Copy(data, order * PayloadSize, chunk, 0, length);
@@ -66,9 +71,9 @@ namespace Network.Core
 				packets[order] = new Packet
 				{
 					Id = id,
-					Order = order + 1,
-					End = end,
+					Order = (ushort)(order + 1),
 					Length = length,
+					End = end,
 					Chunk = chunk
 				};
 			}
