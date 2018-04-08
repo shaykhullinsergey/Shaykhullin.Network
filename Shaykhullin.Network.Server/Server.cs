@@ -1,4 +1,5 @@
-﻿using System.Net;
+﻿using System;
+using System.Net;
 using System.Net.Sockets;
 using System.Threading.Tasks;
 using DependencyInjection;
@@ -22,7 +23,7 @@ namespace Network.Core
 			var socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.IP);
 			socket.Bind(new IPEndPoint(IPAddress.Parse(configuration.Host), configuration.Port));
 			socket.Listen(10);
-
+			
 			while (true)
 			{
 				var client = socket.Accept();

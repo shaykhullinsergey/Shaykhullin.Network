@@ -5,10 +5,10 @@ namespace Network.Core
 {
 	public interface IPacketsComposer
 	{
-		ValueTask<byte[]> GetBuffer();
-		ValueTask<byte[]> GetBytes(IPacket packet);
-		ValueTask<IMessage> GetMessage(IList<IPacket> packets);
-		ValueTask<IPacket> GetPacket(byte[] data);
-		ValueTask<IPacket[]> GetPackets(IMessage message);
+		Task<byte[]> GetBuffer();
+		Task<byte[]> GetBytes(IPacket packet);
+		Task<IMessage> GetMessage(IList<IPacket> packets);
+		Task<IPacket> GetPacket(byte[] data);
+		Task<IPacket[]> GetPackets(IMessage message);
 	}
 }

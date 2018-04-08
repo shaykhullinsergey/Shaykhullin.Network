@@ -24,6 +24,10 @@ namespace Network
 
 			var connection = container.Resolve<IConnection>();
 
+			config.Register<IConnection>()
+				.ImplementedBy(c => connection)
+				.As<Singleton>();
+			
 			await container.Resolve<ICommunicator>().Connect();
 
 			return connection;

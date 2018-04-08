@@ -12,7 +12,7 @@ namespace Network.Core
 			this.container = container;
 		}
 
-		public ValueTask<IMessage> GetMessage(IPayload payload)
+		public Task<IMessage> GetMessage(IPayload payload)
 		{
 			var data = container.Resolve<ISerializer>().Serialize(payload.Data);
 			data = container.Resolve<ICompression>().Compress(data);
@@ -20,10 +20,10 @@ namespace Network.Core
 
 			var eventId = container.Resolve<IEventHolder>().GetEvent(payload.Event);
 
-			return new ValueTask<IMessage>(new Message { EventId = eventId, Data = data });
+			return Task.FromResult((IMessage)new Message { EventId = eventId, Data = data });
 		}
 
-		public ValueTask<IPayload> GetPayload(IMessage message)
+		public Task<IPayload> GetPayload(IMessage message)
 		{
 			var data = container.Resolve<IEncryption>().Decrypt(message.Data);
 			data = container.Resolve<ICompression>().Decompress(data);
@@ -33,7 +33,7 @@ namespace Network.Core
 
 			var @object = container.Resolve<ISerializer>().Deserialize(data, dataType);
 
-			return new ValueTask<IPayload>(new Payload { Event = @event, Data = @object });
+			return Task.FromResult((IPayload)new Payload { Event = @event, Data = @object });
 		}
 	}
 }

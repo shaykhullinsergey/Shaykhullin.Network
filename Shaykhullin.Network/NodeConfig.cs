@@ -73,7 +73,7 @@ namespace Network
 
 			Config.Register<IConnection>()
 				.ImplementedBy<Connection>()
-				.As<Singleton>();
+				.As<Transient>();
 			
 			Config.Register<IContainerConfig>()
 				.ImplementedBy(c => Config)

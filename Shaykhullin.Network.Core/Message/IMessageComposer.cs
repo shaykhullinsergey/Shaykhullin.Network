@@ -4,7 +4,7 @@ namespace Network.Core
 {
 	public interface IMessageComposer
 	{
-		ValueTask<IMessage> GetMessage(IPayload payload);
-		ValueTask<IPayload> GetPayload(IMessage message);
+		Task<IMessage> GetMessage(IPayload payload);
+		Task<IPayload> GetPayload(IMessage message);
 	}
 }

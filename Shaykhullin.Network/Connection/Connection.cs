@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Collections.Generic;
@@ -33,7 +34,7 @@ namespace Network.Core
 
 			container = config.Container;
 			
-			Task.Run(() => ReceiveLoop().Wait());
+			Task.Run(async () => await ReceiveLoop());
 		}
 
 		public ISendBuilder<TData> Send<TData>(TData data)
@@ -48,10 +49,16 @@ namespace Network.Core
 			var packetsComposer = container.Resolve<IPacketsComposer>();
 			var messageComposer = container.Resolve<IMessageComposer>();
 			var eventRaiser = container.Resolve<IEventRaiser>();
-			
+
 			while (true)
 			{
-				var packet = await communicator.Receive().ConfigureAwait(false);
+				var packet = await communicator.Receive();
+
+				if (packet.Length == 0 && !communicator.IsConnected)
+				{
+					throw new OperationCanceledException();
+				}
+				
 				Task.Run(async () =>
 				{
 					if (messages.TryGetValue(packet.Id, out var packets))

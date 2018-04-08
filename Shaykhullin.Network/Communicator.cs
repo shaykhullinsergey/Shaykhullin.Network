@@ -1,3 +1,4 @@
+using System;
 using System.Net.Sockets;
 using System.Threading.Tasks;
 using DependencyInjection;
@@ -10,6 +11,8 @@ namespace Network.Core
 		private readonly IPacketsComposer packetsComposer;
 		private readonly IConfiguration configuration;
 		
+		public bool IsConnected => !(socket.Poll(1000, SelectMode.SelectRead) && socket.Available == 0);
+		
 		public Communicator(IContainer container)
 		{
 			socket = container.Resolve<Socket>();
@@ -19,44 +22,38 @@ namespace Network.Core
 
 		public Task Connect()
 		{
-			return Task.Factory.FromAsync(
-				(callback, state) => ((Socket)state).BeginConnect(configuration.Host, configuration.Port, callback, state),
-				result =>
-				{
-					((Socket)result.AsyncState).EndConnect(result);
-				}, 
-				socket);
-		}
-
-		public async Task Send(IPacket packet)
-		{
-			var data = await packetsComposer.GetBytes(packet);
-			await Task.Factory.FromAsync(
-				(callback, state) => ((Socket)state).BeginSend(data, 0, data.Length, SocketFlags.None, callback, state),
-				result => ((Socket)result.AsyncState).EndSend(result), 
-				socket);
-			await Task.Delay(1);
-		}
-
-		public async Task<IPacket> Receive()
-		{
-			var data = await packetsComposer.GetBuffer();
-
-			while (!socket.Connected)
+			return Task.Run(async () =>
 			{
-				await Task.Delay(100);
-			}
+				socket.Connect(configuration.Host, configuration.Port);
+				await Task.Yield();
+			});
+		}
 
-			var packet = await Task<IPacket>.Factory.FromAsync(
-				(callback, state) => ((Socket)state).BeginReceive(data, 0, data.Length, SocketFlags.None, callback, state),
-				result =>
+		public Task Send(IPacket packet)
+		{
+			return Task.Run(async () =>
+			{
+				var data = await packetsComposer.GetBytes(packet);
+
+				socket.Send(data, 0, data.Length, SocketFlags.None);
+			});
+		}
+
+		public Task<IPacket> Receive()
+		{
+			return Task.Run(async () =>
+			{
+				var buffer = await packetsComposer.GetBuffer();
+
+				while(!socket.Connected)
 				{
-					((Socket)result.AsyncState).EndReceive(result);
-					return packetsComposer.GetPacket(data).Result;
-				},
-				socket);
-			await Task.Delay(1);
-			return packet;
+					await Task.Yield();
+				}
+				
+				socket.Receive(buffer, 0, buffer.Length, SocketFlags.None);
+				
+				return await packetsComposer.GetPacket(buffer);
+			});
 		}
 	}
 }
