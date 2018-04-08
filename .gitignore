@@ -37,3 +37,7 @@ Shaykhullin.Network.Client.Tests/obj/
 Shaykhullin.Network.Client.Tests/bin/
 
 Shaykhullin\.Network\.Core/bin/
+
+Shaykhullin\.Network\.Extensions\.JsonSerializer/bin/
+
+Shaykhullin\.Network\.Extensions\.JsonSerializer/obj/
