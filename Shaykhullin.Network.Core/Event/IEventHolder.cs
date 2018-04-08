@@ -7,6 +7,6 @@ namespace Network.Core
 	{
 		Type GetEvent(int id);
 		int GetEvent(Type @event);
-		IList<Type> GetHandlers(Type @event);
+		IList<Type> GetHandlers(IPayload payload);
 	}
 }

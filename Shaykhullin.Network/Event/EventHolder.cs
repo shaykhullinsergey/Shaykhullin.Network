@@ -27,10 +27,10 @@ namespace Network.Core
 				.GetEvent(@event);
 		}
 
-		public IList<Type> GetHandlers(Type @event)
+		public IList<Type> GetHandlers(IPayload payload)
 		{
 			return container.Resolve<HandlerCollection>()
-				.GetHandlers(@event);
+				.GetHandlers(payload.Event);
 		}
 	}
 }

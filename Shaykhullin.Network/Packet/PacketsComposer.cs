@@ -76,8 +76,9 @@ namespace Network.Core
 			return new ValueTask<IPacket[]>(packets);
 		}
 
-		public ValueTask<IMessage> GetMessage(IEnumerable<IPacket> packets)
+		public ValueTask<IMessage> GetMessage(IList<IPacket> packets)
 		{
+			// TODO: Performace!!
 			var data = packets.SelectMany(x => x.Chunk.Take(x.Length));
 
 			return new ValueTask<IMessage>(

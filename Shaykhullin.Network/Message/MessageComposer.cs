@@ -20,12 +20,7 @@ namespace Network.Core
 
 			var eventId = container.Resolve<IEventHolder>().GetEvent(payload.Event);
 
-			return new ValueTask<IMessage>(
-				new Message
-				{
-					EventId = eventId,
-					Data = data
-				});
+			return new ValueTask<IMessage>(new Message { EventId = eventId, Data = data });
 		}
 
 		public ValueTask<IPayload> GetPayload(IMessage message)
@@ -38,12 +33,7 @@ namespace Network.Core
 
 			var @object = container.Resolve<ISerializer>().Deserialize(data, dataType);
 
-			return new ValueTask<IPayload>(
-				new Payload
-				{
-					Event = @event,
-					Data = @object
-				});
+			return new ValueTask<IPayload>(new Payload { Event = @event, Data = @object });
 		}
 	}
 }

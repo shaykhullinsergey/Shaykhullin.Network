@@ -51,29 +51,35 @@ namespace Network.Core
 			
 			while (true)
 			{
-				var packet = await communicator.Receive();
-
-				if (messages.TryGetValue(packet.Id, out var packets))
+				var packet = await communicator.Receive().ConfigureAwait(false);
+				Task.Run(async () =>
 				{
-					packets.Add(packet);
-				}
-				else
-				{
-					packets = new List<IPacket> { packet };
-					messages.Add(packet.Id, packets);
-				}
+					if (messages.TryGetValue(packet.Id, out var packets))
+					{
+						packets.Add(packet);
+					}
+					else
+					{
+						packets = new List<IPacket>
+						{
+							packet
+						};
+						messages.Add(packet.Id, packets);
+					}
 
-				var end = packets.FirstOrDefault(x => x.End);
-				if (end == null || end.Order != packets.Count)
-				{
-					continue;
-				}
+					var end = packets.FirstOrDefault(x => x.End);
 
-				var message = await packetsComposer.GetMessage(packets);
-				var payload = await messageComposer.GetPayload(message);
+					if (end == null || end.Order != packets.Count)
+					{
+						return;
+					}
 
-				await eventRaiser.Raise(payload);
-				messages.Remove(end.Id);
+					var message = await packetsComposer.GetMessage(packets).ConfigureAwait(false);
+					var payload = await messageComposer.GetPayload(message).ConfigureAwait(false);
+					messages.Remove(end.Id);
+
+					await eventRaiser.Raise(payload);
+				});
 			}
 		}
 	}

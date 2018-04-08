@@ -7,8 +7,11 @@ namespace Network.Core
 	{
 		private readonly Dictionary<int, Type> events = new Dictionary<int, Type>();
 
-		public void Add(Type @event)
+		public void Add<TEvent>()
+			where TEvent : IEvent<object>
 		{
+			var @event = typeof(TEvent);
+			
 			if (!events.ContainsValue(@event))
 			{
 				events.Add(GetHash(@event.Name), @event);
@@ -30,7 +33,7 @@ namespace Network.Core
 				}
 			}
 
-			throw new InvalidOperationException();
+			throw new InvalidOperationException($"Event {@event} not found");
 		}
 		
 		private static unsafe int GetHash(string name)

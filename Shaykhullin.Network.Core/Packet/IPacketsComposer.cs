@@ -7,7 +7,7 @@ namespace Network.Core
 	{
 		ValueTask<byte[]> GetBuffer();
 		ValueTask<byte[]> GetBytes(IPacket packet);
-		ValueTask<IMessage> GetMessage(IEnumerable<IPacket> packets);
+		ValueTask<IMessage> GetMessage(IList<IPacket> packets);
 		ValueTask<IPacket> GetPacket(byte[] data);
 		ValueTask<IPacket[]> GetPackets(IMessage message);
 	}

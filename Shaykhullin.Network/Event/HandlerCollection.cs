@@ -7,8 +7,13 @@ namespace Network.Core
 	{
 		private readonly Dictionary<Type, List<Type>> handlers = new Dictionary<Type, List<Type>>();
 		
-		public void Add(Type @event, Type handler)
+		public void Add<TEvent, THandler>()
+			where TEvent : IEvent<object>
+			where THandler : IHandler<TEvent>
 		{
+			var @event = typeof(TEvent);
+			var handler = typeof(THandler);
+			
 			if (handlers.TryGetValue(@event, out var list))
 			{
 				list.Add(handler);

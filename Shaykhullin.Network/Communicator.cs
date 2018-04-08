@@ -35,6 +35,7 @@ namespace Network.Core
 				(callback, state) => ((Socket)state).BeginSend(data, 0, data.Length, SocketFlags.None, callback, state),
 				result => ((Socket)result.AsyncState).EndSend(result), 
 				socket);
+			await Task.Delay(1);
 		}
 
 		public async Task<IPacket> Receive()
@@ -46,7 +47,7 @@ namespace Network.Core
 				await Task.Delay(100);
 			}
 
-			return await Task<IPacket>.Factory.FromAsync(
+			var packet = await Task<IPacket>.Factory.FromAsync(
 				(callback, state) => ((Socket)state).BeginReceive(data, 0, data.Length, SocketFlags.None, callback, state),
 				result =>
 				{
@@ -54,6 +55,8 @@ namespace Network.Core
 					return packetsComposer.GetPacket(data).Result;
 				},
 				socket);
+			await Task.Delay(1);
+			return packet;
 		}
 	}
 }

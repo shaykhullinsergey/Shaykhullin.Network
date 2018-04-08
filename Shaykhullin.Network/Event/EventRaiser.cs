@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using System;
+using System.Reflection;
 using System.Threading.Tasks;
 using DependencyInjection;
 
@@ -17,7 +18,7 @@ namespace Network.Core
 		{
 			var handlers = config.Container
 				.Resolve<IEventHolder>()
-				.GetHandlers(payload.Event);
+				.GetHandlers(payload);
 
 			foreach (var handler in handlers)
 			{
@@ -25,7 +26,7 @@ namespace Network.Core
 				{
 					scope.Register(payload.Data.GetType())
 						.ImplementedBy(c => payload.Data)
-						.As<Transient>();
+						.As<Singleton>();
 
 					var container = scope.Container;
 				

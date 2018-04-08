@@ -30,7 +30,6 @@ namespace Network.Core
 			foreach (var packet in packets)
 			{
 				await communicator.Send(packet);
-				await Task.Delay(1);
 			}
 		}
 	}

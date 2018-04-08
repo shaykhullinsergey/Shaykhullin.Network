@@ -5,13 +5,13 @@ using DependencyInjection.Core;
 
 namespace Network
 {
-	public abstract class Config<TNode> : IConfig<TNode>
+	public abstract class NodeConfig<TNode> : IConfig<TNode>
 		where TNode : INode
 	{
 		private readonly IContainerConfig rootConfig = new ContainerConfig();
-		protected readonly IContainerConfig config;
+		protected readonly IContainerConfig Config;
 
-		protected Config()
+		protected NodeConfig()
 		{
 			rootConfig.Register<ISerializer>()
 				.ImplementedBy<Serializer>()
@@ -25,58 +25,58 @@ namespace Network
 				.ImplementedBy<Encryption>()
 				.As<Singleton>();
 
-			config = rootConfig.Scope();
+			Config = rootConfig.Scope();
 		}
 		
 		public ICompressionBuilder UseSerializer<TSerializer>() 
 			where TSerializer : ISerializer
 		{
-			return new SerializerBuilder(config)
+			return new SerializerBuilder(Config)
 				.UseSerializer<TSerializer>();
 		}
 		public IEncryptionBuilder UseCompression<TCompression>()
 			where TCompression : ICompression
 		{
-			return new SerializerBuilder(config)
+			return new SerializerBuilder(Config)
 				.UseCompression<TCompression>();
 		}
 		public void UseEncryption<TEncryption>()
 			where TEncryption : IEncryption
 		{
-			new SerializerBuilder(config)
+			new SerializerBuilder(Config)
 				.UseEncryption<TEncryption>();
 		}
 
 		public IImplementedByBuilder<TRegister> Register<TRegister>() 
 			where TRegister : class
 		{
-			return config.Register<TRegister>();
+			return Config.Register<TRegister>();
 		}
 
 		public IImplementedByBuilder<object> Register(Type register)
 		{
-			return config.Register(register);
+			return Config.Register(register);
 		}
 
 		public IHandlerBuilder<TEvent> When<TEvent>() 
 			where TEvent : class, IEvent<object>
 		{
-			return new EventBuilder(config)
+			return new EventBuilder(Config)
 				.When<TEvent>();
 		}
 
 		public virtual TNode Create(string host, int port)
 		{
-			config.Register<IConfiguration>()
+			Config.Register<IConfiguration>()
 				.ImplementedBy(c => new Configuration(host, port))
 				.As<Singleton>();
 
-			config.Register<IConnection>()
+			Config.Register<IConnection>()
 				.ImplementedBy<Connection>()
 				.As<Singleton>();
 			
-			config.Register<IContainerConfig>()
-				.ImplementedBy(c => config)
+			Config.Register<IContainerConfig>()
+				.ImplementedBy(c => Config)
 				.As<Singleton>();
 			
 			return default;

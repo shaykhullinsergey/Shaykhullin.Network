@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shaykhullin.Network.Client"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shaykhullin.Network.Server", "Shaykhullin.Network.Server\Shaykhullin.Network.Server.csproj", "{35C2D885-0E8C-41C2-8A59-99C3B6972A9F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shaykhullin.Network.Extensions.JsonSerializer", "Shaykhullin.Network.Extensions.JsonSerializer\Shaykhullin.Network.Extensions.JsonSerializer.csproj", "{9F0E4C99-F973-4E5B-8DEF-B02BC468F6FD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,6 +32,10 @@ Global
 		{35C2D885-0E8C-41C2-8A59-99C3B6972A9F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{35C2D885-0E8C-41C2-8A59-99C3B6972A9F}.Debug|Any CPU.ActiveCfg = Release|Any CPU
 		{35C2D885-0E8C-41C2-8A59-99C3B6972A9F}.Debug|Any CPU.Build.0 = Release|Any CPU
+		{9F0E4C99-F973-4E5B-8DEF-B02BC468F6FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F0E4C99-F973-4E5B-8DEF-B02BC468F6FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F0E4C99-F973-4E5B-8DEF-B02BC468F6FD}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{9F0E4C99-F973-4E5B-8DEF-B02BC468F6FD}.Debug|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
