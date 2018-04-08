@@ -8,7 +8,7 @@ namespace Network.Core
 	internal class PacketsComposer : IPacketsComposer
 	{
 		private static int UniqueId;
-		private const int PacketSize = 1024;
+		private const int PacketSize = 256;
 		private const int HeaderSize = 20;
 		private const int PayloadSize = PacketSize - HeaderSize;
 
