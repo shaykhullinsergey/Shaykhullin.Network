@@ -12,10 +12,6 @@ namespace Network.Core
 
 		public Connection(IContainerConfig config)
 		{
-			config.Register<IContainer>()
-				.ImplementedBy(c => c)
-				.As<Singleton>();
-
 			config.Register<IPacketsComposer>()
 				.ImplementedBy<PacketsComposer>()
 				.As<Singleton>();
@@ -49,6 +45,8 @@ namespace Network.Core
 			var packetsComposer = container.Resolve<IPacketsComposer>();
 			var messageComposer = container.Resolve<IMessageComposer>();
 			var eventRaiser = container.Resolve<IEventRaiser>();
+
+			Console.WriteLine("Loop");
 
 			IPacket packet = null;
 

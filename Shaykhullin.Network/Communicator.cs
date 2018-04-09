@@ -1,4 +1,6 @@
+using System;
 using System.Net.Sockets;
+using System.Threading;
 using System.Threading.Tasks;
 using DependencyInjection;
 
@@ -6,43 +8,57 @@ namespace Network.Core
 {
 	internal class Communicator : ICommunicator
 	{
+		private readonly object @lock = new object();
 		private readonly TcpClient tcpClient;
 		private readonly IPacketsComposer packetsComposer;
 		private readonly IConfiguration configuration;
+		private readonly IEventRaiser eventRaiser;
 
 		public Communicator(IContainer container)
 		{
 			tcpClient = container.Resolve<TcpClient>();
 			packetsComposer = container.Resolve<IPacketsComposer>();
 			configuration = container.Resolve<IConfiguration>();
+			eventRaiser = container.Resolve<IEventRaiser>();
 		}
 
-		public async Task Connect()
+		public Task Connect()
 		{
-			await tcpClient.ConnectAsync(configuration.Host, configuration.Port).ConfigureAwait(false);
+			if (!isConnected && !IsConnected)
+			{
+				lock (@lock)
+				{
+					if(!tcpClient.Connected)
+					{
+						tcpClient.ConnectAsync(configuration.Host, configuration.Port).Wait();
+					}
+				}
+			}
+
+			return Task.CompletedTask;
 		}
 
 		public async Task Send(IPacket packet)
 		{
 			var data = await packetsComposer.GetBytes(packet).ConfigureAwait(false);
 
-			while (!isConnected && !IsConnected)
+			try
 			{
-				await Connect().ConfigureAwait(false);
+				await tcpClient.GetStream().WriteAsync(data, 0, data.Length).ConfigureAwait(false);
 			}
-
-			await tcpClient.GetStream().WriteAsync(data, 0, data.Length).ConfigureAwait(false);
-			await Task.Delay(100);
+			catch (Exception exception)
+			{
+				await eventRaiser.Raise(new Payload
+				{
+					Event = typeof(Disconnect),
+					Data = new DisconnectInfo("Connection closed", exception)
+				}).ConfigureAwait(false);
+			}
 		}
 
 		public async Task<IPacket> Receive()
 		{
 			var buffer = await packetsComposer.GetBuffer();
-
-			if(isConnected && !IsConnected)
-			{
-				System.Console.WriteLine("DISCONNECT");
-			}
 
 			while (!isConnected && !IsConnected)
 			{

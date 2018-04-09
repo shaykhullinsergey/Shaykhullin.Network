@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DependencyInjection;
+using System;
 using System.Collections.Generic;
 
 namespace Network.Core
@@ -6,10 +7,16 @@ namespace Network.Core
 	public class HandlerCollection
 	{
 		private readonly Dictionary<Type, List<Type>> handlers = new Dictionary<Type, List<Type>>();
-		
+		private readonly IContainerConfig config;
+
+		public HandlerCollection(IContainerConfig config)
+		{
+			this.config = config;
+		}
+
 		public void Add<TEvent, THandler>()
-			where TEvent : IEvent<object>
-			where THandler : IHandler<TEvent>
+			where TEvent : class, IEvent<object>
+			where THandler : class, IHandler<TEvent>
 		{
 			var @event = typeof(TEvent);
 			var handler = typeof(THandler);
@@ -20,6 +27,7 @@ namespace Network.Core
 			}
 			else
 			{
+				config.Register<THandler>();
 				handlers.Add(@event, new List<Type> { handler });
 			}
 		}

@@ -17,9 +17,9 @@ namespace Network.Core
 
 		public async Task Run()
 		{
-			var container = config.Container;
+			var rootContainer = config.Container;
 
-			var configuration = container.Resolve<IConfiguration>();
+			var configuration = rootContainer.Resolve<IConfiguration>();
 
 			var tcpListener = new TcpListener(new IPEndPoint(IPAddress.Parse(configuration.Host), configuration.Port));
 			tcpListener.Start();
@@ -28,17 +28,29 @@ namespace Network.Core
 			{
 				var tcpClient = await tcpListener.AcceptTcpClientAsync().ConfigureAwait(false);
 
+				tcpClient.NoDelay = true;
+				tcpClient.ReceiveTimeout = 0;
+				tcpClient.SendTimeout = 0;
+				tcpClient.ReceiveBufferSize = 256;
+				tcpClient.SendBufferSize = 256;
+
 				using (var scope = config.Scope())
 				{
 					scope.Register<IContainerConfig>()
 						.ImplementedBy(c => scope)
 						.As<Singleton>();
-				
+
+					var container = scope.Container;
+
+					scope.Register<IContainer>()
+						.ImplementedBy(c => container)
+						.As<Singleton>();
+
 					scope.Register<TcpClient>()
 						.ImplementedBy(c => tcpClient)
 						.As<Singleton>();
 
-					var connection = scope.Container.Resolve<IConnection>();
+					var connection = container.Resolve<IConnection>();
 				
 					scope.Register<IConnection>()
 						.ImplementedBy(c => connection)

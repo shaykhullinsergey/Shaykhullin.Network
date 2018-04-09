@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DependencyInjection;
+using System;
 using System.Collections.Generic;
 
 namespace Network.Core
@@ -6,14 +7,21 @@ namespace Network.Core
 	public class EventCollection
 	{
 		private readonly Dictionary<int, Type> events = new Dictionary<int, Type>();
+		private readonly IContainerConfig config;
+
+		public EventCollection(IContainerConfig config)
+		{
+			this.config = config;
+		}
 
 		public void Add<TEvent>()
-			where TEvent : IEvent<object>
+			where TEvent : class, IEvent<object>
 		{
 			var @event = typeof(TEvent);
 			
 			if (!events.ContainsValue(@event))
 			{
+				config.Register<TEvent>();
 				events.Add(GetHash(@event.Name), @event);
 			}
 		}
@@ -33,7 +41,10 @@ namespace Network.Core
 				}
 			}
 
-			throw new InvalidOperationException($"Event {@event} not found");
+			var hash = GetHash(@event.Name);
+			events.Add(hash, @event);
+			config.Register(@event);
+			return hash;
 		}
 		
 		private static unsafe int GetHash(string name)

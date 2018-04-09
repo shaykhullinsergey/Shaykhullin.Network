@@ -8,18 +8,6 @@ namespace Network.Core
 
 		public EventBuilder(IContainerConfig config)
 		{
-			config.Register<EventCollection>()
-				.ImplementedBy<EventCollection>()
-				.As<Singleton>();
-			
-			config.Register<HandlerCollection>()
-				.ImplementedBy<HandlerCollection>()
-				.As<Singleton>();
-			
-			config.Register<IEventHolder>()
-				.ImplementedBy<EventHolder>()
-				.As<Singleton>();
-			
 			this.config = config;
 		}
 		

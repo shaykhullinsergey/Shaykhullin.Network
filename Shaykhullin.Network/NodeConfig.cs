@@ -25,10 +25,30 @@ namespace Network
 				.ImplementedBy<Encryption>()
 				.As<Singleton>();
 
+			rootConfig.Register<IConnection>()
+				.ImplementedBy<Connection>()
+				.As<Transient>();
+
+			rootConfig.Register<EventCollection>()
+				.ImplementedBy<EventCollection>()
+				.As<Singleton>();
+
+			rootConfig.Register<HandlerCollection>()
+				.ImplementedBy<HandlerCollection>()
+				.As<Singleton>();
+
+			rootConfig.Register<IEventHolder>()
+				.ImplementedBy<EventHolder>()
+				.As<Singleton>();
+
 			rootConfig.Register<Disconnect>();
 			rootConfig.Register<Error>();
 
 			Config = rootConfig.Scope();
+
+			Config.Register<IContainerConfig>()
+				.ImplementedBy(c => Config)
+				.As<Singleton>();
 		}
 		
 		public ICompressionBuilder UseSerializer<TSerializer>() 
@@ -73,14 +93,6 @@ namespace Network
 		{
 			Config.Register<IConfiguration>()
 				.ImplementedBy(c => new Configuration(host, port))
-				.As<Singleton>();
-
-			Config.Register<IConnection>()
-				.ImplementedBy<Connection>()
-				.As<Transient>();
-			
-			Config.Register<IContainerConfig>()
-				.ImplementedBy(c => Config)
 				.As<Singleton>();
 		}
 	}

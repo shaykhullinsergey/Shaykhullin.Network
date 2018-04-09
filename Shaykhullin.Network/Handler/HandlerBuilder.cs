@@ -17,9 +17,6 @@ namespace Network.Core
 		public void Use<THandler>() where THandler 
 			: class, IHandler<TEvent>
 		{
-			config.Register<TEvent>();
-			config.Register<THandler>();
-
 			var container = config.Container;
 			
 			container.Resolve<EventCollection>()
