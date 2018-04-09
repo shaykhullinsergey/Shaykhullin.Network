@@ -19,33 +19,38 @@ namespace Network.Core
 
 		public async Task Connect()
 		{
-			await tcpClient.ConnectAsync(configuration.Host, configuration.Port);
+			await tcpClient.ConnectAsync(configuration.Host, configuration.Port).ConfigureAwait(false);
 		}
 
 		public async Task Send(IPacket packet)
 		{
-			var data = await packetsComposer.GetBytes(packet);
+			var data = await packetsComposer.GetBytes(packet).ConfigureAwait(false);
 
 			while (!isConnected && !IsConnected)
 			{
-				await Connect();
+				await Connect().ConfigureAwait(false);
 			}
 
-			await tcpClient.GetStream().WriteAsync(data, 0, data.Length);
-			await Task.Delay(10);
+			await tcpClient.GetStream().WriteAsync(data, 0, data.Length).ConfigureAwait(false);
+			await Task.Delay(100);
 		}
 
 		public async Task<IPacket> Receive()
 		{
 			var buffer = await packetsComposer.GetBuffer();
 
-			while (!isConnected && !IsConnected)
+			if(isConnected && !IsConnected)
 			{
-				await Connect();
+				System.Console.WriteLine("DISCONNECT");
 			}
 
-			await tcpClient.GetStream().ReadAsync(buffer, 0, buffer.Length);
-			return await packetsComposer.GetPacket(buffer);
+			while (!isConnected && !IsConnected)
+			{
+				await Connect().ConfigureAwait(false);
+			}
+
+			await tcpClient.GetStream().ReadAsync(buffer, 0, buffer.Length).ConfigureAwait(false);
+			return await packetsComposer.GetPacket(buffer).ConfigureAwait(false);
 		}
 
 		private bool isConnected = false;

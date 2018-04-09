@@ -12,9 +12,17 @@ namespace Network.Core
 		private const int HeaderSize = 5;
 		private const int PayloadSize = PacketSize - HeaderSize;
 
+		private readonly IEventRaiser eventRaiser;
+
+		public PacketsComposer(IEventRaiser eventRaiser)
+		{
+			this.eventRaiser = eventRaiser;
+		}
+
+
 		public async Task<IPacket> GetPacket(byte[] data)
 		{
-			var chunk = await GetBuffer();
+			var chunk = await GetBuffer().ConfigureAwait(false);
 			Array.Copy(data, HeaderSize, chunk, 0, PayloadSize);
 
 			return new Packet
@@ -29,7 +37,7 @@ namespace Network.Core
 
 		public async Task<byte[]> GetBytes(IPacket packet)
 		{
-			var data = await GetBuffer();
+			var data = await GetBuffer().ConfigureAwait(false);
 
 			data[0] = packet.Id;
 			Array.Copy(BitConverter.GetBytes(packet.Order), 0, data, 1, 2);
@@ -41,7 +49,7 @@ namespace Network.Core
 
 		public async Task<byte[]> GetBuffer()
 		{
-			return await Task.FromResult(new byte[PacketSize]);
+			return await Task.FromResult(new byte[PacketSize]).ConfigureAwait(false);
 		}
 
 		public async Task<IPacket[]> GetPackets(IMessage message)
@@ -56,7 +64,16 @@ namespace Network.Core
 
 			if (count > ushort.MaxValue)
 			{
-				throw new InvalidOperationException("Message size is too long");
+				await eventRaiser.Raise(new Payload
+				{
+					Event = typeof(Error),
+					Data = new ErrorInfo
+					{
+						Reason = "Message size is too long"
+					}
+				}).ConfigureAwait(false);
+
+				throw new InvalidOperationException();
 			}
 
 			var packets = new IPacket[count];
@@ -79,7 +96,7 @@ namespace Network.Core
 				};
 			}
 
-			return await Task.FromResult(packets);
+			return await Task.FromResult(packets).ConfigureAwait(false);
 		}
 
 		public async Task<IMessage> GetMessage(IList<IPacket> packets)
@@ -89,7 +106,7 @@ namespace Network.Core
 
 			var eventId = BitConverter.ToInt32(data.Take(4).ToArray(), 0);
 
-			return await Task.FromResult((IMessage) new Message { EventId = eventId, Data = data.Skip(4).ToArray() });
+			return await Task.FromResult((IMessage) new Message { EventId = eventId, Data = data.Skip(4).ToArray() }).ConfigureAwait(false);
 		}
 
 		private static int GetPacketCount(int length) => length / PayloadSize + (length % PayloadSize == 0 ? 0 : 1);

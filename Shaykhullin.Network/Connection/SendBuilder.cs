@@ -20,16 +20,16 @@ namespace Network.Core
 			var payload = new Payload { Event = typeof(TEvent), Data = data };
 			
 			var message = await container.Resolve<IMessageComposer>()
-				.GetMessage(payload);
+				.GetMessage(payload).ConfigureAwait(false);
 			
 			var packets = await container.Resolve<IPacketsComposer>()
-				.GetPackets(message);
+				.GetPackets(message).ConfigureAwait(false);
 
 			var communicator = container.Resolve<ICommunicator>();
 			
 			foreach (var packet in packets)
 			{
-				await communicator.Send(packet);
+				await communicator.Send(packet).ConfigureAwait(false);
 			}
 		}
 	}

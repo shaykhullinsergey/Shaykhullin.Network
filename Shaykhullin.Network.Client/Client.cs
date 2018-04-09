@@ -29,7 +29,7 @@ namespace Network
 				.ImplementedBy(c => connection)
 				.As<Singleton>();
 			
-			await container.Resolve<ICommunicator>().Connect();
+			await container.Resolve<ICommunicator>().Connect().ConfigureAwait(false);
 
 			return connection;
 		}

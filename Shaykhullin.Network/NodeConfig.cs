@@ -25,6 +25,9 @@ namespace Network
 				.ImplementedBy<Encryption>()
 				.As<Singleton>();
 
+			rootConfig.Register<Disconnect>();
+			rootConfig.Register<Error>();
+
 			Config = rootConfig.Scope();
 		}
 		

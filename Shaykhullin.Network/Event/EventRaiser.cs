@@ -33,12 +33,12 @@ namespace Network.Core
 					var instanse = container.Resolve(handler);
 					var @event = container.Resolve(payload.Event);
 
-					await (Task)handler.InvokeMember(
+					await ((Task)handler.InvokeMember(
 						"Execute",
 						BindingFlags.Instance | BindingFlags.Public | BindingFlags.InvokeMethod,
 						null, 
 						instanse, 
-						new[] { @event });
+						new[] { @event })).ConfigureAwait(false);
 				}
 			}
 		}

@@ -28,7 +28,7 @@ namespace Network.Core
 
 			var eventId = eventHolder.GetEvent(payload.Event);
 
-			return await Task.FromResult((IMessage)new Message { EventId = eventId, Data = data });
+			return await Task.FromResult((IMessage)new Message { EventId = eventId, Data = data }).ConfigureAwait(false);
 		}
 
 		public async Task<IPayload> GetPayload(IMessage message)
@@ -41,7 +41,7 @@ namespace Network.Core
 
 			var @object = serializer.Deserialize(data, dataType);
 
-			return await Task.FromResult((IPayload)new Payload { Event = @event, Data = @object });
+			return await Task.FromResult((IPayload)new Payload { Event = @event, Data = @object }).ConfigureAwait(false);
 		}
 	}
 }

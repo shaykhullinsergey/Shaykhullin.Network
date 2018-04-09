@@ -15,25 +15,25 @@ namespace Network.Core
 			config.Register<IContainer>()
 				.ImplementedBy(c => c)
 				.As<Singleton>();
-			
+
 			config.Register<IPacketsComposer>()
 				.ImplementedBy<PacketsComposer>()
 				.As<Singleton>();
-			
+
 			config.Register<IMessageComposer>()
 				.ImplementedBy<MessageComposer>()
 				.As<Singleton>();
-			
+
 			config.Register<IEventRaiser>()
 				.ImplementedBy<EventRaiser>()
 				.As<Singleton>();
-			
+
 			config.Register<ICommunicator>()
 				.ImplementedBy<Communicator>()
 				.As<Singleton>();
 
 			container = config.Container;
-			
+
 			Task.Run(async () => await ReceiveLoop());
 		}
 
@@ -50,13 +50,23 @@ namespace Network.Core
 			var messageComposer = container.Resolve<IMessageComposer>();
 			var eventRaiser = container.Resolve<IEventRaiser>();
 
+			IPacket packet = null;
+
 			while (true)
 			{
-				var packet = await communicator.Receive();
-
-				if (packet.Length == 0 && !communicator.IsConnected)
+				try
 				{
-					throw new OperationCanceledException();
+					packet = await communicator.Receive().ConfigureAwait(false);
+				}
+				catch (Exception exception)
+				{
+					await eventRaiser.Raise(new Payload
+					{
+						Event = typeof(Disconnect),
+						Data = new DisconnectInfo("Connection lost", exception)
+					}).ConfigureAwait(false);
+
+					throw;
 				}
 
 				if (messages.TryGetValue(packet.Id, out var packets))
@@ -65,14 +75,11 @@ namespace Network.Core
 				}
 				else
 				{
-					packets = new List<IPacket>
-					{
-						packet
-					};
+					packets = new List<IPacket> { packet };
 					messages.Add(packet.Id, packets);
 				}
-				
-				if(packet.End)
+
+				if (packet.End)
 				{
 					Task.Run(async () =>
 					{
@@ -80,8 +87,8 @@ namespace Network.Core
 						var payload = await messageComposer.GetPayload(message).ConfigureAwait(false);
 						messages.Remove(packet.Id);
 
-						await eventRaiser.Raise(payload);
-					});
+						await eventRaiser.Raise(payload).ConfigureAwait(false);
+					}).ConfigureAwait(false);
 				}
 			}
 		}

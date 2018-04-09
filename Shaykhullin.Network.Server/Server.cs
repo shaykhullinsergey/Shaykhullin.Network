@@ -26,7 +26,7 @@ namespace Network.Core
 
 			while (true)
 			{
-				var tcpClient = await tcpListener.AcceptTcpClientAsync();
+				var tcpClient = await tcpListener.AcceptTcpClientAsync().ConfigureAwait(false);
 
 				using (var scope = config.Scope())
 				{
