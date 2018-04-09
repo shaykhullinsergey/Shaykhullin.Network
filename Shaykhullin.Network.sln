@@ -13,6 +13,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shaykhullin.Network.Server"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shaykhullin.Network.Extensions.JsonSerializer", "Shaykhullin.Network.Extensions.JsonSerializer\Shaykhullin.Network.Extensions.JsonSerializer.csproj", "{9F0E4C99-F973-4E5B-8DEF-B02BC468F6FD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{309B9D53-88E6-4669-81F9-A2AB235DFC84}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp2", "ConsoleApp2\ConsoleApp2.csproj", "{CBC31777-0A51-4355-A877-F76F4EB2D251}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{9F0E4C99-F973-4E5B-8DEF-B02BC468F6FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F0E4C99-F973-4E5B-8DEF-B02BC468F6FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F0E4C99-F973-4E5B-8DEF-B02BC468F6FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{309B9D53-88E6-4669-81F9-A2AB235DFC84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{309B9D53-88E6-4669-81F9-A2AB235DFC84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{309B9D53-88E6-4669-81F9-A2AB235DFC84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{309B9D53-88E6-4669-81F9-A2AB235DFC84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBC31777-0A51-4355-A877-F76F4EB2D251}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBC31777-0A51-4355-A877-F76F4EB2D251}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBC31777-0A51-4355-A877-F76F4EB2D251}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBC31777-0A51-4355-A877-F76F4EB2D251}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

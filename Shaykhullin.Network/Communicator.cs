@@ -32,7 +32,7 @@ namespace Network.Core
 			}
 
 			await tcpClient.GetStream().WriteAsync(data, 0, data.Length);
-			await Task.Delay(5);
+			await Task.Delay(10);
 		}
 
 		public async Task<IPacket> Receive()

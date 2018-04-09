@@ -2,11 +2,11 @@
 
 namespace Network
 {
-	public class ServerConfig : NodeConfig<IServer>
+	public sealed class ServerConfig : NodeConfig<IServer>
 	{
 		public override IServer Create(string host, int port)
 		{
-			base.Create(host, port);
+			base.Configure(host, port);
 			return new Server(Config);
 		}
 	}

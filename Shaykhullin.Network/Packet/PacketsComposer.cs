@@ -12,38 +12,39 @@ namespace Network.Core
 		private const int HeaderSize = 5;
 		private const int PayloadSize = PacketSize - HeaderSize;
 
-		public Task<IPacket> GetPacket(byte[] data)
+		public async Task<IPacket> GetPacket(byte[] data)
 		{
-			var chunk = new byte[PayloadSize];
+			var chunk = await GetBuffer();
 			Array.Copy(data, HeaderSize, chunk, 0, PayloadSize);
 
-			return Task.FromResult((IPacket)new Packet
+			return new Packet
 			{
 				Id = data[0],
 				Order = BitConverter.ToUInt16(data, 1),
 				Length = data[3],
 				End = data[4] == 1,
 				Chunk = chunk
-			});
+			};
 		}
 
-		public Task<byte[]> GetBytes(IPacket packet)
+		public async Task<byte[]> GetBytes(IPacket packet)
 		{
-			var data = new byte[PacketSize];
+			var data = await GetBuffer();
+
 			data[0] = packet.Id;
 			Array.Copy(BitConverter.GetBytes(packet.Order), 0, data, 1, 2);
 			data[3] = packet.Length;
 			data[4] = (byte)(packet.End ? 1 : 0);
 			Array.Copy(packet.Chunk, 0, data, HeaderSize, PayloadSize);
-			return Task.FromResult(data);
+			return data;
 		}
 
-		public Task<byte[]> GetBuffer()
+		public async Task<byte[]> GetBuffer()
 		{
-			return Task.FromResult(new byte[PacketSize]);
+			return await Task.FromResult(new byte[PacketSize]);
 		}
 
-		public Task<IPacket[]> GetPackets(IMessage message)
+		public async Task<IPacket[]> GetPackets(IMessage message)
 		{
 			var id = (byte)(UniqueId++ % byte.MaxValue);
 
@@ -78,20 +79,17 @@ namespace Network.Core
 				};
 			}
 
-			return Task.FromResult(packets);
+			return await Task.FromResult(packets);
 		}
 
-		public Task<IMessage> GetMessage(IList<IPacket> packets)
+		public async Task<IMessage> GetMessage(IList<IPacket> packets)
 		{
 			// TODO: Performace!!
 			var data = packets.SelectMany(x => x.Chunk.Take(x.Length));
 
-			return Task.FromResult((IMessage)
-				new Message
-				{
-					EventId = BitConverter.ToInt32(data.Take(4).ToArray(), 0),
-					Data = data.Skip(4).ToArray()
-				});
+			var eventId = BitConverter.ToInt32(data.Take(4).ToArray(), 0);
+
+			return await Task.FromResult((IMessage) new Message { EventId = eventId, Data = data.Skip(4).ToArray() });
 		}
 
 		private static int GetPacketCount(int length) => length / PayloadSize + (length % PayloadSize == 0 ? 0 : 1);

@@ -26,7 +26,13 @@ namespace Network.Core
 
 		public IList<Type> GetHandlers(Type @event)
 		{
-			return handlers[@event];
+			if(!handlers.TryGetValue(@event, out var list))
+			{
+				list = new List<Type>();
+				handlers.Add(@event, list);
+			}
+
+			return list;
 		}
 	}
 }

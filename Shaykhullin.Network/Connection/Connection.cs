@@ -58,35 +58,31 @@ namespace Network.Core
 				{
 					throw new OperationCanceledException();
 				}
-				
-				Task.Run(async () =>
+
+				if (messages.TryGetValue(packet.Id, out var packets))
 				{
-					if (messages.TryGetValue(packet.Id, out var packets))
+					packets.Add(packet);
+				}
+				else
+				{
+					packets = new List<IPacket>
 					{
-						packets.Add(packet);
-					}
-					else
+						packet
+					};
+					messages.Add(packet.Id, packets);
+				}
+				
+				if(packet.End)
+				{
+					Task.Run(async () =>
 					{
-						packets = new List<IPacket>
-						{
-							packet
-						};
-						messages.Add(packet.Id, packets);
-					}
+						var message = await packetsComposer.GetMessage(packets).ConfigureAwait(false);
+						var payload = await messageComposer.GetPayload(message).ConfigureAwait(false);
+						messages.Remove(packet.Id);
 
-					var end = packets.FirstOrDefault(x => x.End);
-
-					if (end == null || end.Order != packets.Count)
-					{
-						return;
-					}
-
-					var message = await packetsComposer.GetMessage(packets).ConfigureAwait(false);
-					var payload = await messageComposer.GetPayload(message).ConfigureAwait(false);
-					messages.Remove(end.Id);
-
-					await eventRaiser.Raise(payload);
-				});
+						await eventRaiser.Raise(payload);
+					});
+				}
 			}
 		}
 	}

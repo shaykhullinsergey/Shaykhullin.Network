@@ -2,11 +2,11 @@
 
 namespace Network
 {
-	public class ClientConfig : NodeConfig<IClient>
+	public sealed class ClientConfig : NodeConfig<IClient>
 	{
 		public override IClient Create(string host, int port)
 		{
-			base.Create(host, port);
+			base.Configure(host, port);
 			return new Client(Config);
 		}
 	}

@@ -1,3 +1,5 @@
+using System;
+using System.Diagnostics;
 using System.Threading.Tasks;
 using DependencyInjection;
 
@@ -5,35 +7,41 @@ namespace Network.Core
 {
 	internal class MessageComposer : IMessageComposer
 	{
-		private readonly IContainer container;
+		private readonly ISerializer serializer;
+		private readonly ICompression compression;
+		private readonly IEncryption encryption;
+		private readonly IEventHolder eventHolder;
 
 		public MessageComposer(IContainer container)
 		{
-			this.container = container;
+			serializer = container.Resolve<ISerializer>();
+			compression = container.Resolve<ICompression>();
+			encryption = container.Resolve<IEncryption>();
+			eventHolder = container.Resolve<IEventHolder>();
 		}
 
-		public Task<IMessage> GetMessage(IPayload payload)
+		public async Task<IMessage> GetMessage(IPayload payload)
 		{
-			var data = container.Resolve<ISerializer>().Serialize(payload.Data);
-			data = container.Resolve<ICompression>().Compress(data);
-			data = container.Resolve<IEncryption>().Encrypt(data);
+			var data = serializer.Serialize(payload.Data);
+			data = compression.Compress(data);
+			data = encryption.Encrypt(data);
 
-			var eventId = container.Resolve<IEventHolder>().GetEvent(payload.Event);
+			var eventId = eventHolder.GetEvent(payload.Event);
 
-			return Task.FromResult((IMessage)new Message { EventId = eventId, Data = data });
+			return await Task.FromResult((IMessage)new Message { EventId = eventId, Data = data });
 		}
 
-		public Task<IPayload> GetPayload(IMessage message)
+		public async Task<IPayload> GetPayload(IMessage message)
 		{
-			var data = container.Resolve<IEncryption>().Decrypt(message.Data);
-			data = container.Resolve<ICompression>().Decompress(data);
+			var data = encryption.Decrypt(message.Data);
+			data = compression.Decompress(data);
 
-			var @event = container.Resolve<IEventHolder>().GetEvent(message.EventId);
+			var @event = eventHolder.GetEvent(message.EventId);
 			var dataType = @event.GetInterfaces()[0].GetGenericArguments()[0];
 
-			var @object = container.Resolve<ISerializer>().Deserialize(data, dataType);
+			var @object = serializer.Deserialize(data, dataType);
 
-			return Task.FromResult((IPayload)new Payload { Event = @event, Data = @object });
+			return await Task.FromResult((IPayload)new Payload { Event = @event, Data = @object });
 		}
 	}
 }

@@ -6,31 +6,28 @@ namespace Network.Core
 {
 	internal class EventHolder : IEventHolder
 	{
-		private readonly IContainer container;
+		private readonly EventCollection eventCollention;
+		private readonly HandlerCollection handlerCollection;
 
 		public EventHolder(IContainer container)
 		{
-			this.container = container;
+			eventCollention = container.Resolve<EventCollection>();
+			handlerCollection = container.Resolve<HandlerCollection>();
 		}
 
 		public Type GetEvent(int id)
 		{
-			return container
-				.Resolve<EventCollection>()
-				.GetEvent(id);
+			return eventCollention.GetEvent(id);
 		}
 
 		public int GetEvent(Type @event)
 		{
-			return container
-				.Resolve<EventCollection>()
-				.GetEvent(@event);
+			return eventCollention.GetEvent(@event);
 		}
 
 		public IList<Type> GetHandlers(IPayload payload)
 		{
-			return container.Resolve<HandlerCollection>()
-				.GetHandlers(payload.Event);
+			return handlerCollection.GetHandlers(payload.Event);
 		}
 	}
 }

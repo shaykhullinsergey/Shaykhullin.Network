@@ -64,8 +64,9 @@ namespace Network
 			return new EventBuilder(Config)
 				.When<TEvent>();
 		}
+		public abstract TNode Create(string host, int port);
 
-		public virtual TNode Create(string host, int port)
+		protected void Configure(string host, int port)
 		{
 			Config.Register<IConfiguration>()
 				.ImplementedBy(c => new Configuration(host, port))
@@ -78,8 +79,6 @@ namespace Network
 			Config.Register<IContainerConfig>()
 				.ImplementedBy(c => Config)
 				.As<Singleton>();
-			
-			return default;
 		}
 	}
 }
